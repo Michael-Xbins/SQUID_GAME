@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/spf13/viper"
 	"math"
 	"net/http"
 	"strconv"
@@ -89,9 +90,13 @@ func doWork() {
 
 func GetServerTime() (int64, error) {
 	for {
-		//url := "http://43.156.159.52:9600/proxy?url_proxy=https://www.binance.com/dapi/v1/time"
-		url := "http://43.156.159.52:9600/GetServerTime"
-		//url := "https://www.binance.com/dapi/v1/time"
+		var url string
+		if viper.GetString("common.env") == utils.Test {
+			//url = "http://43.156.159.52:9600/proxy?url_proxy=https://www.binance.com/dapi/v1/time"
+			url = "http://43.156.159.52:9600/GetServerTime"
+		} else {
+			url = "https://www.binance.com/dapi/v1/time"
+		}
 		client := &http.Client{
 			Timeout: time.Second * 3,
 		}
@@ -145,9 +150,13 @@ func GetNearEffectTime(effectTime time.Time) time.Time {
 // http://10.226.60.7:9600/proxy?url_proxy=https://www.binance.com/api/v3/uiKlines?endTime=1728983568000%26limit=1%26symbol=BTCUSDT%26interval=1s
 // 成交价
 func GetNumbers(timestamp int64) (float64, error) {
-	//url := "http://43.156.159.52:9600/proxy?url_proxy=https://www.binance.com/api/v3/klines?startTime=" + fmt.Sprintf("%d", timestamp) + "%26endTime=" + fmt.Sprintf("%d", timestamp) + "%26limit=1%26symbol=BTCUSDT%26interval=1s"
-	url := fmt.Sprintf("http://43.156.159.52:9600/GetNumbers?startTime=%d&endTime=%d", timestamp, timestamp)
-	//url := fmt.Sprintf("https://www.binance.com/api/v3/klines?startTime=%d&endTime=%d&limit=1&symbol=BTCUSDT&interval=1s", timestamp, timestamp)
+	var url string
+	if viper.GetString("common.env") == utils.Test {
+		//url = "http://43.156.159.52:9600/proxy?url_proxy=https://www.binance.com/api/v3/klines?startTime=" + fmt.Sprintf("%d", timestamp) + "%26endTime=" + fmt.Sprintf("%d", timestamp) + "%26limit=1%26symbol=BTCUSDT%26interval=1s"
+		url = fmt.Sprintf("http://43.156.159.52:9600/GetNumbers?startTime=%d&endTime=%d", timestamp, timestamp)
+	} else {
+		url = fmt.Sprintf("https://www.binance.com/api/v3/klines?startTime=%d&endTime=%d&limit=1&symbol=BTCUSDT&interval=1s", timestamp, timestamp)
+	}
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return 0, err
@@ -177,10 +186,13 @@ func GetNumbers(timestamp int64) (float64, error) {
 
 // 成交量
 func GetVolNum(startTime int64, endTime int64) (float64, error) {
-	//url := "http://43.156.159.52:9600/proxy?url_proxy=https://api.binance.com/api/v3/aggTrades?symbol=BTCUSDT%26limit=1000%26startTime=" + fmt.Sprintf("%d", startTime) + "%26endTime=" + fmt.Sprintf("%d", endTime)
-	url := fmt.Sprintf("http://43.156.159.52:9600/GetVolNum?symbol=BTCUSDT&limit=1000&startTime=%d&endTime=%d", startTime, endTime)
-	//url := fmt.Sprintf("https://api.binance.com/api/v3/aggTrades?symbol=BTCUSDT&limit=1000&startTime=%d&endTime=%d", startTime, endTime)
-
+	var url string
+	if viper.GetString("common.env") == utils.Test {
+		//url = "http://43.156.159.52:9600/proxy?url_proxy=https://api.binance.com/api/v3/aggTrades?symbol=BTCUSDT%26limit=1000%26startTime=" + fmt.Sprintf("%d", startTime) + "%26endTime=" + fmt.Sprintf("%d", endTime)
+		url = fmt.Sprintf("http://43.156.159.52:9600/GetVolNum?symbol=BTCUSDT&limit=1000&startTime=%d&endTime=%d", startTime, endTime)
+	} else {
+		url = fmt.Sprintf("https://api.binance.com/api/v3/aggTrades?symbol=BTCUSDT&limit=1000&startTime=%d&endTime=%d", startTime, endTime)
+	}
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return 0, err
