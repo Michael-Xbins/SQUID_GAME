@@ -1214,7 +1214,7 @@ func UsdtToSqu(userInfo *presenter.UserInfo, amount int64) error {
 		log.Error(err)
 		return err
 	}
-	fund.UsdtToSquCoins += transferCoin
+	fund.ExchangeCoins += transferCoin
 	if e := Update(context.Background(), fund, nil); e != nil {
 		log.Error("Error updating recharge fund:", e)
 	}
@@ -1695,12 +1695,10 @@ func Check(gameType string) {
 	// 拔河可赔付库存
 	availableFundCompete := game.Amount
 
-	// 闪兑获取游戏币
-	usdtToSquCoins := rechargeFund.UsdtToSquCoins
-	// 闪兑消耗游戏币
-	squToUsdtCoins := rechargeFund.SquToUsdtCoins
+	// 闪兑游戏币
+	exchangeCoins := rechargeFund.ExchangeCoins
 
-	loss := (initMoney + invite + cdk + welfare + rechargeGameCoins + usdtToSquCoins - balances) - (bets + unclaimedAgents + firstPassPools + houseCutSquid + robotPool + jackpot + houseCutLadder + availableFundLadder + houseCutCompete + availableFundCompete + squToUsdtCoins)
+	loss := (initMoney + invite + cdk + welfare + rechargeGameCoins + exchangeCoins - balances) - (bets + unclaimedAgents + firstPassPools + houseCutSquid + robotPool + jackpot + houseCutLadder + availableFundLadder + houseCutCompete + availableFundCompete)
 	if loss == 0 {
 		log.Infof("%s核对总账单成功,误差为:%d, 初始资金%d, 邀请奖励%d, 已领取cdk:%d, 福利金:%d, 余额:%d, 用户本轮未结算下注额之和:%d, 未领取代理%d, 首通池:%d, 木头人玩家抽水:%d, 木头人机器人抽水:%d, 木头人jackpot:%d, 梯子抽水:%d, 梯子可赔付库存:%d, 拔河抽水:%d, 拔河可赔付库存:%d",
 			gameType, loss, initMoney, invite, cdk, welfare, balances, bets, unclaimedAgents, firstPassPools, houseCutSquid, robotPool, jackpot, houseCutLadder, availableFundLadder, houseCutCompete, availableFundCompete)

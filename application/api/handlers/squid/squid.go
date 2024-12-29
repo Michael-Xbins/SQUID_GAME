@@ -772,7 +772,7 @@ func SquToUsdt() fiber.Handler {
 			log.Error(err)
 			return err
 		}
-		fund.SquToUsdtCoins += req.Squ
+		fund.ExchangeCoins -= req.Squ
 		if e := mongodb.Update(context.Background(), fund, nil); e != nil {
 			log.Error("Error updating recharge fund:", e)
 		}
