@@ -1,0 +1,276 @@
+[2024-12-25 20:39:00] 192.168.110.11:6123 200POST| ReqID:e9384081-112a-43e5-b205-8b76c5706d52 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A7938939851%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939851",
+    "type":"web"
+} |       6.5232ms
+[2024-12-26 13:13:39] 192.168.110.11:17433 200POST| ReqID:1cf84c73-9d16-4f9c-ac25-78fdbef07ec9 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A7938939851%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939851",
+    "type":"web"
+} |       3.3696ms
+[2024-12-26 13:13:49] 192.168.110.11:17444 101GET| ReqID:1df84c73-9d16-4f9c-ac25-78fdbef07ec9 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:14:03] 192.168.110.11:17433 200POST| ReqID:1ef84c73-9d16-4f9c-ac25-78fdbef07ec9 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.2258ms
+[2024-12-26 13:17:25] 192.168.110.11:17482 101GET| ReqID:bf877893-1cf3-4278-a8f4-9f74c8614541 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:17:28] 192.168.110.11:17484 200POST| ReqID:c0877893-1cf3-4278-a8f4-9f74c8614541 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.0796ms
+[2024-12-26 13:17:59] 192.168.110.11:17499 200POST| ReqID:b2674b60-3d96-41e0-bb8c-05edb4d2cd49 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.7095ms
+[2024-12-26 13:22:04] 192.168.110.11:17543 101GET| ReqID:dfc59df0-69a8-4cb2-8e74-1e03c49f1b08 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:22:08] 192.168.110.11:17545 200POST| ReqID:e0c59df0-69a8-4cb2-8e74-1e03c49f1b08 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       4.4866ms
+[2024-12-26 13:23:11] 192.168.110.11:17566 200POST| ReqID:b1c66f48-e6e4-4358-aa55-b901317015d1 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.6734ms
+[2024-12-26 13:33:59] 192.168.110.11:17757 101GET| ReqID:e37014f6-4d30-4fd2-b5be-b6bf162d6861 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:34:01] 192.168.110.11:17759 200POST| ReqID:e47014f6-4d30-4fd2-b5be-b6bf162d6861 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |        6.842ms
+[2024-12-26 13:34:33] 192.168.110.11:17772 101GET| ReqID:7407ce79-f62f-44db-9262-c09df40a2cc1 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058        17.7µs
+[2024-12-26 13:34:35] 192.168.110.11:17774 200POST| ReqID:7507ce79-f62f-44db-9262-c09df40a2cc1 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       4.9637ms
+[2024-12-26 13:36:07] 192.168.110.11:17799 101GET| ReqID:422c991a-cb82-4fac-ae6f-6df05e8e71f5 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:36:09] 192.168.110.11:17801 200POST| ReqID:432c991a-cb82-4fac-ae6f-6df05e8e71f5 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.5311ms
+[2024-12-26 13:37:46] 192.168.110.11:17826 101GET| ReqID:886ef896-2dc0-4c74-a6ab-76cc581801aa | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 13:37:48] 192.168.110.11:17827 200POST| ReqID:896ef896-2dc0-4c74-a6ab-76cc581801aa | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       4.8449ms
+[2024-12-26 15:26:45] 192.168.110.11:51438 101GET| ReqID:9ef78dd1-d4f9-44c7-9ac0-df2876ae959a | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 15:27:07] 192.168.110.11:51554 101GET| ReqID:0e57860d-f7c6-4a3b-b2c6-2f5b224b4764 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 15:27:12] 192.168.110.11:51575 200POST| ReqID:0f57860d-f7c6-4a3b-b2c6-2f5b224b4764 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       6.5382ms
+[2024-12-26 15:59:57] 192.168.110.11:60569 101GET| ReqID:59938209-1c88-4fcd-aba5-b3586e0eadf7 | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 16:00:00] 192.168.110.11:60580 200POST| ReqID:5a938209-1c88-4fcd-aba5-b3586e0eadf7 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       6.4168ms
+[2024-12-26 16:00:32] 192.168.110.11:60734 101GET| ReqID:95f18480-72f5-48f8-899a-97120b4389ae | Path:/app/ws | Body: | token=bf22c16b-33e4-4614-be9c-d6cadd25b058            0s
+[2024-12-26 16:00:34] 192.168.110.11:60740 200POST| ReqID:96f18480-72f5-48f8-899a-97120b4389ae | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "bf22c16b-33e4-4614-be9c-d6cadd25b058",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       5.7666ms
+[2024-12-26 16:01:52] 192.168.110.11:61110 200POST| ReqID:97f18480-72f5-48f8-899a-97120b4389ae | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A7938939852%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939851",
+    "type":"web"
+} |       8.9677ms
+[2024-12-26 16:02:01] 192.168.110.11:61153 101GET| ReqID:98f18480-72f5-48f8-899a-97120b4389ae | Path:/app/ws | Body: | token=82c50294-509f-4761-b9c2-12b9118fd269            0s
+[2024-12-26 16:02:07] 192.168.110.11:61110 200POST| ReqID:99f18480-72f5-48f8-899a-97120b4389ae | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "82c50294-509f-4761-b9c2-12b9118fd269",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       9.3614ms
+[2024-12-26 16:03:22] 192.168.110.11:61526 200POST| ReqID:f20fd64e-80fc-475b-b51c-6e9088b32654 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A7938939852%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939851",
+    "type":"web"
+} |       4.3219ms
+[2024-12-26 16:03:31] 192.168.110.11:61576 101GET| ReqID:f30fd64e-80fc-475b-b51c-6e9088b32654 | Path:/app/ws | Body: | token=b8f4cb18-f209-49ea-a961-e43b113dd38a            0s
+[2024-12-26 16:03:37] 192.168.110.11:61526 200POST| ReqID:f40fd64e-80fc-475b-b51c-6e9088b32654 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "b8f4cb18-f209-49ea-a961-e43b113dd38a",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |        7.768ms
+[2024-12-26 16:08:13] 192.168.110.11:62899 200POST| ReqID:ecad4a5d-ad86-4e67-a9ad-0282e3371c07 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A7938939853%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       7.2094ms
+[2024-12-26 16:08:21] 192.168.110.11:62941 101GET| ReqID:edad4a5d-ad86-4e67-a9ad-0282e3371c07 | Path:/app/ws | Body: | token=f17d9c39-2c83-4525-91d0-0594b1aaf1f6            0s
+[2024-12-26 16:08:30] 192.168.110.11:62899 200POST| ReqID:eead4a5d-ad86-4e67-a9ad-0282e3371c07 | Path:/app/game/get_asset/http | Body:{
+    "sessionToken": "f17d9c39-2c83-4525-91d0-0594b1aaf1f6",
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       10.546ms
+[2024-12-27 17:38:50] 192.168.110.11:53456 200POST| ReqID:79bab89f-e07d-4fe1-9306-af180475ab64 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       5.6171ms
+[2024-12-27 17:39:00] 192.168.110.11:53511 101GET| ReqID:7abab89f-e07d-4fe1-9306-af180475ab64 | Path:/app/ws | Body: | token=f17a399f-b2ff-44e8-96b4-57fb440dd8b8            0s
+[2024-12-27 17:39:39] 192.168.110.11:53456 200POST| ReqID:7bbab89f-e07d-4fe1-9306-af180475ab64 | Path:/app/game/history_record/http | Body:{
+    "sessionToken": "f2528e57-3fb6-4ae5-bd11-d4efef2c31bd",
+    "type": 2,
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |       1.0132ms
+[2024-12-27 17:40:00] 192.168.110.11:53456 200POST| ReqID:7cbab89f-e07d-4fe1-9306-af180475ab64 | Path:/app/game/history_record/http | Body:{
+    "sessionToken": "f17a399f-b2ff-44e8-96b4-57fb440dd8b8",
+    "type": 2,
+    "address":"TLay1moHwFC1fpVvxR5pg12sx6m1kqHwQY",
+    "network":"TRC20",
+    "amount":1100
+} |    31.6822044s
+[2024-12-27 17:41:12] 192.168.110.11:54217 101GET| ReqID:c285b2be-63bf-4ad4-b31d-d020f4e97e74 | Path:/app/ws | Body: | token=f17a399f-b2ff-44e8-96b4-57fb440dd8b8            0s
+[2024-12-27 19:53:59] 192.168.110.11:27825 200POST| ReqID:f4aabb9d-fb90-45a3-bfdd-ed196df0e99e | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       3.3151ms
+[2024-12-27 19:54:06] 192.168.110.11:27866 101GET| ReqID:f5aabb9d-fb90-45a3-bfdd-ed196df0e99e | Path:/app/ws | Body: | token=b2eac5ae-cc92-4abe-b304-983168830d1d            0s
+[2024-12-27 19:54:13] 192.168.110.11:27825 200POST| ReqID:f6aabb9d-fb90-45a3-bfdd-ed196df0e99e | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "b2eac5ae-cc92-4abe-b304-983168830d1d",
+    "amount":1100,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       2.0885ms
+[2024-12-27 19:55:13] 192.168.110.11:28198 200POST| ReqID:a5849553-be89-435c-9195-3c4f52a639f0 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       3.2474ms
+[2024-12-27 19:55:19] 192.168.110.11:28229 101GET| ReqID:a6849553-be89-435c-9195-3c4f52a639f0 | Path:/app/ws | Body: | token=a25bc4ae-904a-4c9d-bcaa-374f289b93de            0s
+[2024-12-27 19:55:26] 192.168.110.11:28198 200POST| ReqID:a7849553-be89-435c-9195-3c4f52a639f0 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "a25bc4ae-904a-4c9d-bcaa-374f289b93de",
+    "amount":1100,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       1.5561ms
+[2024-12-27 19:56:06] 192.168.110.11:28198 200POST| ReqID:a8849553-be89-435c-9195-3c4f52a639f0 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "a25bc4ae-904a-4c9d-bcaa-374f289b93de",
+    "amount":1500,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       2.0904ms
+[2024-12-27 19:56:12] 192.168.110.11:28198 200POST| ReqID:a9849553-be89-435c-9195-3c4f52a639f0 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       3.6587ms
+[2024-12-27 19:56:39] 192.168.110.11:28616 101GET| ReqID:aa849553-be89-435c-9195-3c4f52a639f0 | Path:/app/ws | Body: | token=45e89231-9923-4302-bf5f-093f57546378            0s
+[2024-12-27 19:56:46] 192.168.110.11:28198 200POST| ReqID:ab849553-be89-435c-9195-3c4f52a639f0 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "45e89231-9923-4302-bf5f-093f57546378",
+    "amount":1500,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       1.5668ms
+[2024-12-27 19:57:32] 192.168.110.11:28873 200POST| ReqID:92a8a3eb-1ab2-400e-8a93-1b28c647b731 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       3.1074ms
+[2024-12-27 19:57:37] 192.168.110.11:28900 101GET| ReqID:93a8a3eb-1ab2-400e-8a93-1b28c647b731 | Path:/app/ws | Body: | token=4dd3658d-a92e-436d-939a-8f9a26c38550            0s
+[2024-12-27 19:57:45] 192.168.110.11:28873 200POST| ReqID:94a8a3eb-1ab2-400e-8a93-1b28c647b731 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "4dd3658d-a92e-436d-939a-8f9a26c38550",
+    "amount":1500,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       2.5747ms
+[2024-12-27 19:58:13] 192.168.110.11:28873 200POST| ReqID:95a8a3eb-1ab2-400e-8a93-1b28c647b731 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "4dd3658d-a92e-436d-939a-8f9a26c38550",
+    "amount":1500,
+
+    "squ":11000000,
+    "vou":11,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |             0s
+[2024-12-27 19:58:54] 192.168.110.11:29300 200POST| ReqID:1b20e9eb-0356-434f-8f5d-6151a06aeaa1 | Path:/app/login/http | Body:{
+    "tgWebAppStartParam": 
+    "query_id=AAHdF6IQAAAAAN0XohDhrOrc&user=%7B%22id%22%3A5243341575%2C%22first_name%22%3A%22Vladislav%22%2C%22last_name%22%3A%22Kibenko%22%2C%22username%22%3A%22vdkfrost%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%7D&auth_date=1662771648&hash=c501b71e775f74ce10e377dea85a7ea24ecd640b223ea86dfe453e0eaed2e2b2&start_param=code_7938939852",
+    "type":"web"
+} |       3.1265ms
+[2024-12-27 19:59:02] 192.168.110.11:29341 101GET| ReqID:1c20e9eb-0356-434f-8f5d-6151a06aeaa1 | Path:/app/ws | Body: | token=09187b98-dad6-40c0-bf12-fcfa6b29bcbd            0s
+[2024-12-27 19:59:09] 192.168.110.11:29300 200POST| ReqID:1d20e9eb-0356-434f-8f5d-6151a06aeaa1 | Path:/app/game/exchange_squ_to_usdt/http | Body:{
+    "sessionToken": "09187b98-dad6-40c0-bf12-fcfa6b29bcbd",
+    "amount":1500,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |     126.7815ms
+[2024-12-27 20:00:37] 192.168.110.11:29803 200POST| ReqID:1e20e9eb-0356-434f-8f5d-6151a06aeaa1 | Path:/app/game/exchange_usdt_to_squ/http | Body:{
+    "sessionToken": "09187b98-dad6-40c0-bf12-fcfa6b29bcbd",
+    "amount":1100,
+
+    "squ":11000000,
+    "vou":110,
+
+    "type": 1,
+    "cdk":"AGDN5PoBqyal67oW7MKpzmwYdj0xb3",
+    "taskId":"invite1"
+
+} |       4.7325ms

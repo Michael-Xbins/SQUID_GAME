@@ -1,0 +1,146 @@
+[
+  {
+    "id": "pump_profit",
+    "name": "庄家盈利抽水值",
+    "desc": "庄家比例【千分比】",
+    "num_int": 30
+  },
+  {
+    "id": "pump_jackpot",
+    "name": "JACKPOT大奖抽水值",
+    "desc": "大奖比例【千分比】",
+    "num_int": 70
+  },
+  {
+    "id": "pump_day",
+    "name": "每日首通抽水值",
+    "desc": "首通比例【千分比】",
+    "num_int": 50
+  },
+  {
+    "id": "pump_acting",
+    "name": "代理佣金抽水值",
+    "desc": "佣金比例【千分比】",
+    "num_int": 50
+  },
+  {
+    "id": "price_one",
+    "name": "筹码1单价",
+    "desc": "投注单价",
+    "num_int": 100
+  },
+  {
+    "id": "price_two",
+    "name": "筹码2单价",
+    "desc": "投注单价",
+    "num_int": 1000
+  },
+  {
+    "id": "price_three",
+    "name": "筹码3单价",
+    "desc": "投注单价",
+    "num_int": 10000
+  },
+  {
+    "id": "price_four",
+    "name": "筹码4单价",
+    "desc": "投注单价",
+    "num_int": 50000
+  },
+  {
+    "id": "price_five",
+    "name": "筹码5单价",
+    "desc": "投注单价",
+    "num_int": 100000
+  },
+  {
+    "id": "open_time",
+    "name": "开盘时间",
+    "desc": "下注时间",
+    "num_int": 30
+  },
+  {
+    "id": "close_time",
+    "name": "封盘时间",
+    "desc": "封盘时间",
+    "num_int": 5
+  },
+  {
+    "id": "settlement_time",
+    "name": "结算时间",
+    "desc": "结算时间",
+    "num_int": 5
+  },
+  {
+    "id": "money_power1",
+    "name": "第1轮金额权重",
+    "desc": "第1轮金额权重",
+    "num_int": 12288
+  },
+  {
+    "id": "money_power2",
+    "name": "第2轮金额权重",
+    "desc": "第2轮金额权重",
+    "num_int": 9216
+  },
+  {
+    "id": "money_power3",
+    "name": "第3轮金额权重",
+    "desc": "第3轮金额权重",
+    "num_int": 6912
+  },
+  {
+    "id": "money_power4",
+    "name": "第4轮金额权重",
+    "desc": "第4轮金额权重",
+    "num_int": 5184
+  },
+  {
+    "id": "money_power5",
+    "name": "第5轮金额权重",
+    "desc": "第5轮金额权重",
+    "num_int": 3888
+  },
+  {
+    "id": "money_power6",
+    "name": "第6轮金额权重",
+    "desc": "第6轮金额权重",
+    "num_int": 2916
+  },
+  {
+    "id": "money_power7",
+    "name": "第7轮金额权重",
+    "desc": "第7轮金额权重",
+    "num_int": 2187
+  },
+  {
+    "id": "acting0",
+    "name": "代理直属上线佣金分成",
+    "desc": "佣金比例【千分比】",
+    "num_int": 800
+  },
+  {
+    "id": "acting1",
+    "name": "代理间接上线佣金分成",
+    "desc": "佣金比例【千分比】",
+    "num_int": 200
+  },
+  {
+    "id": "new_humen",
+    "name": "新玩家首通奖励",
+    "desc": "金币数值",
+    "num_int": 200
+  },
+  {
+    "id": "jackpot_min",
+    "name": "JACKPOT大奖返奖比例下限",
+    "desc": "14以上为吐分【千分比】",
+    "num_int": 100
+  },
+  {
+    "id": "jackpot_max",
+    "name": "JACKPOT大奖返奖比例上限",
+    "desc": "14以下为吃分【千分比】",
+    "num_int": 120
+  }
+]

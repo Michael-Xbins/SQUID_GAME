@@ -1,0 +1,804 @@
+{"level":"INFO","time":"2024-12-25 15:09:20.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 13"}
+{"level":"INFO","time":"2024-12-25 15:09:20.601","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第13期, winNum: [2 1 0],transHash: 0x84388153f5cdf17c4eafc3769cfded, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:12:20.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 14"}
+{"level":"INFO","time":"2024-12-25 15:12:20.598","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第14期, winNum: [1 2 2],transHash: 0xe40b0ac3ce571d62cd83d102fba26e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:15:20.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 15"}
+{"level":"INFO","time":"2024-12-25 15:15:20.598","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第15期, winNum: [0 1 0],transHash: 0x0ebac9dc511819242eb64fca2d2978, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:18:20.596","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 16"}
+{"level":"INFO","time":"2024-12-25 15:18:20.597","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第16期, winNum: [0 2 1],transHash: 0x2e043c57c14828a4c7eff7f601f043, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:21:20.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 17"}
+{"level":"INFO","time":"2024-12-25 15:21:20.597","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第17期, winNum: [1 3 1],transHash: 0x514b4d3b66b9d9807083baba10eead, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:24:20.598","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 18"}
+{"level":"INFO","time":"2024-12-25 15:24:20.599","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第18期, winNum: [1 3 2],transHash: 0x9a6a292a05a31c32f0254852b7ab11, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:27:20.596","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 19"}
+{"level":"INFO","time":"2024-12-25 15:27:20.596","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第19期, winNum: [0 3 2],transHash: 0x9fdb07a2a489705bfed292e45435a0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:30:20.596","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 20"}
+{"level":"INFO","time":"2024-12-25 15:30:20.597","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第20期, winNum: [2 1 0],transHash: 0x18107df5b41456529cca3b2921e3f6, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:33:21.596","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 21"}
+{"level":"INFO","time":"2024-12-25 15:33:21.597","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第21期, winNum: [0 0 0],transHash: 0x97ddffb33237dcab0eb396f3e654ae, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:36:21.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 22"}
+{"level":"INFO","time":"2024-12-25 15:36:21.598","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第22期, winNum: [2 0 2],transHash: 0xbb616d994c93c8008dd4d1760c44de, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:39:21.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 23"}
+{"level":"INFO","time":"2024-12-25 15:39:21.598","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第23期, winNum: [0 3 1],transHash: 0x5ba97337b53c13b3681dc2f077c3bf, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:42:21.597","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 24"}
+{"level":"INFO","time":"2024-12-25 15:42:21.597","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第24期, winNum: [1 3 1],transHash: 0x3730e1cc8c4e69aaaefe02839fb8a8, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:53:04.750","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 30"}
+{"level":"INFO","time":"2024-12-25 15:53:04.751","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第30期, winNum: [2 3 0],transHash: 0xda99e0c9582895fc2f9ea5fcab8342, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:56:04.749","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 31"}
+{"level":"INFO","time":"2024-12-25 15:56:04.750","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第31期, winNum: [0 2 1],transHash: 0xf9576bc0df12c24339fb3bdff0c9a1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 15:59:05.749","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 32"}
+{"level":"INFO","time":"2024-12-25 15:59:05.750","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第32期, winNum: [1 0 2],transHash: 0x0f982050001af5e83033678536d26d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 16:02:05.749","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 33"}
+{"level":"INFO","time":"2024-12-25 16:02:05.750","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第33期, winNum: [1 3 0],transHash: 0xc4e1b7a68646e6960b891285ac7906, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 16:05:05.748","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 34"}
+{"level":"INFO","time":"2024-12-25 16:05:05.749","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第34期, winNum: [0 0 0],transHash: 0xa03c18609063e7ec786f8252724c30, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 16:08:05.750","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 35"}
+{"level":"INFO","time":"2024-12-25 16:08:05.750","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第35期, winNum: [1 1 1],transHash: 0x1c791b7f3c7b4ae6ed6dcf55017bd9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 16:11:05.750","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 36"}
+{"level":"INFO","time":"2024-12-25 16:11:05.751","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第36期, winNum: [0 1 2],transHash: 0x3b156b8ad7e18fd2897d50bbd9ea20, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 16:14:05.750","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 37"}
+{"level":"INFO","time":"2024-12-25 16:14:05.750","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第37期, winNum: [2 1 2],transHash: 0xad7b65bccec95e23dd5f65c11eabff, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 20:39:00.220","caller":"handlers/login.go:185","msg":"登录成功, Account:7938939851, Token:f0a61243-f9a6-445b-a744-dfc381ae828e, PlatForm:web"}
+{"level":"INFO","time":"2024-12-25 20:51:43.582","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 41"}
+{"level":"INFO","time":"2024-12-25 20:51:43.583","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第41期, winNum: [1 3 2],transHash: 0x52e3ca16221c7fba59ea73793f1b77, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 20:54:31.304","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 42"}
+{"level":"INFO","time":"2024-12-25 20:54:31.305","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第42期, winNum: [2 1 2],transHash: 0x6ff714f4037469af13d9e14fb93a68, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 20:57:31.304","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 43"}
+{"level":"INFO","time":"2024-12-25 20:57:31.305","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第43期, winNum: [0 3 2],transHash: 0xffe33665645120436d480e42a5b505, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:00:05.290","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 44"}
+{"level":"INFO","time":"2024-12-25 21:00:05.291","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第44期, winNum: [2 2 2],transHash: 0xa0fc8ed4a5425300e7be71b9622665, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:06:05.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 47"}
+{"level":"INFO","time":"2024-12-25 21:06:05.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第47期, winNum: [1 1 1],transHash: 0x640a53020e5735cebfe67c5a7ae3f7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:09:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 48"}
+{"level":"INFO","time":"2024-12-25 21:09:06.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第48期, winNum: [0 0 2],transHash: 0xf310f5bc71f4ec43e014cbed23271c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:12:06.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 49"}
+{"level":"INFO","time":"2024-12-25 21:12:06.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第49期, winNum: [2 0 1],transHash: 0xaef56f2a1a2902ceeb4ba8deef0c7b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:15:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 50"}
+{"level":"INFO","time":"2024-12-25 21:15:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第50期, winNum: [0 1 2],transHash: 0x8b94cedf7271a10e9b0011e8cf2183, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:18:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 51"}
+{"level":"INFO","time":"2024-12-25 21:18:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第51期, winNum: [2 2 1],transHash: 0xdf96036d12287a5022ff5a8987494e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:21:07.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 52"}
+{"level":"INFO","time":"2024-12-25 21:21:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第52期, winNum: [0 3 1],transHash: 0x1e9120d27fb8439996fff7eda973fb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:24:07.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 53"}
+{"level":"INFO","time":"2024-12-25 21:24:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第53期, winNum: [2 1 2],transHash: 0xffccc0400d712ce72dc9edc17b1347, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:27:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 54"}
+{"level":"INFO","time":"2024-12-25 21:27:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第54期, winNum: [0 1 1],transHash: 0xd28641f1c83ec95800281306f34194, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:30:07.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 55"}
+{"level":"INFO","time":"2024-12-25 21:30:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第55期, winNum: [0 2 0],transHash: 0xfbdb4d241418e9537dee9b9e4642db, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:33:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 56"}
+{"level":"INFO","time":"2024-12-25 21:33:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第56期, winNum: [2 1 0],transHash: 0x2a3f0f207531c24148d9e5c0d9c9b3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:36:07.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 57"}
+{"level":"INFO","time":"2024-12-25 21:36:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第57期, winNum: [2 1 0],transHash: 0x947eb329e0d8deefce1619f5997b87, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:39:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 58"}
+{"level":"INFO","time":"2024-12-25 21:39:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第58期, winNum: [1 0 0],transHash: 0xa9dfeb03bde5eab4e1952bd2f8e442, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:42:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 59"}
+{"level":"INFO","time":"2024-12-25 21:42:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第59期, winNum: [2 3 2],transHash: 0x3032c4493c198713753fe2d1f17bd1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:45:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 60"}
+{"level":"INFO","time":"2024-12-25 21:45:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第60期, winNum: [2 3 1],transHash: 0xf5200dbbdf6a555a85bf13891a1c76, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:48:08.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 61"}
+{"level":"INFO","time":"2024-12-25 21:48:08.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第61期, winNum: [2 0 2],transHash: 0x446dffdfa0c13f83ff68abbcfb74ed, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:51:08.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 62"}
+{"level":"INFO","time":"2024-12-25 21:51:08.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第62期, winNum: [2 3 1],transHash: 0xff98a4685d2b411f31f620d713e1df, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:54:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 63"}
+{"level":"INFO","time":"2024-12-25 21:54:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第63期, winNum: [2 1 0],transHash: 0xe9fb4c41b1ed20028fd88fbb029f45, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 21:57:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 64"}
+{"level":"INFO","time":"2024-12-25 21:57:09.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第64期, winNum: [0 1 1],transHash: 0x205a745c5b09ba317453486b53cbe7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:00:09.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 65"}
+{"level":"INFO","time":"2024-12-25 22:00:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第65期, winNum: [1 1 0],transHash: 0x4729b74f2143b788811c6a813d6972, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:03:09.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 66"}
+{"level":"INFO","time":"2024-12-25 22:03:09.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第66期, winNum: [2 0 2],transHash: 0x5c94720bf8d817f6fa3142968fcf80, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:06:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 67"}
+{"level":"INFO","time":"2024-12-25 22:06:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第67期, winNum: [1 0 1],transHash: 0x9d1b1f1d77a07019852c84dd972e88, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:09:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 68"}
+{"level":"INFO","time":"2024-12-25 22:09:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第68期, winNum: [1 1 1],transHash: 0xca12384efdfddca751f219ed2d16c7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:12:09.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 69"}
+{"level":"INFO","time":"2024-12-25 22:12:09.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第69期, winNum: [0 3 0],transHash: 0x3577be6bee4c0b549ba9587b51ff21, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:15:10.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 70"}
+{"level":"INFO","time":"2024-12-25 22:15:10.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第70期, winNum: [1 0 1],transHash: 0xcfee95735f76d3ca538834fd2422ff, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:18:10.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 71"}
+{"level":"INFO","time":"2024-12-25 22:18:10.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第71期, winNum: [2 2 2],transHash: 0x8daa8a984fc80c1883107f6e297835, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:21:11.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 72"}
+{"level":"INFO","time":"2024-12-25 22:21:11.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第72期, winNum: [1 3 0],transHash: 0xf3dbc524b541d8ed29a9088f2039f0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:24:11.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 73"}
+{"level":"INFO","time":"2024-12-25 22:24:11.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第73期, winNum: [0 2 1],transHash: 0x8b6598e9bb12580438ab76720d616c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:27:11.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 74"}
+{"level":"INFO","time":"2024-12-25 22:27:11.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第74期, winNum: [2 0 0],transHash: 0x33ec9b4600044b811bdc68e0dcbd6c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:30:11.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 75"}
+{"level":"INFO","time":"2024-12-25 22:30:11.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第75期, winNum: [2 1 0],transHash: 0x689bdb32498c67234805e430865384, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:33:11.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 76"}
+{"level":"INFO","time":"2024-12-25 22:33:11.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第76期, winNum: [1 2 2],transHash: 0x4f3fe3b33d891daa57b5278311811d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:36:11.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 77"}
+{"level":"INFO","time":"2024-12-25 22:36:11.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第77期, winNum: [2 2 1],transHash: 0x45129b44c26ca5450cd2683f839458, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:39:12.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 78"}
+{"level":"INFO","time":"2024-12-25 22:39:12.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第78期, winNum: [0 0 1],transHash: 0x99799f032f24836705c8612f0897ad, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:42:12.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 79"}
+{"level":"INFO","time":"2024-12-25 22:42:12.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第79期, winNum: [1 0 2],transHash: 0xf32780451387aeb088c01c1cf638ed, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:45:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 80"}
+{"level":"INFO","time":"2024-12-25 22:45:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第80期, winNum: [1 1 1],transHash: 0xe52ad7e6fe2c9b051b5f7f61b7310d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:48:13.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 81"}
+{"level":"INFO","time":"2024-12-25 22:48:13.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第81期, winNum: [1 0 2],transHash: 0xb88087e0bf042d0d203d9d1680f4d7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:51:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 82"}
+{"level":"INFO","time":"2024-12-25 22:51:13.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第82期, winNum: [2 3 0],transHash: 0xcc7f4d326fb94c9d96233b2e386339, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:54:14.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 83"}
+{"level":"INFO","time":"2024-12-25 22:54:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第83期, winNum: [1 2 1],transHash: 0x170f380b3d203a5eb51fa85f66b73c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 22:57:14.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 84"}
+{"level":"INFO","time":"2024-12-25 22:57:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第84期, winNum: [1 3 1],transHash: 0x5df63145d89ebec7b24b4447948782, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:00:14.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 85"}
+{"level":"INFO","time":"2024-12-25 23:00:14.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第85期, winNum: [2 0 1],transHash: 0x674a19dc759570fa22c6d03864b001, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:03:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 86"}
+{"level":"INFO","time":"2024-12-25 23:03:15.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第86期, winNum: [1 2 1],transHash: 0x7a07487b7abdb3c07fda85466fb4ea, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:06:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 87"}
+{"level":"INFO","time":"2024-12-25 23:06:15.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第87期, winNum: [0 0 0],transHash: 0x4dd0a2dd0301869832bf7e5fb2ad42, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:09:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 88"}
+{"level":"INFO","time":"2024-12-25 23:09:15.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第88期, winNum: [1 2 1],transHash: 0x5c36ded1545a20d762c43c8949e031, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:12:16.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 89"}
+{"level":"INFO","time":"2024-12-25 23:12:16.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第89期, winNum: [1 2 2],transHash: 0x306f7d532c3e4151dd87a286e22a0f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:15:17.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 90"}
+{"level":"INFO","time":"2024-12-25 23:15:17.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第90期, winNum: [1 3 0],transHash: 0x4729215c3ee108919fc26873743e18, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:18:18.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 91"}
+{"level":"INFO","time":"2024-12-25 23:18:18.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第91期, winNum: [0 3 2],transHash: 0xa88cb5f80d2870e802c9059c1ff4ae, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:21:18.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 92"}
+{"level":"INFO","time":"2024-12-25 23:21:18.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第92期, winNum: [0 3 0],transHash: 0xd70def20ff002fa8860f19391c55d7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:24:18.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 93"}
+{"level":"INFO","time":"2024-12-25 23:24:18.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第93期, winNum: [1 1 2],transHash: 0x6e14c2e02fa7407771c87334075786, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:27:18.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 94"}
+{"level":"INFO","time":"2024-12-25 23:27:18.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第94期, winNum: [0 3 0],transHash: 0x9f291ca21fb4cebb5efec618476a3f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:30:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 95"}
+{"level":"INFO","time":"2024-12-25 23:30:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第95期, winNum: [0 1 1],transHash: 0xd51e1f9bdf584eafabf8fb4d874531, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:33:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 96"}
+{"level":"INFO","time":"2024-12-25 23:33:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第96期, winNum: [0 2 1],transHash: 0xd7143ae5b1be6f7a69194278eb28cb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:36:20.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 97"}
+{"level":"INFO","time":"2024-12-25 23:36:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第97期, winNum: [1 2 0],transHash: 0x5a68b2142bde9746dea0ccc137f460, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:39:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 98"}
+{"level":"INFO","time":"2024-12-25 23:39:20.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第98期, winNum: [1 2 0],transHash: 0xafcb150653609de04e9494ff64227d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:42:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 99"}
+{"level":"INFO","time":"2024-12-25 23:42:20.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第99期, winNum: [0 2 1],transHash: 0xbdcf0a541c152b32cf140635ec8b88, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:45:20.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 100"}
+{"level":"INFO","time":"2024-12-25 23:45:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第100期, winNum: [2 1 1],transHash: 0xd2aaf5ce4ee61161c88a1353d818d2, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:48:20.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 101"}
+{"level":"INFO","time":"2024-12-25 23:48:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第101期, winNum: [1 2 2],transHash: 0x473ed5ca822c8280957584e6c94e56, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:51:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 102"}
+{"level":"INFO","time":"2024-12-25 23:51:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第102期, winNum: [0 2 2],transHash: 0x94c7a86648cd6fd8f3f324d22bf95c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:54:20.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 103"}
+{"level":"INFO","time":"2024-12-25 23:54:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第103期, winNum: [2 3 0],transHash: 0x0726315571650ddf19d295f8b71aa2, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-25 23:57:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 104"}
+{"level":"INFO","time":"2024-12-25 23:57:21.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第104期, winNum: [0 1 2],transHash: 0xcb0c13e34fe21ce8aa974d284770e5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:00:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 105"}
+{"level":"INFO","time":"2024-12-26 00:00:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第105期, winNum: [2 2 1],transHash: 0x871fc0d47188403cc30508ab6ca46d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:03:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 106"}
+{"level":"INFO","time":"2024-12-26 00:03:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第106期, winNum: [0 1 0],transHash: 0x2e186fe2b52cb52381ba375aa0d148, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:06:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 107"}
+{"level":"INFO","time":"2024-12-26 00:06:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第107期, winNum: [2 0 0],transHash: 0xe2e4e49b48dc20e7b9d05da968a4d8, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:09:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 108"}
+{"level":"INFO","time":"2024-12-26 00:09:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第108期, winNum: [0 1 1],transHash: 0x72300bcb35e8faea5116c5184579c7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:12:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 109"}
+{"level":"INFO","time":"2024-12-26 00:12:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第109期, winNum: [0 2 0],transHash: 0x653741f69812d97c6a66fff12902b1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:15:22.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 110"}
+{"level":"INFO","time":"2024-12-26 00:15:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第110期, winNum: [2 3 1],transHash: 0x27a9c4524071e389ae12055ff04eab, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:18:22.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 111"}
+{"level":"INFO","time":"2024-12-26 00:18:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第111期, winNum: [1 2 1],transHash: 0xaf7cc12175cb6e34b04fc99103d828, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:21:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 112"}
+{"level":"INFO","time":"2024-12-26 00:21:21.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第112期, winNum: [0 3 1],transHash: 0x52c0ebdf90b0e7f2fce2ae38da2ece, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:24:22.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 113"}
+{"level":"INFO","time":"2024-12-26 00:24:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第113期, winNum: [0 0 1],transHash: 0x27f9110d15dc57041e0dedafafecfd, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:27:22.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 114"}
+{"level":"INFO","time":"2024-12-26 00:27:22.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第114期, winNum: [0 3 2],transHash: 0x7bb42c20b8a85b6d25092241db55f3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:30:22.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 115"}
+{"level":"INFO","time":"2024-12-26 00:30:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第115期, winNum: [2 3 2],transHash: 0xa9033d44fd9355035b25a9b29394d7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:33:22.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 116"}
+{"level":"INFO","time":"2024-12-26 00:33:22.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第116期, winNum: [0 0 2],transHash: 0x6918f49538e8af5ab0fc436cd00c71, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:36:23.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 117"}
+{"level":"INFO","time":"2024-12-26 00:36:23.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第117期, winNum: [1 1 2],transHash: 0xf155200a7824dee430e9d316f1d5d3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:39:23.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 118"}
+{"level":"INFO","time":"2024-12-26 00:39:23.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第118期, winNum: [0 3 2],transHash: 0x30d636d2c25590cdb2f24fe8c738ed, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:42:23.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 119"}
+{"level":"INFO","time":"2024-12-26 00:42:23.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第119期, winNum: [0 0 1],transHash: 0xa86362e4e6e36bee678188d1ebbb9c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:45:23.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 120"}
+{"level":"INFO","time":"2024-12-26 00:45:23.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第120期, winNum: [2 2 2],transHash: 0x3cc10c27755acefb725402ae429be8, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:48:24.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 121"}
+{"level":"INFO","time":"2024-12-26 00:48:24.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第121期, winNum: [2 3 0],transHash: 0x1354449f78e51ab83e2a4eb477184d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:51:24.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 122"}
+{"level":"INFO","time":"2024-12-26 00:51:24.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第122期, winNum: [2 0 1],transHash: 0x3406a285fddb8e48b17add0809652c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:54:24.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 123"}
+{"level":"INFO","time":"2024-12-26 00:54:24.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第123期, winNum: [0 2 2],transHash: 0xc200fca82f23986fce998b46e24de1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 00:57:24.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 124"}
+{"level":"INFO","time":"2024-12-26 00:57:24.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第124期, winNum: [1 2 0],transHash: 0x2e5c1d307b43167b17f70bf1a8ae21, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:00:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 125"}
+{"level":"INFO","time":"2024-12-26 01:00:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第125期, winNum: [0 1 2],transHash: 0x1251137bb057074fddeb1597ebef23, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:03:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 126"}
+{"level":"INFO","time":"2024-12-26 01:03:25.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第126期, winNum: [1 1 2],transHash: 0xe5d50a768d72fbe521aa9bca764902, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:06:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 127"}
+{"level":"INFO","time":"2024-12-26 01:06:25.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第127期, winNum: [1 0 1],transHash: 0xce97b0a851a5186b6eb3752ee6ace7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:09:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 128"}
+{"level":"INFO","time":"2024-12-26 01:09:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第128期, winNum: [0 2 2],transHash: 0x4fe87dc6fb21b5c0b32257933a47e7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:12:25.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 129"}
+{"level":"INFO","time":"2024-12-26 01:12:25.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第129期, winNum: [0 0 0],transHash: 0xa62b83a4a009f3892c30a1573cf290, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:15:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 130"}
+{"level":"INFO","time":"2024-12-26 01:15:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第130期, winNum: [1 0 1],transHash: 0x18d5362b983ed9ee87ea3decd3625e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:18:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 131"}
+{"level":"INFO","time":"2024-12-26 01:18:25.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第131期, winNum: [2 2 2],transHash: 0x4b49e71409cd7596c9b75aee39e059, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:21:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 132"}
+{"level":"INFO","time":"2024-12-26 01:21:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第132期, winNum: [2 3 1],transHash: 0xc24bd97357bbaf676f974ace1b1194, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:24:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 133"}
+{"level":"INFO","time":"2024-12-26 01:24:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第133期, winNum: [0 1 2],transHash: 0x1222f733634e7814568313b6457a7c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:27:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 134"}
+{"level":"INFO","time":"2024-12-26 01:27:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第134期, winNum: [1 3 0],transHash: 0x2a273be7dc7a37ab1c52b6df1a5196, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:30:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 135"}
+{"level":"INFO","time":"2024-12-26 01:30:25.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第135期, winNum: [2 3 1],transHash: 0x4f3d1e6fb423c2b03891a1119b3ca1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:33:26.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 136"}
+{"level":"INFO","time":"2024-12-26 01:33:26.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第136期, winNum: [2 2 0],transHash: 0xcfd6a10c75a8921443e9501edf49e0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:36:26.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 137"}
+{"level":"INFO","time":"2024-12-26 01:36:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第137期, winNum: [1 2 0],transHash: 0xe9d706f6920ee1b1ae8ef426b71478, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:39:26.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 138"}
+{"level":"INFO","time":"2024-12-26 01:39:26.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第138期, winNum: [0 0 1],transHash: 0x6511795895acd0d2efbae006c360d4, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:42:27.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 139"}
+{"level":"INFO","time":"2024-12-26 01:42:27.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第139期, winNum: [1 2 1],transHash: 0x1ee2214123d4928806bf12d68e2dfe, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:45:28.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 140"}
+{"level":"INFO","time":"2024-12-26 01:45:28.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第140期, winNum: [1 1 2],transHash: 0x3bed017d1c793627e0cf4b3c398dba, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:48:27.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 141"}
+{"level":"INFO","time":"2024-12-26 01:48:27.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第141期, winNum: [1 2 1],transHash: 0x84957abf1f28a63d08c6e6b19bf437, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:51:29.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 142"}
+{"level":"INFO","time":"2024-12-26 01:51:29.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第142期, winNum: [2 1 1],transHash: 0xb5179e5dc054a145e2a2e5d68188bc, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:54:29.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 143"}
+{"level":"INFO","time":"2024-12-26 01:54:29.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第143期, winNum: [2 0 2],transHash: 0xceaa4b8e3ae7f35519fcf229f60a47, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 01:57:29.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 144"}
+{"level":"INFO","time":"2024-12-26 01:57:29.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第144期, winNum: [2 0 1],transHash: 0x1e66bb90fff29350220fb1f48d8d88, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:00:29.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 145"}
+{"level":"INFO","time":"2024-12-26 02:00:29.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第145期, winNum: [1 1 2],transHash: 0x408f59f2dc5bc3ca2ebf9c16468574, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:03:29.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 146"}
+{"level":"INFO","time":"2024-12-26 02:03:29.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第146期, winNum: [0 2 1],transHash: 0x828fdd098fe489656d83b360516294, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:06:29.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 147"}
+{"level":"INFO","time":"2024-12-26 02:06:29.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第147期, winNum: [1 2 0],transHash: 0xd31942f27ac7be3dd53128d5423eb0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:09:30.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 148"}
+{"level":"INFO","time":"2024-12-26 02:09:30.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第148期, winNum: [0 0 0],transHash: 0xb1ca9ca9209b904f6cf73a90bda066, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:12:30.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 149"}
+{"level":"INFO","time":"2024-12-26 02:12:30.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第149期, winNum: [0 3 1],transHash: 0xd6c26cc9871bc8e560e1bd82f74301, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:15:30.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 150"}
+{"level":"INFO","time":"2024-12-26 02:15:30.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第150期, winNum: [2 1 0],transHash: 0x739e4cc7383dc3d0818ea99170106a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:18:31.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 151"}
+{"level":"INFO","time":"2024-12-26 02:18:31.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第151期, winNum: [1 1 0],transHash: 0x443621db860a6953237075479e8969, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:21:31.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 152"}
+{"level":"INFO","time":"2024-12-26 02:21:31.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第152期, winNum: [2 3 2],transHash: 0x3a1919044c5b3fe5761f41aa959aaf, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:24:31.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 153"}
+{"level":"INFO","time":"2024-12-26 02:24:31.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第153期, winNum: [2 2 0],transHash: 0xd3de681bc184f8fbc89e617383bb9b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:27:31.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 154"}
+{"level":"INFO","time":"2024-12-26 02:27:31.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第154期, winNum: [1 2 0],transHash: 0x2ee52beb97bf05f847c86b7e0e6d75, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:30:31.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 155"}
+{"level":"INFO","time":"2024-12-26 02:30:31.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第155期, winNum: [0 1 2],transHash: 0x69d90f960ff12d507ae1043b487326, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:33:32.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 156"}
+{"level":"INFO","time":"2024-12-26 02:33:32.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第156期, winNum: [0 0 2],transHash: 0x8dd7885e1b8d780d941b541bd208eb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:36:33.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 157"}
+{"level":"INFO","time":"2024-12-26 02:36:33.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第157期, winNum: [2 2 0],transHash: 0x4e818d4d636ee89667045c4a10200f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:39:33.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 158"}
+{"level":"INFO","time":"2024-12-26 02:39:33.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第158期, winNum: [1 0 1],transHash: 0xb1523c5fbb907342cae3667600c61c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:42:34.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 159"}
+{"level":"INFO","time":"2024-12-26 02:42:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第159期, winNum: [0 1 1],transHash: 0x1199dee56ca46799673aee392931df, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:45:34.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 160"}
+{"level":"INFO","time":"2024-12-26 02:45:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第160期, winNum: [1 1 0],transHash: 0x402276cdfcb1845f8dff2df5ae387a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:48:34.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 161"}
+{"level":"INFO","time":"2024-12-26 02:48:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第161期, winNum: [0 0 1],transHash: 0x84ed1d1585d84f057f44fcdba0fdd4, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:51:34.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 162"}
+{"level":"INFO","time":"2024-12-26 02:51:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第162期, winNum: [1 0 1],transHash: 0x4ca2d186a4bcfddb300034f92dae94, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:54:34.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 163"}
+{"level":"INFO","time":"2024-12-26 02:54:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第163期, winNum: [1 0 2],transHash: 0xbbe045a05f727bdf4cb58f5f1665be, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 02:57:34.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 164"}
+{"level":"INFO","time":"2024-12-26 02:57:34.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第164期, winNum: [0 3 1],transHash: 0xa8f0a813041841cbd09844871bc01a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:00:35.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 165"}
+{"level":"INFO","time":"2024-12-26 03:00:35.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第165期, winNum: [0 2 1],transHash: 0x763306612ead8b09c7bff4f0350e52, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:03:35.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 166"}
+{"level":"INFO","time":"2024-12-26 03:03:35.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第166期, winNum: [1 3 2],transHash: 0x0e8748b651a2aa59142f81bfc544fb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:06:35.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 167"}
+{"level":"INFO","time":"2024-12-26 03:06:35.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第167期, winNum: [2 2 1],transHash: 0x5576a4739e5d1336971b981b9babdd, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:09:36.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 168"}
+{"level":"INFO","time":"2024-12-26 03:09:36.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第168期, winNum: [2 0 0],transHash: 0x77cd384645c25c6dbe02e72a2cdd4a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:12:36.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 169"}
+{"level":"INFO","time":"2024-12-26 03:12:36.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第169期, winNum: [0 1 2],transHash: 0x42a23e827e00d07cff3f279338195d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:15:36.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 170"}
+{"level":"INFO","time":"2024-12-26 03:15:36.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第170期, winNum: [2 3 0],transHash: 0x15d81882d61dc9904dff358e3c4dd2, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:18:37.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 171"}
+{"level":"INFO","time":"2024-12-26 03:18:37.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第171期, winNum: [2 3 2],transHash: 0x5f72feb97be064028f40b974d51d11, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:21:36.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 172"}
+{"level":"INFO","time":"2024-12-26 03:21:36.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第172期, winNum: [2 1 0],transHash: 0x105343b2836056038ccdd01d7fa45f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:24:37.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 173"}
+{"level":"INFO","time":"2024-12-26 03:24:37.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第173期, winNum: [2 2 2],transHash: 0xd32fe28415f6ad1c8506f83cfd426f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:27:38.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 174"}
+{"level":"INFO","time":"2024-12-26 03:27:38.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第174期, winNum: [1 3 0],transHash: 0xb6676942cc759fd779230446255521, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:30:39.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 175"}
+{"level":"INFO","time":"2024-12-26 03:30:39.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第175期, winNum: [1 3 2],transHash: 0xd403284fb2ee3a23aa559339195d56, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:33:39.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 176"}
+{"level":"INFO","time":"2024-12-26 03:33:39.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第176期, winNum: [1 3 1],transHash: 0x4ad5a1f9783f9dc497a5a16c27bb64, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:36:39.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 177"}
+{"level":"INFO","time":"2024-12-26 03:36:39.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第177期, winNum: [0 2 0],transHash: 0xf5607a9026411424cfd03cbd06e5e7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:39:39.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 178"}
+{"level":"INFO","time":"2024-12-26 03:39:39.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第178期, winNum: [1 0 2],transHash: 0xc182fd7141983c9707eaa0cb1a3638, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:42:39.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 179"}
+{"level":"INFO","time":"2024-12-26 03:42:39.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第179期, winNum: [2 3 1],transHash: 0xba6d06fee783708a2c727ef59a4707, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:45:40.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 180"}
+{"level":"INFO","time":"2024-12-26 03:45:40.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第180期, winNum: [2 0 0],transHash: 0x822e4674bbfa5a2c00f6b2f5f63230, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:48:40.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 181"}
+{"level":"INFO","time":"2024-12-26 03:48:40.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第181期, winNum: [0 0 0],transHash: 0x9d4930afca2668cc143e512e165da7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:51:41.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 182"}
+{"level":"INFO","time":"2024-12-26 03:51:41.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第182期, winNum: [0 3 2],transHash: 0x83223bc342546eb889fad3b6754df4, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:54:41.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 183"}
+{"level":"INFO","time":"2024-12-26 03:54:41.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第183期, winNum: [1 3 0],transHash: 0x57c1c6fee8349f0411e219ed312e4c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 03:57:41.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 184"}
+{"level":"INFO","time":"2024-12-26 03:57:41.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第184期, winNum: [1 3 2],transHash: 0xd6a49d1cee982a777f3405eb10ec5c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:00:41.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 185"}
+{"level":"INFO","time":"2024-12-26 04:00:41.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第185期, winNum: [0 0 1],transHash: 0x80d5a56617a26617db968689904e34, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:03:41.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 186"}
+{"level":"INFO","time":"2024-12-26 04:03:41.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第186期, winNum: [1 3 2],transHash: 0xed004525717bc1c9a6ca7ac643e535, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:06:42.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 187"}
+{"level":"INFO","time":"2024-12-26 04:06:42.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第187期, winNum: [1 0 1],transHash: 0xcd2141fe4ade36634646425b16bc13, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:09:43.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 188"}
+{"level":"INFO","time":"2024-12-26 04:09:43.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第188期, winNum: [2 2 2],transHash: 0x9969ebb151a9d15cc7df40854af68b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:12:43.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 189"}
+{"level":"INFO","time":"2024-12-26 04:12:43.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第189期, winNum: [2 0 1],transHash: 0x74f849e4b086ce59ddbc0240d37eeb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:15:44.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 190"}
+{"level":"INFO","time":"2024-12-26 04:15:44.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第190期, winNum: [2 3 2],transHash: 0xc2a02b47d40aebdbb7378a9ae11b83, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:18:44.937","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 191"}
+{"level":"INFO","time":"2024-12-26 04:18:44.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第191期, winNum: [1 1 2],transHash: 0xc0dff4c3b1ef8883d31ced3cc05e38, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:21:44.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 192"}
+{"level":"INFO","time":"2024-12-26 04:21:44.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第192期, winNum: [2 2 2],transHash: 0x8bf7a5696b31a305e353de747fa4fd, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:24:44.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 193"}
+{"level":"INFO","time":"2024-12-26 04:24:44.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第193期, winNum: [2 0 2],transHash: 0xaa31f38c22d48730cafe18f9803283, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:27:44.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 194"}
+{"level":"INFO","time":"2024-12-26 04:27:44.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第194期, winNum: [0 1 0],transHash: 0x77451683f6b85370b91115f4253c75, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:30:44.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 195"}
+{"level":"INFO","time":"2024-12-26 04:30:44.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第195期, winNum: [2 1 0],transHash: 0x8ccf067110af8b7052d2a38d3e369e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:33:45.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 196"}
+{"level":"INFO","time":"2024-12-26 04:33:45.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第196期, winNum: [0 1 0],transHash: 0xb8923cb070d87392bbe471b29b70c0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:36:45.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 197"}
+{"level":"INFO","time":"2024-12-26 04:36:45.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第197期, winNum: [0 0 1],transHash: 0x3078c366911b5c6d336d8760c0ff1c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:39:45.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 198"}
+{"level":"INFO","time":"2024-12-26 04:39:45.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第198期, winNum: [0 2 2],transHash: 0xc8961f6f880be4559ad7313542f698, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:42:45.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 199"}
+{"level":"INFO","time":"2024-12-26 04:42:45.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第199期, winNum: [0 1 0],transHash: 0xb19c7870fa9f54f9125ec0b3ca5342, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:45:45.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 200"}
+{"level":"INFO","time":"2024-12-26 04:45:45.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第200期, winNum: [0 2 1],transHash: 0xeb2851143521ec2446ba958bb1e6bb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:48:47.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 201"}
+{"level":"INFO","time":"2024-12-26 04:48:47.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第201期, winNum: [0 2 1],transHash: 0x89fab6dcbd48ea492fa4dc30bfb25e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:51:47.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 202"}
+{"level":"INFO","time":"2024-12-26 04:51:47.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第202期, winNum: [0 1 0],transHash: 0xf631e9cf77a51cc88f23cf00c9e8c1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:54:48.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 203"}
+{"level":"INFO","time":"2024-12-26 04:54:48.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第203期, winNum: [0 2 1],transHash: 0x2b0323d2b7e4518d49a711d8505f8d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 04:57:48.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 204"}
+{"level":"INFO","time":"2024-12-26 04:57:48.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第204期, winNum: [0 0 0],transHash: 0x098745a7f4f16f407684e30600e54a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:00:49.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 205"}
+{"level":"INFO","time":"2024-12-26 05:00:49.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第205期, winNum: [1 2 0],transHash: 0xa71ffd0466a14bd9316eeb1314f648, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:03:48.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 206"}
+{"level":"INFO","time":"2024-12-26 05:03:48.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第206期, winNum: [1 0 2],transHash: 0x69ca4effde744404ed28568c6a2bbd, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:06:49.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 207"}
+{"level":"INFO","time":"2024-12-26 05:06:49.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第207期, winNum: [1 2 0],transHash: 0x70e1f9b09dba6c656b55c6105e06e6, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:09:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 208"}
+{"level":"INFO","time":"2024-12-26 05:09:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第208期, winNum: [1 1 0],transHash: 0x8573ac24c27a4188604b52022e6190, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:12:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 209"}
+{"level":"INFO","time":"2024-12-26 05:12:50.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第209期, winNum: [2 2 0],transHash: 0x3e93d238829ab9fba07f4fec4543f0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:15:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 210"}
+{"level":"INFO","time":"2024-12-26 05:15:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第210期, winNum: [0 3 1],transHash: 0xfee0806a2d12458f360c899ca23f40, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:18:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 211"}
+{"level":"INFO","time":"2024-12-26 05:18:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第211期, winNum: [2 1 0],transHash: 0xfab87ffbbddd50efb5767d2c65763f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:21:50.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 212"}
+{"level":"INFO","time":"2024-12-26 05:21:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第212期, winNum: [0 1 0],transHash: 0x0573226cf38e8ca5e41fc885fdbd42, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:24:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 213"}
+{"level":"INFO","time":"2024-12-26 05:24:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第213期, winNum: [1 0 0],transHash: 0x11bb2dc6032357de18c822bc8a4aa5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:27:50.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 214"}
+{"level":"INFO","time":"2024-12-26 05:27:50.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第214期, winNum: [2 3 2],transHash: 0x337a4c7afeeaddf2a2c0f35b987f23, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:30:50.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 215"}
+{"level":"INFO","time":"2024-12-26 05:30:50.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第215期, winNum: [2 2 1],transHash: 0x4ea23511169396d1d2085e836c23a1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:33:50.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 216"}
+{"level":"INFO","time":"2024-12-26 05:33:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第216期, winNum: [1 2 1],transHash: 0x1172be5ff04de3a1c8f7ac0d90d40d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:36:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 217"}
+{"level":"INFO","time":"2024-12-26 05:36:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第217期, winNum: [1 2 0],transHash: 0x6b8c2d8fc955a2d6ab87062eb93ebd, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:39:50.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 218"}
+{"level":"INFO","time":"2024-12-26 05:39:50.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第218期, winNum: [2 0 0],transHash: 0x511a88685a32640ff746e776ac45e1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:42:50.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 219"}
+{"level":"INFO","time":"2024-12-26 05:42:50.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第219期, winNum: [2 2 0],transHash: 0x59339c354f74a65092bc6f230f42be, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:45:51.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 220"}
+{"level":"INFO","time":"2024-12-26 05:45:51.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第220期, winNum: [2 2 1],transHash: 0xed54eca245dce91c2e28a8dd006a91, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:48:51.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 221"}
+{"level":"INFO","time":"2024-12-26 05:48:51.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第221期, winNum: [1 2 2],transHash: 0xb208b8ab3700a282003fe28a2c1862, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:51:51.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 222"}
+{"level":"INFO","time":"2024-12-26 05:51:51.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第222期, winNum: [0 3 0],transHash: 0x84b3a06bfe8bee6c6564da5f0e3f69, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:54:51.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 223"}
+{"level":"INFO","time":"2024-12-26 05:54:51.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第223期, winNum: [1 1 0],transHash: 0x2fa2612251d7b1284818da19b37d93, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 05:57:51.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 224"}
+{"level":"INFO","time":"2024-12-26 05:57:51.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第224期, winNum: [2 2 0],transHash: 0xf4aea6c4cff0faccb20db6a1387809, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:00:51.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 225"}
+{"level":"INFO","time":"2024-12-26 06:00:51.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第225期, winNum: [0 0 1],transHash: 0x8c5e23285588997adf7dc91e22d431, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:03:51.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 226"}
+{"level":"INFO","time":"2024-12-26 06:03:51.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第226期, winNum: [1 3 0],transHash: 0xbcd3d8e707d1f77240d53d419ab0c9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:06:51.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 227"}
+{"level":"INFO","time":"2024-12-26 06:06:51.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第227期, winNum: [0 2 0],transHash: 0x8cc89f6750116751620c05fac0d90a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:09:52.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 228"}
+{"level":"INFO","time":"2024-12-26 06:09:52.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第228期, winNum: [0 1 1],transHash: 0x51bbb405e64f87f4eb502872c5fb40, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:12:52.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 229"}
+{"level":"INFO","time":"2024-12-26 06:12:52.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第229期, winNum: [0 3 2],transHash: 0x2ce3d27a35186e0797e27a316debe5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:15:53.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 230"}
+{"level":"INFO","time":"2024-12-26 06:15:53.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第230期, winNum: [1 2 0],transHash: 0xaecfe037322990eca14a24bb3c9460, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:18:53.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 231"}
+{"level":"INFO","time":"2024-12-26 06:18:53.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第231期, winNum: [2 3 2],transHash: 0xdbf104fad008c3b0a80385b97a98f9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:21:53.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 232"}
+{"level":"INFO","time":"2024-12-26 06:21:53.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第232期, winNum: [1 2 0],transHash: 0xf4490efedb8cda48cf699b71f02284, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:24:54.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 233"}
+{"level":"INFO","time":"2024-12-26 06:24:54.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第233期, winNum: [0 0 2],transHash: 0x51eb970bb8201e164868f7c96603f5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:27:54.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 234"}
+{"level":"INFO","time":"2024-12-26 06:27:54.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第234期, winNum: [1 3 2],transHash: 0x01ae7f23d854929e4b2e25e63ac50f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:30:54.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 235"}
+{"level":"INFO","time":"2024-12-26 06:30:54.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第235期, winNum: [2 3 2],transHash: 0xcbee4ae61f5641bd4e9429877751f7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:33:55.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 236"}
+{"level":"INFO","time":"2024-12-26 06:33:55.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第236期, winNum: [2 3 1],transHash: 0x8dd0955bc2f636f278ab6ff6559f76, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:36:56.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 237"}
+{"level":"INFO","time":"2024-12-26 06:36:56.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第237期, winNum: [2 3 1],transHash: 0x22e82c9f64394c9f6f068cc9d13a4e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:39:55.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 238"}
+{"level":"INFO","time":"2024-12-26 06:39:55.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第238期, winNum: [1 3 2],transHash: 0x7b013b9d7468daa6902552ac271ff7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:42:56.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 239"}
+{"level":"INFO","time":"2024-12-26 06:42:56.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第239期, winNum: [0 3 2],transHash: 0x377d431c82a2ce95bc576124883d14, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:45:56.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 240"}
+{"level":"INFO","time":"2024-12-26 06:45:56.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第240期, winNum: [1 2 1],transHash: 0x8286afb4ef916e548fe45407b39819, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:48:57.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 241"}
+{"level":"INFO","time":"2024-12-26 06:48:57.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第241期, winNum: [2 3 2],transHash: 0x126461374a02c3cd8469a10e87941a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:51:57.937","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 242"}
+{"level":"INFO","time":"2024-12-26 06:51:57.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第242期, winNum: [2 0 0],transHash: 0x3b3c8d265ddfba9cfa5a920eaec36b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:54:57.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 243"}
+{"level":"INFO","time":"2024-12-26 06:54:57.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第243期, winNum: [0 0 2],transHash: 0x5057eeb3c6f83656567c2f724d26fe, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 06:57:57.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 244"}
+{"level":"INFO","time":"2024-12-26 06:57:57.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第244期, winNum: [1 2 0],transHash: 0xb5bd3d4548e34274edf43e18611430, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:00:57.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 245"}
+{"level":"INFO","time":"2024-12-26 07:00:57.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第245期, winNum: [0 3 0],transHash: 0x7789151bae7b9876962a9dcc903196, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:03:57.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 246"}
+{"level":"INFO","time":"2024-12-26 07:03:57.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第246期, winNum: [1 0 1],transHash: 0x0be8fdef79cdad16391140f7976028, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:06:58.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 247"}
+{"level":"INFO","time":"2024-12-26 07:06:58.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第247期, winNum: [0 3 0],transHash: 0x13785781c62ec057ba5663e93d533a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:09:59.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 248"}
+{"level":"INFO","time":"2024-12-26 07:09:59.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第248期, winNum: [2 2 2],transHash: 0x947d680cc829ab6d01741eaf82b6dc, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:13:00.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 249"}
+{"level":"INFO","time":"2024-12-26 07:13:00.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第249期, winNum: [2 0 1],transHash: 0xc2d0c577e6a6cfee0194db42a06d4b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:16:00.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 250"}
+{"level":"INFO","time":"2024-12-26 07:16:00.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第250期, winNum: [2 0 0],transHash: 0xbd63d8e9c8d09c194567ec448a4f87, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:19:00.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 251"}
+{"level":"INFO","time":"2024-12-26 07:19:00.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第251期, winNum: [2 3 1],transHash: 0x4304ca4160e149dc367aee12681979, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:22:00.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 252"}
+{"level":"INFO","time":"2024-12-26 07:22:00.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第252期, winNum: [0 2 0],transHash: 0xa8b67e33e17479e66f41547ee81f8e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:25:01.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 253"}
+{"level":"INFO","time":"2024-12-26 07:25:01.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第253期, winNum: [2 1 2],transHash: 0x71f0e4f95d5dcb73d61c69a775d735, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:28:02.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 254"}
+{"level":"INFO","time":"2024-12-26 07:28:02.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第254期, winNum: [2 1 2],transHash: 0x4967619a2ed82df11c1f1e0ad54508, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:31:03.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 255"}
+{"level":"INFO","time":"2024-12-26 07:31:03.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第255期, winNum: [1 2 1],transHash: 0x0f7f92432da84142079e7fb6e68bb2, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:34:02.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 256"}
+{"level":"INFO","time":"2024-12-26 07:34:02.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第256期, winNum: [0 3 2],transHash: 0x9858cbb7e2aab54a10e4b18064753b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:37:03.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 257"}
+{"level":"INFO","time":"2024-12-26 07:37:03.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第257期, winNum: [1 3 1],transHash: 0x3d584c91b1b7afe6c3958f86376dfe, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:40:03.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 258"}
+{"level":"INFO","time":"2024-12-26 07:40:03.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第258期, winNum: [2 1 2],transHash: 0x0b39578021f410d5dc8e20a3c37c1d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:43:04.937","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 259"}
+{"level":"INFO","time":"2024-12-26 07:43:04.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第259期, winNum: [1 1 2],transHash: 0x879f06dd78d69886c680eee7ee1786, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:46:04.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 260"}
+{"level":"INFO","time":"2024-12-26 07:46:04.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第260期, winNum: [0 2 0],transHash: 0xd2b6843c75e093a3414fbdf09503f0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:49:04.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 261"}
+{"level":"INFO","time":"2024-12-26 07:49:04.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第261期, winNum: [0 3 0],transHash: 0x1af7085a5653a28b73f00693d5bb33, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:52:04.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 262"}
+{"level":"INFO","time":"2024-12-26 07:52:04.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第262期, winNum: [2 3 2],transHash: 0xf3385c64f4a665a3a4c3eb2474ee7f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:55:04.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 263"}
+{"level":"INFO","time":"2024-12-26 07:55:04.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第263期, winNum: [1 0 1],transHash: 0xcf3ba06afe7b8840bb084ab5408025, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 07:58:05.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 264"}
+{"level":"INFO","time":"2024-12-26 07:58:05.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第264期, winNum: [2 3 2],transHash: 0x504d4fd79d8050431fc3e8e0411947, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:01:05.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 265"}
+{"level":"INFO","time":"2024-12-26 08:01:05.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第265期, winNum: [1 2 0],transHash: 0x69a7cd4c8a097e190a041374cd221a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:04:05.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 266"}
+{"level":"INFO","time":"2024-12-26 08:04:05.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第266期, winNum: [0 0 2],transHash: 0x289482b783667839316abf6684ee26, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:07:05.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 267"}
+{"level":"INFO","time":"2024-12-26 08:07:05.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第267期, winNum: [2 0 1],transHash: 0x0e3241dcc460f83b47dc9e86d0e840, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:10:05.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 268"}
+{"level":"INFO","time":"2024-12-26 08:10:05.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第268期, winNum: [2 2 2],transHash: 0x7e7a7efcb1ef7579bd05baa664cf7a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:13:06.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 269"}
+{"level":"INFO","time":"2024-12-26 08:13:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第269期, winNum: [1 1 0],transHash: 0x604c37caaea1ab8a39cacfe4e2d524, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:16:06.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 270"}
+{"level":"INFO","time":"2024-12-26 08:16:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第270期, winNum: [0 1 0],transHash: 0x64f8b002f73225b56d46f579a3ee51, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:19:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 271"}
+{"level":"INFO","time":"2024-12-26 08:19:06.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第271期, winNum: [0 3 1],transHash: 0xd7388220e059f47416296d9d5acb94, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:22:06.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 272"}
+{"level":"INFO","time":"2024-12-26 08:22:06.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第272期, winNum: [0 3 2],transHash: 0x1d024a1840bcb0236a0a77e4ffbccc, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:25:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 273"}
+{"level":"INFO","time":"2024-12-26 08:25:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第273期, winNum: [0 1 2],transHash: 0xb7002a35a2ff0a826a3c4b25c38fa6, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:28:06.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 274"}
+{"level":"INFO","time":"2024-12-26 08:28:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第274期, winNum: [2 1 2],transHash: 0xe9caed473279955331b25ff057738e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:31:06.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 275"}
+{"level":"INFO","time":"2024-12-26 08:31:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第275期, winNum: [0 1 0],transHash: 0x7f048e6e0c310fbad77d200f29b8c1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:34:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 276"}
+{"level":"INFO","time":"2024-12-26 08:34:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第276期, winNum: [0 3 1],transHash: 0xa54c60586524bd14c2d3daf6072ba5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:37:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 277"}
+{"level":"INFO","time":"2024-12-26 08:37:06.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第277期, winNum: [2 3 2],transHash: 0xfd7998f6790e3f168b70317313beb2, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:40:06.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 278"}
+{"level":"INFO","time":"2024-12-26 08:40:06.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第278期, winNum: [1 1 1],transHash: 0x3902990c88a32d880d255d8ea182bf, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:43:07.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 279"}
+{"level":"INFO","time":"2024-12-26 08:43:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第279期, winNum: [1 3 1],transHash: 0x3648282354efff63d7fb170747d28b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:46:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 280"}
+{"level":"INFO","time":"2024-12-26 08:46:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第280期, winNum: [2 2 0],transHash: 0xe759cbcae5456bc7e0461415ecb481, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:49:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 281"}
+{"level":"INFO","time":"2024-12-26 08:49:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第281期, winNum: [0 2 1],transHash: 0xd3d4e436f850ea8938cbf12a24db9b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:52:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 282"}
+{"level":"INFO","time":"2024-12-26 08:52:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第282期, winNum: [1 2 2],transHash: 0x59393594edf5d96ce9dd4bd0854277, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:55:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 283"}
+{"level":"INFO","time":"2024-12-26 08:55:07.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第283期, winNum: [0 1 2],transHash: 0x5112d2d2f822ef28c3fbd1ff2c7711, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 08:58:07.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 284"}
+{"level":"INFO","time":"2024-12-26 08:58:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第284期, winNum: [1 1 1],transHash: 0x6d51108b63dc11aaf85d9441efc70e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:01:07.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 285"}
+{"level":"INFO","time":"2024-12-26 09:01:07.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第285期, winNum: [1 1 0],transHash: 0xfec920bde6644c7065410e49cedc27, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:04:08.937","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 286"}
+{"level":"INFO","time":"2024-12-26 09:04:08.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第286期, winNum: [2 0 2],transHash: 0x62e725c36f59fc2fdacfbbaff07b1f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:07:08.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 287"}
+{"level":"INFO","time":"2024-12-26 09:07:08.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第287期, winNum: [1 2 2],transHash: 0xb85a6627676ec63ecc2879b4e98f86, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:10:08.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 288"}
+{"level":"INFO","time":"2024-12-26 09:10:08.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第288期, winNum: [2 1 1],transHash: 0x81f3a0154b975540735279626d4982, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:13:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 289"}
+{"level":"INFO","time":"2024-12-26 09:13:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第289期, winNum: [2 1 1],transHash: 0x7097b758dedf6bd46051fe7df9ffd1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:16:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 290"}
+{"level":"INFO","time":"2024-12-26 09:16:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第290期, winNum: [2 0 1],transHash: 0x1d2749b7c5a6dc55019041ac6488ab, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:19:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 291"}
+{"level":"INFO","time":"2024-12-26 09:19:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第291期, winNum: [0 0 1],transHash: 0x5e75527a70c735d2972065412b94db, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:22:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 292"}
+{"level":"INFO","time":"2024-12-26 09:22:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第292期, winNum: [2 1 2],transHash: 0x35474e330749103ed0950d986ab165, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:25:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 293"}
+{"level":"INFO","time":"2024-12-26 09:25:09.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第293期, winNum: [0 2 0],transHash: 0x5f4901f5459957403d73b492546630, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:28:09.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 294"}
+{"level":"INFO","time":"2024-12-26 09:28:09.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第294期, winNum: [0 3 1],transHash: 0x5ed39a326b80e446c6a93a4e5273b4, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:31:10.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 295"}
+{"level":"INFO","time":"2024-12-26 09:31:10.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第295期, winNum: [2 3 2],transHash: 0x974cd8b1bc1722e7d8d5d3fa5c4741, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:34:10.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 296"}
+{"level":"INFO","time":"2024-12-26 09:34:10.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第296期, winNum: [0 2 2],transHash: 0x3a4a6c2bd96ed6ceac2bf57f5d7462, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:37:10.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 297"}
+{"level":"INFO","time":"2024-12-26 09:37:10.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第297期, winNum: [1 0 1],transHash: 0x28755f4aecebf640a65259faf634eb, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:40:12.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 298"}
+{"level":"INFO","time":"2024-12-26 09:40:12.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第298期, winNum: [2 1 1],transHash: 0x9991b8543d57233536dd50be0e9d61, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:43:13.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 299"}
+{"level":"INFO","time":"2024-12-26 09:43:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第299期, winNum: [1 2 1],transHash: 0x50ae27e276dbbe8f57b3ec41b07df3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:46:13.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 300"}
+{"level":"INFO","time":"2024-12-26 09:46:13.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第300期, winNum: [0 0 1],transHash: 0xb90157494261205d9a4ad493446da1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:49:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 301"}
+{"level":"INFO","time":"2024-12-26 09:49:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第301期, winNum: [1 0 0],transHash: 0x9334cd8deae90c2185985c54229218, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:52:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 302"}
+{"level":"INFO","time":"2024-12-26 09:52:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第302期, winNum: [2 2 1],transHash: 0x53eb6c0d9378431c42f59ae382264c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:55:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 303"}
+{"level":"INFO","time":"2024-12-26 09:55:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第303期, winNum: [1 1 0],transHash: 0xa005d6af45e586436448549c5a4aca, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 09:58:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 304"}
+{"level":"INFO","time":"2024-12-26 09:58:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第304期, winNum: [2 0 2],transHash: 0x5e14e189bdce1f358f94211ae5698e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:01:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 305"}
+{"level":"INFO","time":"2024-12-26 10:01:13.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第305期, winNum: [1 3 2],transHash: 0x1d6580a00efd806adffa2758a7a574, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:04:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 306"}
+{"level":"INFO","time":"2024-12-26 10:04:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第306期, winNum: [1 0 0],transHash: 0x80f5636086a6c005f04ebc1f20bca3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:07:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 307"}
+{"level":"INFO","time":"2024-12-26 10:07:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第307期, winNum: [1 1 0],transHash: 0xc90febf5c74fa0b11c7ffc061bd0e0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:10:13.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 308"}
+{"level":"INFO","time":"2024-12-26 10:10:13.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第308期, winNum: [0 1 0],transHash: 0x913dab1952ab4853b72f95d4c05a18, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:13:13.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 309"}
+{"level":"INFO","time":"2024-12-26 10:13:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第309期, winNum: [0 3 0],transHash: 0x58e55954f140ee8a62a7606a3c8727, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:16:13.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 310"}
+{"level":"INFO","time":"2024-12-26 10:16:13.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第310期, winNum: [1 2 2],transHash: 0x85cb06602b5e8f2b5d6497ad08adf0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:19:14.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 311"}
+{"level":"INFO","time":"2024-12-26 10:19:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第311期, winNum: [0 2 1],transHash: 0x8f0817a954c6af3f133d0c2bfac55c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:22:14.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 312"}
+{"level":"INFO","time":"2024-12-26 10:22:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第312期, winNum: [1 3 0],transHash: 0xe6f79fd6289d9cfcd5d0719b18372e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:25:14.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 313"}
+{"level":"INFO","time":"2024-12-26 10:25:14.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第313期, winNum: [1 1 1],transHash: 0x5ab84c11fa1d3c72b10e1c333d6cc7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:28:14.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 314"}
+{"level":"INFO","time":"2024-12-26 10:28:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第314期, winNum: [2 0 2],transHash: 0x03758388a2ff2a27f8a7205bd2b20f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:31:14.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 315"}
+{"level":"INFO","time":"2024-12-26 10:31:14.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第315期, winNum: [1 2 0],transHash: 0x02d5f1552270a8b8d6d6aabf3cdde9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:34:14.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 316"}
+{"level":"INFO","time":"2024-12-26 10:34:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第316期, winNum: [0 3 0],transHash: 0x4e09a6ae059b0f3e28ad3548e2a745, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:37:14.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 317"}
+{"level":"INFO","time":"2024-12-26 10:37:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第317期, winNum: [1 1 0],transHash: 0x7ff48169aab9d3a623d76432f563ef, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:40:14.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 318"}
+{"level":"INFO","time":"2024-12-26 10:40:14.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第318期, winNum: [2 3 0],transHash: 0xcc4a78e3c35fe76a995299e555d87a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:43:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 319"}
+{"level":"INFO","time":"2024-12-26 10:43:15.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第319期, winNum: [1 3 1],transHash: 0xc5f7db7d5ecdf8ce1dba66713758d8, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:46:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 320"}
+{"level":"INFO","time":"2024-12-26 10:46:15.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第320期, winNum: [2 1 0],transHash: 0x9f4d3c06f5f15f4f0684529496c6ff, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:49:15.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 321"}
+{"level":"INFO","time":"2024-12-26 10:49:15.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第321期, winNum: [2 3 2],transHash: 0x48d8fbbfe199ef0058e9750500368d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:52:16.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 322"}
+{"level":"INFO","time":"2024-12-26 10:52:16.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第322期, winNum: [1 3 2],transHash: 0x418d40c587d47a03ae394dda797c4d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:55:16.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 323"}
+{"level":"INFO","time":"2024-12-26 10:55:16.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第323期, winNum: [1 0 1],transHash: 0x877f0c40ac0ab69daeca55965cee5f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 10:58:17.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 324"}
+{"level":"INFO","time":"2024-12-26 10:58:17.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第324期, winNum: [1 1 0],transHash: 0xaaa1d6025e54e4ffd51837d137cd2e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:01:18.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 325"}
+{"level":"INFO","time":"2024-12-26 11:01:18.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第325期, winNum: [2 3 0],transHash: 0x5e86f6f8424a37a38dccc3895dcd30, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:04:18.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 326"}
+{"level":"INFO","time":"2024-12-26 11:04:18.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第326期, winNum: [1 1 2],transHash: 0xc8bdd378a07f6e0ae709d41dcca353, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:07:18.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 327"}
+{"level":"INFO","time":"2024-12-26 11:07:18.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第327期, winNum: [1 1 2],transHash: 0x284346bf103acb7e529a068865d9e5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:10:18.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 328"}
+{"level":"INFO","time":"2024-12-26 11:10:18.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第328期, winNum: [0 2 2],transHash: 0x431a33e41bd6b64f750ec6be2cfba3, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:13:19.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 329"}
+{"level":"INFO","time":"2024-12-26 11:13:19.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第329期, winNum: [2 1 1],transHash: 0x936e1e54a73436103f0d354bcd16a7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:16:19.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 330"}
+{"level":"INFO","time":"2024-12-26 11:16:19.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第330期, winNum: [2 3 1],transHash: 0x0a2e868045ab7d24f282bda6e5b967, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:19:18.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 331"}
+{"level":"INFO","time":"2024-12-26 11:19:18.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第331期, winNum: [2 3 0],transHash: 0xedf38c65f923d539e8cfd5c5c69aea, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:22:19.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 332"}
+{"level":"INFO","time":"2024-12-26 11:22:19.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第332期, winNum: [1 0 0],transHash: 0x9b2b824535110e74b8d50be826d496, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:25:20.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 333"}
+{"level":"INFO","time":"2024-12-26 11:25:20.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第333期, winNum: [2 0 0],transHash: 0xffa9c74be3b714859aba88837b251c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:28:20.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 334"}
+{"level":"INFO","time":"2024-12-26 11:28:20.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第334期, winNum: [0 0 1],transHash: 0x41006b848bda6eef079870dfb45c8e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:31:21.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 335"}
+{"level":"INFO","time":"2024-12-26 11:31:21.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第335期, winNum: [0 3 1],transHash: 0x88f145cb2d80a30f419100af129946, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:34:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 336"}
+{"level":"INFO","time":"2024-12-26 11:34:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第336期, winNum: [0 0 1],transHash: 0x686e92528cedf64c95263d72ad7d9c, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:37:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 337"}
+{"level":"INFO","time":"2024-12-26 11:37:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第337期, winNum: [1 3 1],transHash: 0xe2db6d8db1107f4b9e1fcc3c719df7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:40:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 338"}
+{"level":"INFO","time":"2024-12-26 11:40:21.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第338期, winNum: [1 1 1],transHash: 0x2d8e5fa4d33dc845524eef91658be5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:43:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 339"}
+{"level":"INFO","time":"2024-12-26 11:43:21.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第339期, winNum: [2 3 2],transHash: 0x0dffb88f860d8dbc62585ef3519d8a, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:46:21.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 340"}
+{"level":"INFO","time":"2024-12-26 11:46:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第340期, winNum: [1 2 2],transHash: 0x21893f230f26968c398d77a9f7e023, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:49:21.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 341"}
+{"level":"INFO","time":"2024-12-26 11:49:21.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第341期, winNum: [0 2 1],transHash: 0xe2f841cb51ce1a5912605ec02ca2fc, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:52:22.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 342"}
+{"level":"INFO","time":"2024-12-26 11:52:22.938","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第342期, winNum: [0 1 2],transHash: 0xca4b4744f8e96fa60758bb5b4e4cac, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:55:22.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 343"}
+{"level":"INFO","time":"2024-12-26 11:55:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第343期, winNum: [0 1 0],transHash: 0xff596e5c3e5081c2d644d873d51fdc, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 11:58:22.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 344"}
+{"level":"INFO","time":"2024-12-26 11:58:22.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第344期, winNum: [0 1 0],transHash: 0xab901c3b4aa8e85b48fc5417e7ebd5, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:01:23.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 345"}
+{"level":"INFO","time":"2024-12-26 12:01:23.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第345期, winNum: [0 2 2],transHash: 0x4c60cf1a629b5251c3eabb61a51883, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:04:24.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 346"}
+{"level":"INFO","time":"2024-12-26 12:04:24.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第346期, winNum: [1 3 2],transHash: 0x439b704110e0f8d9c0049e87ae7c4e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:07:24.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 347"}
+{"level":"INFO","time":"2024-12-26 12:07:24.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第347期, winNum: [1 1 0],transHash: 0x7805185e83c5d2cd8f2702ffd9b54b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:10:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 348"}
+{"level":"INFO","time":"2024-12-26 12:10:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第348期, winNum: [1 1 1],transHash: 0x5363ed572e5dbe1edb9bdf37014c9d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:13:25.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 349"}
+{"level":"INFO","time":"2024-12-26 12:13:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第349期, winNum: [1 1 0],transHash: 0xcfba4c11ca1200e532420c79f16509, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:16:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 350"}
+{"level":"INFO","time":"2024-12-26 12:16:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第350期, winNum: [0 3 1],transHash: 0xfa0a77be8958e4c9b3bd92bab755fa, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:19:25.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 351"}
+{"level":"INFO","time":"2024-12-26 12:19:25.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第351期, winNum: [0 2 0],transHash: 0x3c30869dac3ca7ed82342e128266ba, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:22:26.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 352"}
+{"level":"INFO","time":"2024-12-26 12:22:26.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第352期, winNum: [0 2 2],transHash: 0x09963aedbae05ec1ab9ba18ed22e71, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:25:26.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 353"}
+{"level":"INFO","time":"2024-12-26 12:25:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第353期, winNum: [1 2 2],transHash: 0xfb0b6c7923ece60d52de1162866a83, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:28:26.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 354"}
+{"level":"INFO","time":"2024-12-26 12:28:26.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第354期, winNum: [2 3 2],transHash: 0xf581c244d340db74c3063171a314d7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:31:26.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 355"}
+{"level":"INFO","time":"2024-12-26 12:31:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第355期, winNum: [2 2 0],transHash: 0x434334fd27ab6e3acc44fc01f47021, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:34:26.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 356"}
+{"level":"INFO","time":"2024-12-26 12:34:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第356期, winNum: [1 0 2],transHash: 0x903610dbca5e629c992ff2d2250408, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:37:26.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 357"}
+{"level":"INFO","time":"2024-12-26 12:37:26.941","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第357期, winNum: [2 0 0],transHash: 0x7f831a38e02c8dd220aeea6e0ddf78, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:40:26.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 358"}
+{"level":"INFO","time":"2024-12-26 12:40:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第358期, winNum: [1 3 0],transHash: 0x09df7179e6e903645b3a1d62315fba, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:43:26.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 359"}
+{"level":"INFO","time":"2024-12-26 12:43:26.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第359期, winNum: [2 1 2],transHash: 0xccf0eafee8f8650f390359829a0ee8, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:46:27.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 360"}
+{"level":"INFO","time":"2024-12-26 12:46:27.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第360期, winNum: [0 3 2],transHash: 0x0f33a70f6848a173eaad21197dbda4, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:49:27.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 361"}
+{"level":"INFO","time":"2024-12-26 12:49:27.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第361期, winNum: [0 0 0],transHash: 0x2edc0a193d16bc0a588f33d1c6a6c9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:52:28.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 362"}
+{"level":"INFO","time":"2024-12-26 12:52:28.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第362期, winNum: [0 3 2],transHash: 0x4c1b61c9d4c0d827d73d5c96127986, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:55:28.940","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 363"}
+{"level":"INFO","time":"2024-12-26 12:55:28.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第363期, winNum: [1 2 1],transHash: 0x98776e61a270e49d69b316c2cb6de7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 12:58:28.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 364"}
+{"level":"INFO","time":"2024-12-26 12:58:28.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第364期, winNum: [2 3 2],transHash: 0x24aae0a9a12da48f76faf53ea95ab9, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:01:28.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 365"}
+{"level":"INFO","time":"2024-12-26 13:01:28.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第365期, winNum: [0 3 2],transHash: 0xaf8ae620662eb84ddec3927037cb4b, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:04:28.938","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 366"}
+{"level":"INFO","time":"2024-12-26 13:04:28.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第366期, winNum: [2 1 0],transHash: 0x6035be047ba79ee8446ddac20b166e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:07:28.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 367"}
+{"level":"INFO","time":"2024-12-26 13:07:28.939","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第367期, winNum: [1 0 0],transHash: 0x4221a416f8747c5c3791574b376c42, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:10:29.939","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 368"}
+{"level":"INFO","time":"2024-12-26 13:10:29.940","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第368期, winNum: [1 3 2],transHash: 0xe0aecf6e2c60e3d1725e2540bf6780, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:13:39.584","caller":"handlers/login.go:185","msg":"登录成功, Account:7938939851, Token:bf22c16b-33e4-4614-be9c-d6cadd25b058, PlatForm:web"}
+{"level":"INFO","time":"2024-12-26 13:13:49.889","caller":"socket/server.go:60","msg":"[192.168.110.11:17444]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:14:55.486","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 1"}
+{"level":"INFO","time":"2024-12-26 13:14:55.612","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第1期, winNum: [1 2 1],transHash: 0xeeba1a0fe5df4b45ddb11047eb085f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:17:25.266","caller":"socket/server.go:60","msg":"[192.168.110.11:17482]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:20:09.542","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 4"}
+{"level":"INFO","time":"2024-12-26 13:20:09.543","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第4期, winNum: [2 3 2],transHash: 0xfd2dfe55062e5db1705e571b590e5e, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:22:04.122","caller":"socket/server.go:60","msg":"[192.168.110.11:17543]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:25:05.414","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 7"}
+{"level":"INFO","time":"2024-12-26 13:25:05.415","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第7期, winNum: [0 0 1],transHash: 0x53cbf232e8da0aa92a0d9318243cb1, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:28:05.413","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 8"}
+{"level":"INFO","time":"2024-12-26 13:28:05.415","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第8期, winNum: [2 0 2],transHash: 0xed92d531732feb713883bdfcd1602f, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:31:06.413","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 9"}
+{"level":"INFO","time":"2024-12-26 13:31:06.414","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第9期, winNum: [1 2 1],transHash: 0xdea74474184e35cff25770988023c7, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:33:59.421","caller":"socket/server.go:60","msg":"[192.168.110.11:17757]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:34:33.638","caller":"socket/server.go:60","msg":"[192.168.110.11:17772]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:36:07.302","caller":"socket/server.go:60","msg":"[192.168.110.11:17799]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:37:46.969","caller":"socket/server.go:60","msg":"[192.168.110.11:17826]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 13:39:55.467","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 14"}
+{"level":"INFO","time":"2024-12-26 13:39:55.468","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第14期, winNum: [1 1 1],transHash: 0xb326c75a601873e0b0cdc6a4e29c19, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:40:46.971","caller":"socket/server.go:132","msg":"[192.168.110.11:17826]连接断开"}
+{"level":"INFO","time":"2024-12-26 13:40:46.972","caller":"socket/server.go:99","msg":"[192.168.110.11:17826]连接断开\n"}
+{"level":"INFO","time":"2024-12-26 13:44:18.317","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 16"}
+{"level":"INFO","time":"2024-12-26 13:44:18.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第16期, winNum: [1 1 0],transHash: 0xa4d90774649b82b8fc8ac45d58c112, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:47:18.318","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 17"}
+{"level":"INFO","time":"2024-12-26 13:47:18.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第17期, winNum: [2 2 2],transHash: 0x9055bbfa96a0432a35a0a4a26aad8d, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:50:18.319","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 18"}
+{"level":"INFO","time":"2024-12-26 13:50:18.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第18期, winNum: [2 1 2],transHash: 0x0bfb153ec4f1e0d0216b8a5dace717, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:53:18.319","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 19"}
+{"level":"INFO","time":"2024-12-26 13:53:18.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第19期, winNum: [2 0 1],transHash: 0x0f78cb28f6c25dda6fb82d0ed1dde0, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:56:19.319","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 20"}
+{"level":"INFO","time":"2024-12-26 13:56:19.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第20期, winNum: [1 2 2],transHash: 0x67461e9d9c4822b709ff7b41469868, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 13:59:19.318","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 21"}
+{"level":"INFO","time":"2024-12-26 13:59:19.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第21期, winNum: [0 3 0],transHash: 0x53f0852b7d748e47178663e7c5eb57, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 14:02:20.319","caller":"redis/redis.go:315","msg":"Successfully removed bets for round 22"}
+{"level":"INFO","time":"2024-12-26 14:02:20.319","caller":"ladder/ladder_start.go:284","msg":"日志核对, 梯子第22期, winNum: [1 1 0],transHash: 0xbd7870361a34d04c7afd3a3ccba366, 本期直注总额:0,直注赔付额:0,直注历史反水比例:0.000000, 本期二串一总额0,二串一赔付额:0,二串一历史反水比例:0.000000"}
+{"level":"INFO","time":"2024-12-26 15:26:46.411","caller":"socket/server.go:60","msg":"[192.168.110.11:51438]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 15:27:07.631","caller":"socket/server.go:60","msg":"[192.168.110.11:51554]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 15:27:12.501","caller":"mongodb/db.go:1162","msg":"玩家7938939851 充值USDT, value:9000000, Decimals:6, 实际到账USDT:9.000000, 兑换游戏币:9000000,玩家旧余额:500000,新余额:9500000, 兑换券:90,玩家旧余额:0,新余额:90"}
+{"level":"INFO","time":"2024-12-26 15:59:57.406","caller":"socket/server.go:60","msg":"[192.168.110.11:60569]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 16:00:00.506","caller":"mongodb/db.go:1164","msg":"玩家7938939851 充值USDT, value:9000000, Decimals:6, 实际到账USDT:9.000000, 兑换游戏币:9000000,玩家旧余额:9500000,新余额:18500000, 兑换券:90,玩家旧余额:90,新余额:180"}
+{"level":"INFO","time":"2024-12-26 16:00:32.618","caller":"socket/server.go:60","msg":"[192.168.110.11:60734]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 16:01:53.245","caller":"handlers/login.go:185","msg":"登录成功, Account:7938939852, Token:82c50294-509f-4761-b9c2-12b9118fd269, PlatForm:web"}
+{"level":"INFO","time":"2024-12-26 16:01:58.946","caller":"socket/server.go:132","msg":"[192.168.110.11:60734]连接断开"}
+{"level":"INFO","time":"2024-12-26 16:01:58.947","caller":"socket/server.go:99","msg":"[192.168.110.11:60734]连接断开\n"}
+{"level":"INFO","time":"2024-12-26 16:02:01.468","caller":"socket/server.go:60","msg":"[192.168.110.11:61153]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 16:02:07.511","caller":"mongodb/db.go:1126","msg":"用户:7938939852 充值代理佣金有 上线 7938939851, 上线usdt: 36, 上上线用户: , 上上线usdt: 9"}
+{"level":"INFO","time":"2024-12-26 16:03:23.050","caller":"handlers/login.go:185","msg":"登录成功, Account:7938939852, Token:b8f4cb18-f209-49ea-a961-e43b113dd38a, PlatForm:web"}
+{"level":"INFO","time":"2024-12-26 16:03:31.781","caller":"socket/server.go:60","msg":"[192.168.110.11:61576]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 16:03:38.017","caller":"mongodb/db.go:1126","msg":"用户:7938939852 充值代理佣金有 上线 7938939851, 上线usdt: 36, 上上线用户: , 上上线usdt: 9"}
+{"level":"INFO","time":"2024-12-26 16:08:13.780","caller":"handlers/login.go:185","msg":"登录成功, Account:7938939853, Token:f17d9c39-2c83-4525-91d0-0594b1aaf1f6, PlatForm:web"}
+{"level":"INFO","time":"2024-12-26 16:08:21.559","caller":"socket/server.go:60","msg":"[192.168.110.11:62941]连接成功\n"}
+{"level":"INFO","time":"2024-12-26 16:08:30.437","caller":"mongodb/db.go:1126","msg":"用户:7938939853 充值代理佣金有 上线 7938939852, 上线usdt: 36, 上上线用户: 7938939851, 上上线usdt: 9"}
+{"level":"INFO","time":"2024-12-27 16:10:54.896","caller":"compete/start.go:255","msg":"日志核对, 拔河第1期, 获胜:a,num:22.251000,numA:5,numB:1, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 16:11:37.818","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第3期, 本期死亡赛道:1,transPrice:95690.210000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[410850000 0 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[369781500 0 0 0 0 0 0], 机器人总余额:74914481500, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 16:12:57.668","caller":"compete/start.go:255","msg":"日志核对, 拔河第3期, 获胜:a,num:15.462000,numA:6,numB:2, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 16:14:11.854","caller":"compete/start.go:255","msg":"日志核对, 拔河第5期, 获胜:a,num:20.131000,numA:3,numB:1, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 16:14:22.828","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第6期, 本期死亡赛道:2,transPrice:95907.870000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[146400000 299500000 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[121414800 248516100 0 0 0 0 0], 机器人总余额:74838512400, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 16:14:38.680","caller":"compete/start.go:255","msg":"日志核对, 拔河第6期, 获胜:b,num:9.909000,numA:0,numB:9, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 16:15:12.242","caller":"compete/start.go:255","msg":"日志核对, 拔河第7期, 获胜:a,num:5.588000,numA:8,numB:7, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 16:15:12.619","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第7期, 本期死亡赛道:1,transPrice:95922.360000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[114300000 113750000 226150000 0 0 0 0], 本期每轮赔付总额(包含机器人):[94785200 94331200 187642700 0 0 0 0], 机器人总余额:74761071500, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 17:38:50.892","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:f17a399f-b2ff-44e8-96b4-57fb440dd8b8, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 17:39:00.759","caller":"socket/server.go:60","msg":"[192.168.110.11:53511]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 17:39:06.008","caller":"compete/start.go:255","msg":"日志核对, 拔河第8期, 获胜:a,num:12.898000,numA:9,numB:8, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 17:39:25.470","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第8期, 本期死亡赛道:3,transPrice:96969.560000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[130800000 86500000 96450000 151400000 0 0 0], 本期每轮赔付总额(包含机器人):[108480400 71760800 94435000 125632000 0 0 0], 机器人总余额:74696229700, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 17:39:44.350","caller":"compete/start.go:255","msg":"日志核对, 拔河第9期, 获胜:b,num:5.240000,numA:3,numB:9, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 17:41:12.812","caller":"socket/server.go:60","msg":"[192.168.110.11:54217]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 17:41:39.102","caller":"compete/start.go:255","msg":"日志核对, 拔河第12期, 获胜:b,num:7.867000,numA:6,numB:7, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 17:41:59.100","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第11期, 本期死亡赛道:2,transPrice:97006.430000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[112750000 97250000 55200000 74250000 117750000 0 0], 本期每轮赔付总额(包含机器人):[93549750 80700000 45810250 61620750 97682000 0 0], 机器人总余额:74618392450, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 17:42:20.119","caller":"compete/start.go:255","msg":"日志核对, 拔河第13期, 获胜:a,num:3.776000,numA:7,numB:6, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 17:43:00.092","caller":"compete/start.go:255","msg":"日志核对, 拔河第14期, 获胜:b,num:5.620000,numA:1,numB:9, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 17:43:00.449","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第12期, 本期死亡赛道:4,transPrice:96902.320000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[129750000 74850000 70700000 29250000 48700000 85250000 0], 本期每轮赔付总额(包含机器人):[125892000 62092800 58637600 24276000 40392900 70737700 0], 机器人总余额:74561921450, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 17:43:39.187","caller":"compete/start.go:255","msg":"日志核对, 拔河第15期, 获胜:b,num:9.949000,numA:4,numB:8, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:53:00.859","caller":"compete/start.go:255","msg":"日志核对, 拔河第1期, 获胜:b,num:3.145000,numA:4,numB:5, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:53:22.600","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第1期, 本期死亡赛道:2,transPrice:96819.840000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[471100000 0 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[390704150 0 0 0 0 0 0], 机器人总余额:74919604150, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:53:22.627","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金75000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:74919604150, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:47418850, 木头人jackpot:32977000, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 19:53:42.108","caller":"compete/start.go:255","msg":"日志核对, 拔河第2期, 获胜:b,num:1.309000,numA:0,numB:9, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:53:59.460","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:b2eac5ae-cc92-4abe-b304-983168830d1d, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 19:54:07.113","caller":"socket/server.go:60","msg":"[192.168.110.11:27866]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 19:54:21.545","caller":"compete/start.go:255","msg":"日志核对, 拔河第3期, 获胜:b,num:1.605000,numA:0,numB:4, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:54:21.883","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第2期, 本期死亡赛道:2,transPrice:96781.200000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[128850000 324600000 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[106914000 269249550 0 0 0 0 0], 机器人总余额:74842317700, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:54:21.906","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金75000500000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:74842817700, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:92963800, 木头人jackpot:64718500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 19:55:13.470","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:a25bc4ae-904a-4c9d-bcaa-374f289b93de, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 19:55:19.582","caller":"socket/server.go:60","msg":"[192.168.110.11:28229]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 19:55:46.583","caller":"compete/start.go:255","msg":"日志核对, 拔河第1期, 获胜:a,num:5.365000,numA:6,numB:5, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:56:11.068","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第1期, 本期死亡赛道:1,transPrice:96837.340000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[453750000 0 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[376530000 0 0 0 0 0 0], 机器人总余额:74922780000, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:56:11.089","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金80000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:79922780000, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:45457500, 木头人jackpot:31762500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 19:56:12.162","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:45e89231-9923-4302-bf5f-093f57546378, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 19:56:26.204","caller":"compete/start.go:255","msg":"日志核对, 拔河第2期, 获胜:b,num:4.703000,numA:0,numB:2, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:56:37.442","caller":"socket/server.go:132","msg":"[192.168.110.11:28229]连接断开"}
+{"level":"INFO","time":"2024-12-27 19:56:37.444","caller":"socket/server.go:99","msg":"[192.168.110.11:28229]连接断开\n"}
+{"level":"INFO","time":"2024-12-27 19:56:39.767","caller":"socket/server.go:60","msg":"[192.168.110.11:28616]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 19:57:04.429","caller":"compete/start.go:255","msg":"日志核对, 拔河第3期, 获胜:b,num:4.809000,numA:0,numB:8, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:57:04.759","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第2期, 本期死亡赛道:3,transPrice:96807.530000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[120750000 322850000 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[100214000 267807600 0 0 0 0 0], 机器人总余额:74847201600, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:57:04.783","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金80000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:79847201600, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:89983900, 木头人jackpot:62814500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 19:57:32.594","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:4dd3658d-a92e-436d-939a-8f9a26c38550, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 19:57:38.280","caller":"socket/server.go:60","msg":"[192.168.110.11:28900]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 19:58:03.383","caller":"compete/start.go:255","msg":"日志核对, 拔河第1期, 获胜:a,num:6.232000,numA:3,numB:1, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:58:20.575","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第1期, 本期死亡赛道:2,transPrice:96845.500000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[463550000 0 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[384562500 0 0 0 0 0 0], 机器人总余额:74921012500, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:58:20.608","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金80000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:79921012500, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:46539000, 木头人jackpot:32448500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 19:58:55.035","caller":"handlers/login.go:185","msg":"登录成功, Account:5243341575, Token:09187b98-dad6-40c0-bf12-fcfa6b29bcbd, PlatForm:web"}
+{"level":"INFO","time":"2024-12-27 19:59:02.812","caller":"socket/server.go:60","msg":"[192.168.110.11:29341]连接成功\n"}
+{"level":"INFO","time":"2024-12-27 19:59:10.269","caller":"squid/squid.go:780","msg":"用户:5243341575, 游戏币/兑换券==>美分, 旧美分:1000000,兑换了:1100,新美分:1001100, 旧游戏币:5000000000,消耗了:11000000,新游戏币:4989000000, 旧券1000,消耗了:110,新券:890"}
+{"level":"INFO","time":"2024-12-27 19:59:26.257","caller":"compete/start.go:255","msg":"日志核对, 拔河第1期, 获胜:a,num:13.980000,numA:8,numB:0, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 19:59:45.870","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第1期, 本期死亡赛道:1,transPrice:96929.090000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[451150000 0 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[374451300 0 0 0 0 0 0], 机器人总余额:74923301300, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 19:59:45.891","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金80000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:79912301300, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:45118200, 木头人jackpot:31580500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}
+{"level":"INFO","time":"2024-12-27 20:00:06.726","caller":"compete/start.go:255","msg":"日志核对, 拔河第2期, 获胜:a,num:3.850000,numA:5,numB:0, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 20:00:37.905","caller":"mongodb/db.go:1222","msg":"用户:5243341575, 美分==>游戏币/兑换券, 旧美分:1001100,消耗了:1100,新美分:1000000, 旧游戏币:4989000000,兑换了:11000000,新游戏币:5000000000, 旧券:890,兑换了:110,新券:1000"}
+{"level":"INFO","time":"2024-12-27 20:00:46.536","caller":"compete/start.go:255","msg":"日志核对, 拔河第3期, 获胜:a,num:7.884000,numA:8,numB:4, 本期下注总额:0, 本期赔付总额:0, 历史反水比例:0.000000, 可赔付库存:0, 庄家抽水:0"}
+{"level":"INFO","time":"2024-12-27 20:00:46.833","caller":"squid/squid_start.go:380","msg":"日志核对, 木头人第2期, 本期死亡赛道:1,transPrice:96947.890000, 本期玩家每轮注额[0 0 0 0 0 0 0], 本期机器人每轮注额[117050000 336950000 0 0 0 0 0], 本期每轮赔付总额(包含机器人):[97105050 279589600 0 0 0 0 0], 机器人总余额:74845995950, jackpot领取人数:0,jackpot领取总额:0"}
+{"level":"INFO","time":"2024-12-27 20:00:46.856","caller":"mongodb/db.go:1705","msg":"木头人核对总账单成功,误差为:0, 初始资金80000000000, 邀请奖励0, 已领取cdk:0, 福利金:0, 余额:79845995950, 用户本轮未结算下注额之和:0, 未领取代理0, 首通池:0, 木头人玩家抽水:0, 木头人机器人抽水:90643550, 木头人jackpot:63360500, 梯子抽水:0, 梯子可赔付库存:0, 拔河抽水:0, 拔河可赔付库存:0"}

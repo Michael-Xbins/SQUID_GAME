@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pump_profit",
+    "name": "庄家盈利抽水值",
+    "desc": "庄家比例【千分比】",
+    "num_int": 30
+  },
+  {
+    "id": "price_one",
+    "name": "筹码1单价",
+    "desc": "投注单价",
+    "num_int": 100
+  },
+  {
+    "id": "price_two",
+    "name": "筹码2单价",
+    "desc": "投注单价",
+    "num_int": 1000
+  },
+  {
+    "id": "price_three",
+    "name": "筹码3单价",
+    "desc": "投注单价",
+    "num_int": 10000
+  },
+  {
+    "id": "price_four",
+    "name": "筹码4单价",
+    "desc": "投注单价",
+    "num_int": 50000
+  },
+  {
+    "id": "price_five",
+    "name": "筹码5单价",
+    "desc": "投注单价",
+    "num_int": 100000
+  },
+  {
+    "id": "open_time",
+    "name": "开盘时间",
+    "desc": "下注时间",
+    "num_int": 20
+  },
+  {
+    "id": "close_time",
+    "name": "封盘时间",
+    "desc": "封盘时间",
+    "num_int": 5
+  },
+  {
+    "id": "settlement_time",
+    "name": "结算时间",
+    "desc": "结算时间",
+    "num_int": 5
+  },
+  {
+    "id": "odds_a",
+    "name": "A队赔率",
+    "desc": "A队赔率",
+    "num_int": 2
+  },
+  {
+    "id": "odds_peace",
+    "name": "和局赔率",
+    "desc": "和局赔率",
+    "num_int": 9
+  },
+  {
+    "id": "odds_b",
+    "name": "B队赔率",
+    "desc": "B队赔率",
+    "num_int": 2
+  },
+  {
+    "id": "lim_a",
+    "name": "A队限红",
+    "desc": "A队限红",
+    "num_int": 10000
+  },
+  {
+    "id": "lim_peace",
+    "name": "和局限红",
+    "desc": "和局限红",
+    "num_int": 2222
+  },
+  {
+    "id": "lim_b",
+    "name": "B队限红",
+    "desc": "B队限红",
+    "num_int": 10000
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "pump_profit",
+    "name": "庄家盈利抽水值",
+    "desc": "庄家比例【千分比】",
+    "num_int": 30
+  },
+  {
+    "id": "price_one",
+    "name": "筹码1单价",
+    "desc": "投注单价",
+    "num_int": 100
+  },
+  {
+    "id": "price_two",
+    "name": "筹码2单价",
+    "desc": "投注单价",
+    "num_int": 1000
+  },
+  {
+    "id": "price_three",
+    "name": "筹码3单价",
+    "desc": "投注单价",
+    "num_int": 10000
+  },
+  {
+    "id": "price_four",
+    "name": "筹码4单价",
+    "desc": "投注单价",
+    "num_int": 50000
+  },
+  {
+    "id": "price_five",
+    "name": "筹码5单价",
+    "desc": "投注单价",
+    "num_int": 100000
+  },
+  {
+    "id": "open_time",
+    "name": "开盘时间",
+    "desc": "下注时间",
+    "num_int": 580
+  },
+  {
+    "id": "close_time",
+    "name": "封盘时间",
+    "desc": "封盘时间",
+    "num_int": 10
+  },
+  {
+    "id": "settlement_time",
+    "name": "结算时间",
+    "desc": "结算时间",
+    "num_int": 10
+  },
+  {
+    "id": "round_10",
+    "name": "第一轮【0】赔率",
+    "desc": "第一轮【0】赔率【千分比】",
+    "num_int": 2700
+  },
+  {
+    "id": "round_11",
+    "name": "第一轮【1】赔率",
+    "desc": "第一轮【1】赔率【千分比】",
+    "num_int": 2700
+  },
+  {
+    "id": "round_12",
+    "name": "第一轮【2】赔率",
+    "desc": "第一轮【2】赔率【千分比】",
+    "num_int": 2700
+  },
+  {
+    "id": "round_20",
+    "name": "第二轮【0】赔率",
+    "desc": "第二轮【0】赔率【千分比】",
+    "num_int": 3600
+  },
+  {
+    "id": "round_21",
+    "name": "第二轮【1】赔率",
+    "desc": "第二轮【1】赔率【千分比】",
+    "num_int": 3600
+  },
+  {
+    "id": "round_22",
+    "name": "第二轮【2】赔率",
+    "desc": "第二轮【2】赔率【千分比】",
+    "num_int": 3600
+  },
+  {
+    "id": "round_23",
+    "name": "第二轮【3】赔率",
+    "desc": "第二轮【3】赔率【千分比】",
+    "num_int": 3600
+  },
+  {
+    "id": "round_30",
+    "name": "第三轮【0】赔率",
+    "desc": "第三轮【0】赔率【千分比】",
+    "num_int": 2700
+  },
+  {
+    "id": "round_31",
+    "name": "第三轮【1】赔率",
+    "desc": "第三轮【1】赔率【千分比】",
+    "num_int": 2700
+  },
+  {
+    "id": "round_32",
+    "name": "第三轮【2】赔率",
+    "desc": "第三轮【2】赔率【千分比】",
+    "num_int": 2700
+  }
+]

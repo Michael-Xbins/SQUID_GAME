@@ -1,0 +1,142 @@
+[
+  {
+    "id": "withdrawal",
+    "name": "提现手续费",
+    "target": 0,
+    "desc": "扣除比例【千分比】",
+    "num_int": 0
+  },
+  {
+    "id": "cash_min",
+    "name": "提现最小额度",
+    "target": 0,
+    "desc": "美分为单位 ustd【数值分】",
+    "num_int": 1100
+  },
+  {
+    "id": "market",
+    "name": "交易行手续费",
+    "target": 0,
+    "desc": "交易行手续费【千分比】",
+    "num_int": 50
+  },
+  {
+    "id": "invite1",
+    "name": "Invite 1 friend",
+    "target": 1,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 100000
+  },
+  {
+    "id": "invite2",
+    "name": "Invite 3 friends",
+    "target": 3,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 300000
+  },
+  {
+    "id": "invite3",
+    "name": "Invite 5 friends",
+    "target": 5,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 600000
+  },
+  {
+    "id": "invite4",
+    "name": "Invite 10 friends",
+    "target": 10,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 1000000
+  },
+  {
+    "id": "invite5",
+    "name": "Invite 20 friends",
+    "target": 20,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 3000000
+  },
+  {
+    "id": "invite6",
+    "name": "Invite 30 friends",
+    "target": 30,
+    "desc": "分享成功赠送金币【数值分】",
+    "num_int": 5000000
+  },
+  {
+    "id": "exchange1",
+    "name": "",
+    "target": 0,
+    "desc": "cdk兑换百分比【分】",
+    "num_int": 1000
+  },
+  {
+    "id": "exchange2",
+    "name": "",
+    "target": 0,
+    "desc": "cdk兑换百分比【分】",
+    "num_int": 10000
+  },
+  {
+    "id": "exchange3",
+    "name": "",
+    "target": 0,
+    "desc": "cdk兑换百分比【分】",
+    "num_int": 100000
+  },
+  {
+    "id": "allocation",
+    "name": "闪兑汇率",
+    "target": 0,
+    "desc": "1 USDT = ？SQU【数值分】",
+    "num_int": 1000000
+  },
+  {
+    "id": "allocatioon",
+    "name": "闪兑汇率",
+    "target": 0,
+    "desc": "1 USDT = ？VOU【数值元】",
+    "num_int": 10
+  },
+  {
+    "id": "poor_num",
+    "name": "每次破产扶贫金额",
+    "target": 0,
+    "desc": "每次破产扶贫金额",
+    "num_int": 100000
+  },
+  {
+    "id": "poor_count",
+    "name": "每天扶贫最大次数",
+    "target": 0,
+    "desc": "每天扶贫最大次数",
+    "num_int": 3
+  },
+  {
+    "id": "poor_lim",
+    "name": "金额小于xx时触发扶贫",
+    "target": 0,
+    "desc": "金额小于xx时触发扶贫",
+    "num_int": 100000
+  },
+  {
+    "id": "usdt_sum",
+    "name": "充值代理佣金总比例",
+    "target": 0,
+    "desc": "充值代理佣金总比例【千分比】",
+    "num_int": 50
+  },
+  {
+    "id": "usdt_up",
+    "name": "上线份额",
+    "target": 0,
+    "desc": "上线份额【千分比】",
+    "num_int": 800
+  },
+  {
+    "id": "usdt_upup",
+    "name": "上上线份额",
+    "target": 0,
+    "desc": "上上线份额【千分比】",
+    "num_int": 200
+  }
+]

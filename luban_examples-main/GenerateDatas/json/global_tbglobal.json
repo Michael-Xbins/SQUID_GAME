@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "免费领取",
+    "desc": "免费领取奖励",
+    "num_string": "",
+    "num_int": 3000,
+    "num_int_list": []
+  },
+  {
+    "id": 2,
+    "name": "广告领取",
+    "desc": "广告领取奖励",
+    "num_string": "",
+    "num_int": 0,
+    "num_int_list": [
+      1000,
+      2000,
+      3000
+    ]
+  },
+  {
+    "id": 3,
+    "name": "破产金额",
+    "desc": "破产金额（<数量，视为破产）",
+    "num_string": "",
+    "num_int": 200,
+    "num_int_list": []
+  }
+]

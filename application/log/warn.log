@@ -1,0 +1,5 @@
+{"level":"WARN","time":"2024-12-27 12:01:57.952","caller":"ladder/ladder_start.go:180","msg":"梯子交易hash还没有生成出来, 期数:42"}
+{"level":"WARN","time":"2024-12-27 14:12:28.111","caller":"ladder/ladder_start.go:180","msg":"梯子交易hash还没有生成出来, 期数:45"}
+{"level":"WARN","time":"2024-12-27 15:16:45.001","caller":"ladder/ladder_start.go:180","msg":"梯子交易hash还没有生成出来, 期数:54"}
+{"level":"WARN","time":"2024-12-27 15:34:36.573","caller":"ladder/ladder_start.go:180","msg":"梯子交易hash还没有生成出来, 期数:59"}
+{"level":"WARN","time":"2024-12-27 15:48:21.883","caller":"ladder/ladder_start.go:180","msg":"梯子交易hash还没有生成出来, 期数:67"}

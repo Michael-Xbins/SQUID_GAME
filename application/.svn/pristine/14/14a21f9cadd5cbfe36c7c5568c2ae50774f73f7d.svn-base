@@ -1,0 +1,3 @@
+# 本机目录地址
+BACKEND_PATH=../../application/
+BACKEND_DATA_PATH=../Data/

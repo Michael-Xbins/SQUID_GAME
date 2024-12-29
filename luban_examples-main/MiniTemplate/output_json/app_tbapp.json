@@ -1,0 +1,65 @@
+[
+  {
+    "id": "withdrawal",
+    "name": "提现手续费",
+    "target": 0,
+    "desc": "扣除比例【千分比】",
+    "num_int": 20
+  },
+  {
+    "id": "acting0",
+    "name": "代理直属上线佣金分成",
+    "target": 0,
+    "desc": "佣金比例【千分比】",
+    "num_int": 800
+  },
+  {
+    "id": "acting1",
+    "name": "代理间接上线佣金分成",
+    "target": 0,
+    "desc": "佣金比例【千分比】",
+    "num_int": 200
+  },
+  {
+    "id": "invite1",
+    "name": "邀请1位好友",
+    "target": 1,
+    "desc": "分享成功赠送金币",
+    "num_int": 100
+  },
+  {
+    "id": "invite2",
+    "name": "邀请3位好友",
+    "target": 3,
+    "desc": "分享成功赠送金币",
+    "num_int": 300
+  },
+  {
+    "id": "invite3",
+    "name": "邀请5位好友",
+    "target": 5,
+    "desc": "分享成功赠送金币",
+    "num_int": 600
+  },
+  {
+    "id": "invite4",
+    "name": "邀请10位好友",
+    "target": 10,
+    "desc": "分享成功赠送金币",
+    "num_int": 1000
+  },
+  {
+    "id": "invite5",
+    "name": "邀请20位好友",
+    "target": 20,
+    "desc": "分享成功赠送金币",
+    "num_int": 3000
+  },
+  {
+    "id": "invite6",
+    "name": "邀请30位好友",
+    "target": 30,
+    "desc": "分享成功赠送金币",
+    "num_int": 5000
+  }
+]
