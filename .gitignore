@@ -1,3 +1,3 @@
    *.log
 /application/log/
-/application/data/
+/application/Data/
