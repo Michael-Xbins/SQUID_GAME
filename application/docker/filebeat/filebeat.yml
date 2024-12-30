@@ -2,7 +2,7 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /path/to/your/logs/*.log
+    - /usr/share/filebeat/log/*.log
 
 output.logstash:
   hosts: ["logstash:5000"]

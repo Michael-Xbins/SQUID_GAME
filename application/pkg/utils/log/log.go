@@ -1,6 +1,7 @@
 package log
 
 import (
+	"gopkg.in/natefinch/lumberjack.v2"
 	"os"
 	"path/filepath"
 	"time"
@@ -71,18 +72,26 @@ func InitConfig() {
 
 	// ---------------------------------------- 写入文件 ----------------------------------------
 	core := func(filename string) zapcore.Core {
-		file, err := os.OpenFile(filepath.Join(logDir, filename), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-		if err != nil {
-			panic(err)
+		lumberjackLog := &lumberjack.Logger{
+			Filename: filepath.Join(logDir, filename), // 日志文件的完整路径
+			MaxSize:  10,                              // 日志文件达到10MB后将进行分割
+			MaxAge:   30,                              // 保留分割文件的最长天数为30天
+			//MaxBackups: 5,                               // 只保留最新的5个分割文件
+			//Compress:   true,                            // 分割的旧文件将被压缩
 		}
-		return zapcore.NewCore(zapcore.NewJSONEncoder(encoderConfig), zapcore.AddSync(file), zap.NewAtomicLevelAt(level))
+		return zapcore.NewCore(
+			zapcore.NewJSONEncoder(encoderConfig),
+			zapcore.AddSync(lumberjackLog),
+			zap.NewAtomicLevelAt(level),
+		)
 	}
-	debugLogger = zap.New(core("debug"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
-	infoLogger = zap.New(core("info"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
-	warnLogger = zap.New(core("warn"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
-	errorLogger = zap.New(core("error"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
-	panicLogger = zap.New(core("panic"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
-	fatalLogger = zap.New(core("fatal"+".log"), zap.AddCaller(), zap.AddCallerSkip(1))
+
+	debugLogger = zap.New(core("debug.log"), zap.AddCaller(), zap.AddCallerSkip(1))
+	infoLogger = zap.New(core("info.log"), zap.AddCaller(), zap.AddCallerSkip(1))
+	warnLogger = zap.New(core("warn.log"), zap.AddCaller(), zap.AddCallerSkip(1))
+	errorLogger = zap.New(core("error.log"), zap.AddCaller(), zap.AddCallerSkip(1))
+	panicLogger = zap.New(core("panic.log"), zap.AddCaller(), zap.AddCallerSkip(1))
+	fatalLogger = zap.New(core("fatal.log"), zap.AddCaller(), zap.AddCallerSkip(1))
 }
 func customTimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 	enc.AppendString(t.Format("2006-01-02 15:04:05.000"))

@@ -55,6 +55,7 @@ services:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ../log:/usr/share/filebeat/log:ro
     depends_on:
       - logstash
     command: filebeat -e -strict.perms=false

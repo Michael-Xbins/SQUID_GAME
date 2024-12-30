@@ -1,9 +1,9 @@
 common:
-  env: produce  # 可选值: develop, test, produce (内网本地服, 外网测试服, 正式服)
+  env: test  # 可选值: develop, test, produce (内网本地服, 外网测试服, 正式服)
   port: 8082
   log:
     #Debug、Info、Warn、Error、Fatal、Panic
-    logLevel: 'Debug'
+    logLevel: 'Info'
   redis:
     host: 127.0.0.1
     port: 6379
