@@ -33,6 +33,16 @@ enum MessageType {
 
   RechargeNotify_           = 20;//充值状态
   CloseConnNotify_          = 21;//断开客户端连接
+
+  TradeRecordNotify_ = 22;//交易记录通知(每分钟成交的平均值)
+  BuyOrderNotify_ = 23;//购买下单通知(增量)
+  SellOrderNotify_ = 24;//出售下单通知(增量)
+  BuyOrderListNotify_ = 25;//购买下单通知(全量) top 5 时间排序
+  SellOrderListNotify_ = 26;//出售下单通知(全量) top 5 时间排序
+  BuySuccessNotify_ = 27;//撮合购买成功通知
+  SellSuccessNotify_ = 28;//撮合出售成功通知
+  CloseMarketNotify_ = 29;//关闭市场通知
+  OpenMarketNotify_ = 30;//开启市场通知
 }
 
 message ClientRequest{
@@ -71,6 +81,16 @@ message ClientResponse {
 
     RechargeNotify rechargeNotify = 21;
     CloseConnNotify closeConnNotify = 22;
+
+    TradeRecordNotify tradeRecordNotify = 23;
+    BuyOrderNotify buyOrderNotify = 24;
+    SellOrderNotify sellOrderNotify = 25;
+    BuyOrderListNotify buyOrderListNotify = 26;
+    SellOrderListNotify sellOrderListNotify = 27;
+    BuySuccessNotify buySuccessNotify = 28;
+    SellSuccessNotify sellSuccessNotify = 29;
+    CloseMarketNotify closeMarketNotify = 30;
+    OpenMarketNotify openMarketNotify = 31;
   }
 }
 
@@ -216,4 +236,58 @@ message RechargeNotify {
 }
 
 message CloseConnNotify {
+}
+
+message TradeRecordNotify {
+  int64 timestamp = 1;
+  int64 avgPrice = 2;
+}
+
+message BuyOrderNotify {
+  BuyOrderInfo buyOrderInfo = 1;
+}
+
+message SellOrderNotify {
+  SellOrderInfo sellOrderInfo = 1;
+}
+
+message BuyOrderInfo {
+  string id = 1;
+  int64 count = 2;
+  int64 price = 3;
+}
+
+message SellOrderInfo {
+  string id = 1;
+  int64 count = 2;
+  int64 price = 3;
+}
+
+message BuyOrderListNotify {
+  repeated BuyOrderInfo buyOrderInfo = 1;
+}
+
+message SellOrderListNotify {
+  repeated SellOrderInfo sellOrderInfo = 1;
+}
+
+message BuySuccessNotify {
+  int64 count = 1;
+  int64 price = 2;
+  int64 voucher = 3;
+  int64 balance = 4;
+}
+
+message SellSuccessNotify {
+  int64 count = 1;
+  int64 price = 2;
+  int64 voucher = 3;
+  int64 balance = 4;
+}
+
+message CloseMarketNotify {
+}
+
+message OpenMarketNotify {
+  int64 closePrice = 1;
 }

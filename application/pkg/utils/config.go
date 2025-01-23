@@ -23,9 +23,9 @@ var (
 	Produce       = "produce"
 	NetworkTRC20  = "TRC20"
 	NetworkTON    = "TON"
-	InitBalance   = int64(500000) //临时
-	InitUSDT      = int64(0)      //临时 (美分为单位)
-	InitVoucher   = int64(0)      //临时
+	InitBalance   = int64(500000)
+	InitUSDT      = int64(0)
+	InitVoucher   = int64(0)
 )
 
 func init() {

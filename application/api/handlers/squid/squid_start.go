@@ -87,17 +87,15 @@ func startSquid() {
 				}
 
 				// 停服处理, 不允许下单
-				//if viper.GetBool("common.stopGame") {
-				//	if e := mongodb.Update(context.Background(), game, nil); e != nil {
-				//		log.Error(e)
-				//	}
-				//	//go mongodb.Check(mongodb.SquidType) // 临时, 核对总账单, 总出口 == 总入口
-				//	log.Info("正在停服, 木头人停止服务")
-				//	for viper.GetBool("common.stopGame") {
-				//		time.Sleep(3 * time.Second)
-				//	}
-				//}
-
+				if viper.GetBool("common.stopGame") {
+					if e := mongodb.Update(context.Background(), game, nil); e != nil {
+						log.Error(e)
+					}
+					log.Info("正在停服, 木头人停止服务")
+					for viper.GetBool("common.stopGame") {
+						time.Sleep(3 * time.Second)
+					}
+				}
 			}
 		}
 
@@ -139,7 +137,7 @@ func squidOpen(game *squid.Game, timestamp int64) error {
 	})
 
 	hasRobot := viper.GetBool("common.has_robot")
-	if hasRobot {
+	if hasRobot && !viper.GetBool("common.stopGame") {
 		if err := RobotOrder(game); err != nil {
 			log.Error("RobotOrder error: ", err)
 		}

@@ -11,6 +11,7 @@ import (
 	"application/session"
 	"context"
 	"github.com/google/uuid"
+	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"math"
 	"time"
@@ -73,6 +74,17 @@ func EventLoop() {
 				}
 				if len(game.CurRound.Orders) > 0 {
 					hasUser = true
+				}
+
+				// 停服处理, 不允许下单
+				if viper.GetBool("common.stopGame") {
+					if e := mongodb.Update(context.Background(), game, nil); e != nil {
+						log.Error(e)
+					}
+					log.Info("正在停服, 拔河停止服务")
+					for viper.GetBool("common.stopGame") {
+						time.Sleep(3 * time.Second)
+					}
 				}
 			}
 		}

@@ -2,24 +2,29 @@ package mongodb
 
 import (
 	"application/api/presenter"
+	"application/api/presenter/auction"
 	"application/api/presenter/compete"
 	"application/api/presenter/glass"
 	"application/api/presenter/ladder"
 	rechargedb "application/api/presenter/recharge"
 	"application/api/presenter/squid"
+	"application/api/presenter/web"
+	pb "application/pkg/proto/danmu/message"
 	"application/pkg/utils"
 	"application/pkg/utils/log"
 	"application/wallet"
 	"context"
 	"errors"
 	"fmt"
+	"math/big"
+	"reflect"
+	"time"
+
 	"github.com/spf13/viper"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"math/big"
-	"reflect"
-	"time"
+	"go.uber.org/zap"
 )
 
 var mongoInstance *mongo.Client
@@ -83,6 +88,9 @@ func initializeData(ctx context.Context) error {
 	}
 
 	if err := ensureDocumentExists(ctx, &rechargedb.Fund{Id: 0}); err != nil {
+		return err
+	}
+	if err := ensureDocumentExists(ctx, &auction.Game{Id: 0}); err != nil {
 		return err
 	}
 	//创建机器人
@@ -170,6 +178,246 @@ func Delete(ctx context.Context, data DataStandard) error {
 	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(data.TableName())
 	_, err := collection.DeleteOne(ctx, bson.M{"_id": data.PrimaryId()})
 	return err
+}
+
+func DeleteOldOrders(ctx context.Context, days int32) (int64, error) {
+	// 假设 mongoInstance 是一个全局的 *mongo.Client 实例
+	historyList := &auction.HistoryList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(historyList.TableName())
+
+	// 获取当前时间
+	now := time.Now()
+	// 计算30天前的日期
+	cutoffDate := now.AddDate(0, 0, -int(days))
+
+	// 创建删除过滤器
+	filter := bson.M{
+		"timestamp": bson.M{"$lt": cutoffDate}, // 删除 orderDate 早于 cutoffDate 的订单
+	}
+
+	// 执行删除操作
+	deleteResult, err := collection.DeleteMany(ctx, filter)
+	if err != nil {
+		return 0, err
+	}
+
+	// 返回被删除的文档数量
+	return deleteResult.DeletedCount, nil
+}
+
+func GetOrderHistoryByDate(ctx context.Context, account string, day int32) ([]*auction.HistoryList, error) {
+	historyList := &auction.HistoryList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(historyList.TableName())
+	now := time.Now()
+	// 计算截止日期
+	endDate := now.AddDate(0, 0, -int(day)) // 注意这里用的是负数来向后计算
+	endDateMillis := endDate.UnixNano() / 1e6
+	// 创建查询过滤器
+	filter := bson.M{
+		"account":   account,
+		"timestamp": bson.M{"$gte": endDateMillis},
+	}
+	cursor, err := collection.Find(ctx, filter)
+	if err != nil {
+		return nil, err
+	}
+	var list []*auction.HistoryList
+	if err = cursor.All(ctx, &list); err != nil {
+		return nil, err
+	}
+	return list, nil
+}
+
+func GetBuyOrderWithMaxPrice(ctx context.Context) (*auction.BuyOrderList, error) {
+	buyOrderList := &auction.BuyOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+
+	// 创建排序选项，按 price 降序排列
+	sortOptions := options.FindOne().SetSort(bson.D{{Key: "price", Value: -1}})
+
+	// 执行查询，只返回一条结果
+	var result auction.BuyOrderList
+	err := collection.FindOne(ctx, bson.M{}, sortOptions).Decode(&result)
+	if err != nil {
+		return nil, err
+	}
+	return &result, err
+}
+
+func GetSellOrderWithMaxPrice(ctx context.Context) (*auction.SellOrderList, error) {
+	buyOrderList := &auction.SellOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+
+	// 创建排序选项，按 price 降序排列
+	sortOptions := options.FindOne().SetSort(bson.D{{Key: "price", Value: 1}})
+
+	// 执行查询，只返回一条结果
+	var result auction.SellOrderList
+	err := collection.FindOne(ctx, bson.M{}, sortOptions).Decode(&result)
+	if err != nil {
+		return nil, err
+	}
+	return &result, err
+}
+
+func GetBuyOrderListByAccount(ctx context.Context, account string) ([]*auction.BuyOrderList, error) {
+	buyOrderList := &auction.BuyOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+	cursor, err := collection.Find(ctx, bson.M{"account": account})
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+	var list []*auction.BuyOrderList
+	if err = cursor.All(ctx, &list); err != nil {
+		return nil, err
+	}
+	return list, nil
+}
+
+func GetSellOrderListByAccount(ctx context.Context, account string) ([]*auction.SellOrderList, error) {
+	sellOrderList := &auction.SellOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(sellOrderList.TableName())
+	cursor, err := collection.Find(ctx, bson.M{"account": account})
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+	var list []*auction.SellOrderList
+	if err = cursor.All(ctx, &list); err != nil {
+		return nil, err
+	}
+	return list, nil
+}
+func GetTop5SellOrderList(ctx context.Context) ([]*pb.SellOrderInfo, error) {
+	buyOrderList := &auction.SellOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+	// 创建排序和限制选项
+	findOptions := options.Find()
+	//findOptions.SetSort(bson.D{{Key: "timestamp", Value: -1}})                          // 按 timestamp 降序排列
+	findOptions.SetSort(bson.D{{Key: "price", Value: 1}, {Key: "timestamp", Value: 1}}) // 价格升序，时间升序
+	findOptions.SetLimit(5)                                                             // 限制结果数量为 5
+
+	// 执行查询
+	cursor, err := collection.Find(ctx, bson.M{}, findOptions)
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+
+	// 解码结果到切片中
+	var results []*auction.SellOrderList
+	for cursor.Next(ctx) {
+		var sellOrderList auction.SellOrderList
+		err := cursor.Decode(&sellOrderList)
+		if err != nil {
+			return nil, err
+		}
+		results = append(results, &sellOrderList)
+	}
+	if err := cursor.Err(); err != nil {
+		return nil, err
+	}
+	var sellOrderInfo []*pb.SellOrderInfo
+	if len(results) > 0 {
+		for _, v := range results {
+			sellOrderInfo = append(sellOrderInfo, &pb.SellOrderInfo{
+				Id:    v.Id,
+				Count: v.TotalCount - v.CompletedCount,
+				Price: v.Price,
+			})
+		}
+	}
+	return sellOrderInfo, nil
+}
+func GetTop5BuyOrderList(ctx context.Context) ([]*pb.BuyOrderInfo, error) {
+	buyOrderList := &auction.BuyOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+	// 创建排序和限制选项
+	findOptions := options.Find()
+	//findOptions.SetSort(bson.D{{Key: "timestamp", Value: -1}}) // 按 timestamp 降序排列
+	findOptions.SetSort(bson.D{{Key: "price", Value: -1}, {Key: "timestamp", Value: 1}}) // 价格升序，时间升序
+	findOptions.SetLimit(5)                                                              // 限制结果数量为 5
+
+	// 执行查询
+	cursor, err := collection.Find(ctx, bson.M{}, findOptions)
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+
+	// 解码结果到切片中
+	var results []*auction.BuyOrderList
+	for cursor.Next(ctx) {
+		var buyOrder auction.BuyOrderList
+		err := cursor.Decode(&buyOrder)
+		if err != nil {
+			return nil, err
+		}
+		results = append(results, &buyOrder)
+	}
+	if err := cursor.Err(); err != nil {
+		return nil, err
+	}
+	var buyOrderInfo []*pb.BuyOrderInfo
+
+	if len(results) > 0 {
+		for _, v := range results {
+			buyOrderInfo = append(buyOrderInfo, &pb.BuyOrderInfo{
+				Id:    v.Id,
+				Count: v.TotalCount - v.CompletedCount,
+				Price: v.Price,
+			})
+		}
+	}
+	return buyOrderInfo, nil
+}
+
+func FindAllBuyOrders() ([]auction.BuyOrderList, error) {
+	buyOrderList := &auction.BuyOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(buyOrderList.TableName())
+	// 创建一个空的查询条件，表示查询所有文档
+	filter := bson.D{{}}
+	cur, err := collection.Find(context.TODO(), filter)
+	if err != nil {
+		return nil, err
+	}
+	defer cur.Close(context.TODO())
+	var orders []auction.BuyOrderList
+	for cur.Next(context.TODO()) {
+		var order auction.BuyOrderList
+		if err := cur.Decode(&order); err != nil {
+			return nil, err
+		}
+		orders = append(orders, order)
+	}
+	if err := cur.Err(); err != nil {
+		return nil, err
+	}
+	return orders, nil
+}
+func FindAllSellOrders() ([]auction.SellOrderList, error) {
+	sellOrderList := &auction.SellOrderList{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(sellOrderList.TableName())
+	// 创建一个空的查询条件，表示查询所有文档
+	filter := bson.D{{}}
+	cur, err := collection.Find(context.TODO(), filter)
+	if err != nil {
+		return nil, err
+	}
+	defer cur.Close(context.TODO())
+	var orders []auction.SellOrderList
+	for cur.Next(context.TODO()) {
+		var order auction.SellOrderList
+		if err := cur.Decode(&order); err != nil {
+			return nil, err
+		}
+		orders = append(orders, order)
+	}
+	if err := cur.Err(); err != nil {
+		return nil, err
+	}
+	return orders, nil
 }
 
 func GetAllRobots(ctx context.Context) ([]*presenter.UserInfo, error) {
@@ -290,10 +538,24 @@ func transferAgentDetail(agentDetail *presenter.AgentDetail, userInfo *presenter
 }
 
 func TransferUsdtAgent(userInfo *presenter.UserInfo) {
+	oldUsdt := userInfo.USDT
 	unclaimed := userInfo.UsdtAgent.Unclaimed
 	userInfo.UsdtAgent.Claimed += unclaimed // 将未领取的佣金转移到已领取佣金
 	AddUSDT(userInfo, unclaimed)            // 更新用户余额
 	userInfo.UsdtAgent.Unclaimed = 0        // 重置未领取佣金为0
+
+	// UsdtFlow埋点
+	log.InfoJson("USDT入口",
+		zap.String("Account", userInfo.Account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.UsdtFlow),
+		zap.String("From", log.FromAgent),
+		zap.String("Flag", log.FlagIn),
+		zap.Int64("Amount", unclaimed),
+		zap.Int64("Old", oldUsdt),
+		zap.Int64("New", userInfo.USDT),
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
 }
 
 func UpdateUserinfo(userInfo *presenter.UserInfo) {
@@ -328,6 +590,11 @@ func UpdateUserinfo(userInfo *presenter.UserInfo) {
 		times := utils.LubanTables.TBApp.Get("poor_count").NumInt
 		userInfo.Welfare.Times = times
 		userInfo.Welfare.LastDate = today
+		needUpdate = true
+	}
+	if today != userInfo.DailyTask.LastDate {
+		userInfo.DailyTask.LastDate = today
+		userInfo.DailyTask.Tasks = make(map[int32]*presenter.TaskDetail)
 		needUpdate = true
 	}
 	if needUpdate {
@@ -410,11 +677,36 @@ func SquidNextRound(userInfo *presenter.UserInfo) {
 		userInfo.Squid.Track = 0
 		userInfo.Squid.BetPrices = 0
 		userInfo.Squid.CanJackpot = true
+		UpdateDailyTaskProgress(2, userInfo, squid.TotalRounds)
 	} else {
 		userInfo.Squid.RoundId += 1
 		userInfo.Squid.Track = 0
 		userInfo.Squid.BetPrices = 0
 		userInfo.Squid.CanJackpot = false
+		UpdateDailyTaskProgress(2, userInfo, userInfo.Squid.RoundId)
+	}
+}
+
+func UpdateDailyTaskProgress(taskType int32, userInfo *presenter.UserInfo, progress int32) {
+	if !userInfo.IsRobot {
+		if taskType == 2 {
+			// 直接设置特定任务的进度
+			updateTask(userInfo, taskType, progress, false)
+		} else {
+			// 递增任务进度
+			updateTask(userInfo, taskType, 1, true)
+		}
+	}
+}
+func updateTask(userInfo *presenter.UserInfo, taskType int32, progress int32, increment bool) {
+	if taskDetail, ok := userInfo.DailyTask.Tasks[taskType]; ok {
+		if increment {
+			taskDetail.Progress += progress
+		} else {
+			taskDetail.Progress = max(taskDetail.Progress, progress)
+		}
+	} else {
+		userInfo.DailyTask.Tasks[taskType] = &presenter.TaskDetail{Progress: progress}
 	}
 }
 
@@ -580,10 +872,23 @@ func SquidDailyFirstPass(userInfo *presenter.UserInfo) {
 	if userInfo.Squid.FirstPass.LastFirstPassDate == today {
 		return // 今天已经领取过
 	}
+	oldBalance := userInfo.Balance
+	AddAmount(userInfo, userInfo.Squid.FirstPass.Pool)
 	if !userInfo.IsRobot {
 		log.Debugf("领取firstpass, user: %v, 上次领取时间: %v, 奖金池: %v", userInfo.Account, userInfo.Squid.FirstPass.LastFirstPassDate, userInfo.Squid.FirstPass.Pool)
+		// coinFlow埋点
+		log.InfoJson("金币入口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.CoinFlow),
+			zap.String("From", log.FromFirstPass),
+			zap.String("Flag", log.FlagIn),
+			zap.Int64("Amount", userInfo.Squid.FirstPass.Pool), //兑换了
+			zap.Int64("Old", oldBalance),                       //旧游戏币
+			zap.Int64("New", userInfo.Balance),                 //新游戏币
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
 	}
-	AddAmount(userInfo, userInfo.Squid.FirstPass.Pool)
 	userInfo.Squid.FirstPass.Pool = 0
 	userInfo.Squid.FirstPass.LastFirstPassDate = today
 }
@@ -729,6 +1034,31 @@ func FindAllLotteries(ctx context.Context) ([]*glass.Lottery, error) {
 		return nil, err
 	}
 	return lotteries, nil
+}
+
+func FindAllBatchCdk(ctx context.Context) ([]*presenter.BatchCdk, error) {
+	batchCdk := &presenter.BatchCdk{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(batchCdk.TableName())
+	opts := options.Find().SetSort(bson.D{{"timestamp", -1}}) // Sorting by timestamp descending
+	filter := bson.M{"_id": bson.M{"$ne": batchCdk.TableName()}}
+	cursor, err := collection.Find(ctx, filter, opts)
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+
+	var batchCdks []*presenter.BatchCdk
+	for cursor.Next(ctx) {
+		var batchCdk presenter.BatchCdk // 创建新的实例
+		if err := cursor.Decode(&batchCdk); err != nil {
+			return nil, err
+		}
+		batchCdks = append(batchCdks, &batchCdk)
+	}
+	if err := cursor.Err(); err != nil {
+		return nil, err
+	}
+	return batchCdks, nil
 }
 
 func AddGlassHouseCut(fund *glass.Fund, value int64) {
@@ -1061,11 +1391,11 @@ func IsTransactionProcessed(ctx context.Context, transactionID string) bool {
 	return count > 0
 }
 
-func RechargeUsdt(account string, value string, decimals int) (int64, int64, error) {
+func RechargeUsdt(account string, value string, decimals int) (int64, int64, int64, error) {
 	// 计算实际的代币数量
 	valueBigInt, ok := new(big.Int).SetString(value, 10)
 	if !ok {
-		return 0, 0, errors.New("error converting value to big.Int")
+		return 0, 0, 0, errors.New("error converting value to big.Int")
 	}
 	decimalsBigInt := new(big.Int).Exp(big.NewInt(10), big.NewInt(int64(decimals)), nil) // 计算10的decimals次方
 	actualValue := new(big.Float).Quo(new(big.Float).SetInt(valueBigInt), new(big.Float).SetInt(decimalsBigInt))
@@ -1083,14 +1413,14 @@ func RechargeUsdt(account string, value string, decimals int) (int64, int64, err
 	userInfo := &presenter.UserInfo{}
 	if err := Find(context.Background(), userInfo, account); err != nil {
 		log.Error(err)
-		return 0, 0, err
+		return 0, 0, 0, err
 	}
 	oldBalance := userInfo.Balance
 	oldVoucher := userInfo.Voucher
 	fund := &rechargedb.Fund{}
 	if err := Find(context.Background(), fund, 0); err != nil {
 		log.Error(err)
-		return 0, 0, err
+		return 0, 0, 0, err
 	}
 
 	// 更新充值流水
@@ -1117,13 +1447,13 @@ func RechargeUsdt(account string, value string, decimals int) (int64, int64, err
 		if err := Update(context.Background(), upLineUserInfo, nil); err != nil {
 			log.Error("error: ", err)
 		}
-
 		agentUSD := float64(upLineUSDT) / 100.0
 		agentUSDTFloat := new(big.Float).SetFloat64(agentUSD)
 		agentGameCoins, _ = new(big.Float).Mul(agentUSDTFloat, multiplier).Int64()
 		agentVoucher = int64(agentUSD * float64(utils.LubanTables.TBApp.Get("allocatioon").NumInt))
-
 		log.Infof("用户:%v 充值代理佣金有 上线 %v, 上线usdt: %v, 上上线用户: %v, 上上线usdt: %v", userInfo.Account, upLineUserInfo.Account, upLineUSDT, upLineUserInfo.UpLine, upUpLineUSDT)
+
+		// 更新下下线代理
 		upLineUserInfo1 := &presenter.UserInfo{}
 		_ = Find(context.Background(), upLineUserInfo1, userInfo.UpLine)
 		if upLineUserInfo.UpLine != "" {
@@ -1133,7 +1463,6 @@ func RechargeUsdt(account string, value string, decimals int) (int64, int64, err
 			if err := Update(context.Background(), upUpLineUserInfo, nil); err != nil {
 				log.Error("error: ", err)
 			}
-
 			agentUSD := float64(agent) / 100.0
 			agentUSDTFloat := new(big.Float).SetFloat64(agentUSD)
 			agentGameCoins, _ = new(big.Float).Mul(agentUSDTFloat, multiplier).Int64()
@@ -1155,15 +1484,41 @@ func RechargeUsdt(account string, value string, decimals int) (int64, int64, err
 
 	if err := Update(context.Background(), userInfo, nil); err != nil {
 		log.Error(err)
-		return 0, 0, err
+		return 0, 0, 0, err
 	}
 	if e := Update(context.Background(), fund, nil); e != nil {
 		log.Error("Error updating recharge fund:", e)
-		return 0, 0, e
+		return 0, 0, 0, e
 	}
-	log.Infof("玩家%s 充值USDT, value:%s, Decimals:%d, 实际到账USDT:%f, 兑换游戏币:%d,玩家旧余额:%d,新余额:%d, 兑换券:%d,玩家旧余额:%d,新余额:%d",
-		account, value, decimals, usdtAmount, retGameCoins, oldBalance, userInfo.Balance, retVoucher, oldVoucher, userInfo.Voucher)
-	return retGameCoins, retVoucher, nil
+	//log.Infof("玩家%s 充值USDT, value:%s, Decimals:%d, 实际到账USDT:%f, 兑换游戏币:%d,玩家旧余额:%d,新余额:%d, 兑换券:%d,玩家旧余额:%d,新余额:%d",
+	//	account, value, decimals, usdtAmount, retGameCoins, oldBalance, userInfo.Balance, retVoucher, oldVoucher, userInfo.Voucher)
+
+	// coinFlow埋点
+	log.InfoJson("金币入口",
+		zap.String("Account", account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.CoinFlow),
+		zap.String("From", log.FromRecharge),
+		zap.String("Flag", log.FlagIn),
+		zap.Int64("Amount", retGameCoins),
+		zap.Int64("Old", oldBalance),
+		zap.Int64("New", userInfo.Balance),
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
+	// VoucherFlow埋点
+	log.InfoJson("凭证入口",
+		zap.String("Account", account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.VoucherFlow),
+		zap.String("From", log.FromRecharge),
+		zap.String("Flag", log.FlagIn),
+		zap.Int64("Amount", retVoucher),
+		zap.Int64("Old", oldVoucher),
+		zap.Int64("New", userInfo.Voucher),
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
+
+	return int64(usdtAmount * 100), retGameCoins, retVoucher, nil
 }
 func updateUsdtAgent(userInfo *presenter.UserInfo, contribution int64) {
 	today := time.Now().Format("2006-01-02")
@@ -1219,8 +1574,46 @@ func UsdtToSqu(userInfo *presenter.UserInfo, amount int64) error {
 		log.Error("Error updating recharge fund:", e)
 	}
 
-	log.Infof("用户:%s, 美分==>游戏币/兑换券, 旧美分:%d,消耗了:%d,新美分:%d, 旧游戏币:%d,兑换了:%d,新游戏币:%d, 旧券:%d,兑换了:%d,新券:%d",
-		userInfo.Account, oldUSDT, amount, userInfo.USDT, oldBalance, transferCoin, userInfo.Balance, oldVoucher, transferVoucher, userInfo.Voucher)
+	//log.Infof("用户:%s, 美分==>游戏币/兑换券, 旧美分:%d,消耗了:%d,新美分:%d, 旧游戏币:%d,兑换了:%d,新游戏币:%d, 旧券:%d,兑换了:%d,新券:%d",
+	//	userInfo.Account, oldUSDT, amount, userInfo.USDT, oldBalance, transferCoin, userInfo.Balance, oldVoucher, transferVoucher, userInfo.Voucher)
+
+	// 美分==>游戏币/兑换券
+	// UsdtFlow埋点
+	log.InfoJson("USDT出口",
+		zap.String("Account", userInfo.Account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.UsdtFlow),
+		zap.String("From", log.FromUsdtToSqu),
+		zap.String("Flag", log.FlagOut),
+		zap.Int64("Amount", amount),     //消耗了
+		zap.Int64("Old", oldUSDT),       //旧美分
+		zap.Int64("New", userInfo.USDT), //新美分
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
+	// coinFlow埋点
+	log.InfoJson("金币入口",
+		zap.String("Account", userInfo.Account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.CoinFlow),
+		zap.String("From", log.FromUsdtToSqu),
+		zap.String("Flag", log.FlagIn),
+		zap.Int64("Amount", transferCoin),  //兑换了
+		zap.Int64("Old", oldBalance),       //旧游戏币
+		zap.Int64("New", userInfo.Balance), //新游戏币
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
+	// VoucherFlow埋点
+	log.InfoJson("凭证入口",
+		zap.String("Account", userInfo.Account),
+		zap.String("ActionType", log.Flow),
+		zap.String("FlowType", log.VoucherFlow),
+		zap.String("From", log.FromUsdtToSqu),
+		zap.String("Flag", log.FlagIn),
+		zap.Int64("Amount", transferVoucher), //兑换了
+		zap.Int64("Old", oldVoucher),         //旧券
+		zap.Int64("New", userInfo.Voucher),   //新券
+		zap.Int64("CreatedAt", time.Now().UnixMilli()),
+	)
 	return nil
 }
 
@@ -1317,6 +1710,60 @@ func FindAllExchangeOrder(ctx context.Context, account string) ([]*rechargedb.Ex
 	return exchangeInfos, nil
 }
 
+func FindLabels() ([]web.Label, error) {
+	label := &web.Label{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(label.TableName())
+	// 创建一个空的查询条件，表示查询所有文档
+	filter := bson.D{{}}
+	cur, err := collection.Find(context.TODO(), filter)
+	if err != nil {
+		return nil, err
+	}
+	defer cur.Close(context.TODO())
+	var labels []web.Label
+	for cur.Next(context.TODO()) {
+		var webLabel web.Label
+		if err := cur.Decode(&webLabel); err != nil {
+			return nil, err
+		}
+		labels = append(labels, webLabel)
+	}
+	if err := cur.Err(); err != nil {
+		return nil, err
+	}
+	return labels, nil
+}
+
+func ExistAdv(adv string) (bool, error) {
+	label := &web.Label{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(label.TableName())
+	filter := bson.D{{"adv", adv}}
+	err := collection.FindOne(context.Background(), filter).Decode(label)
+	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return false, nil
+		}
+		return false, err
+	}
+	return true, nil
+}
+
+func GetBatchCdkNextSeq(key string) (int64, error) {
+	filter := bson.M{"_id": key}
+	update := bson.M{"$inc": bson.M{"seq": 1}}
+	opts := options.FindOneAndUpdate().SetUpsert(true).SetReturnDocument(options.After)
+	var updatedDoc struct {
+		Seq int64 `bson:"seq"`
+	}
+	label := &presenter.BatchCdk{}
+	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(label.TableName())
+	err := collection.FindOneAndUpdate(context.Background(), filter, update, opts).Decode(&updatedDoc)
+	if err != nil {
+		return 0, err
+	}
+	return updatedDoc.Seq, nil
+}
+
 // ----------------------------------------------用于核对账单------------------------------------------------------------
 // 有多少用户(不包含机器人)
 func CountUsers(ctx context.Context) (int64, error) {
@@ -1379,7 +1826,7 @@ func SumRobotBalances(ctx context.Context) (int64, error) {
 
 // 所有用户已领取cdk之和
 func SumCdk(ctx context.Context) (int64, error) {
-	var cdkInfo presenter.CdkInfo
+	var cdkInfo presenter.Cdk
 	collection := mongoInstance.Database(viper.GetString("common.mongodb.database")).Collection(cdkInfo.TableName())
 
 	pipeline := mongo.Pipeline{

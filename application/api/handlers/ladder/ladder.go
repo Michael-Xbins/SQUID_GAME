@@ -469,7 +469,7 @@ func Status() fiber.Handler {
 			})
 		}
 		lottery := &ladder.Lottery{}
-		_ = mongodb.Find(context.Background(), lottery, game.RoundNum)
+		_ = mongodb.Find(context.Background(), lottery, game.RoundNum-1)
 
 		return c.Status(fiber.StatusOK).JSON(presenter.Response{
 			Code:    1,

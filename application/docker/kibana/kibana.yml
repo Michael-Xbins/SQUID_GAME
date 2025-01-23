@@ -1,0 +1,5 @@
+server.host: "0.0.0.0"
+xpack.reporting.kibanaServer.hostname: "0.0.0.0"
+elasticsearch.username: "elastic"
+elasticsearch.password: "as13994894153"
+elasticsearch.hosts: ["http://elasticsearch:9200"]

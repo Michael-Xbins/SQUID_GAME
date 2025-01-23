@@ -1,5 +1,5 @@
 common:
-  env: test  # 可选值: develop, test, produce (内网本地服, 外网测试服, 正式服)
+  env: produce  # 可选值: develop, test, produce (内网本地服, 外网测试服, 正式服)
   port: 8082
   log:
     #Debug、Info、Warn、Error、Fatal、Panic
@@ -13,5 +13,5 @@ common:
     database: "app"
     connection_string: "mongodb://localhost:27017"
   has_robot: true
-  stopGame: false
   metricPort: 5854
+  stopGame: false

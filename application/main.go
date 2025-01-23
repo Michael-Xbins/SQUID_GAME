@@ -2,10 +2,11 @@ package main
 
 import (
 	"application/api/handlers"
+	"application/api/handlers/auction"
 	"application/api/handlers/compete"
 	"application/api/handlers/ladder"
-	"application/api/handlers/schedule"
 	"application/api/handlers/squid"
+	"application/api/presenter"
 	"application/api/routes"
 	"application/binance"
 	"application/mongodb"
@@ -15,6 +16,7 @@ import (
 	"application/socket"
 	"context"
 	"fmt"
+	"github.com/arl/statsviz"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	fiberRecover "github.com/gofiber/fiber/v2/middleware/recover"
@@ -79,7 +81,30 @@ func setupMiddlewares(app *fiber.App) {
 			}
 			return c.Next()
 		},
+
+		// 停服检查
+		func(c *fiber.Ctx) error {
+			if viper.GetBool("common.stopGame") {
+				return c.Status(fiber.StatusOK).JSON(presenter.Response{
+					Code:    9999,
+					Message: "stop server",
+				})
+			}
+			return c.Next()
+		},
 	)
+}
+func setupMonitor() {
+	go func() {
+		add := fmt.Sprintf("0.0.0.0:%d", viper.GetInt("common.metricPort"))
+		mux := http.NewServeMux()
+		if err := statsviz.Register(mux); err != nil {
+			panic(err)
+		}
+		if err := http.ListenAndServe(add, mux); err != nil {
+			panic(err)
+		}
+	}()
 }
 
 func main() {
@@ -103,13 +128,15 @@ func main() {
 	defer cancelFunc()
 	app := fiber.New()
 	setupMiddlewares(app)
+	setupMonitor()
 	setupRoutes(app)
 	binance.StartPullBinance()
 	squid.StartSquidGame()
 	compete.StartCompeteGame()
 	//glass.StartGlassGame()
 	ladder.StartLadderGame()
-	schedule.StartSchedule()
+	auction.StartAuctionGame()
+	//schedule.StartSchedule()
 	if err := app.Listen(fmt.Sprintf(":%d", viper.GetInt("common.port"))); err != nil {
 		log.Fatal(err)
 	}
@@ -138,4 +165,10 @@ func setupRoutes(app *fiber.App) {
 
 	//梯子游戏
 	routes.LadderRouter(app.Group("/app/ladder/game"))
+
+	//拍卖行
+	routes.AuctionRouter(app.Group("/app/auction/game"))
+
+	//运营后台
+	routes.BackendWebRouter(app.Group("/app/web/game"))
 }

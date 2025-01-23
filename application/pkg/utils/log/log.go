@@ -1,14 +1,13 @@
 package log
 
 import (
+	"github.com/spf13/viper"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"os"
 	"path/filepath"
 	"time"
-
-	"github.com/spf13/viper"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 )
 
 var (
@@ -18,6 +17,33 @@ var (
 	errorLogger *zap.Logger
 	fatalLogger *zap.Logger
 	panicLogger *zap.Logger
+)
+
+// 埋点数据
+var (
+	Register              = "register"
+	Login                 = "login"
+	Recharge              = "recharge"
+	Flow                  = "flow"
+	CoinFlow              = "coinFlow"
+	VoucherFlow           = "voucherFlow"
+	UsdtFlow              = "usdtFlow"
+	FlagIn                = "in"
+	FlagOut               = "out"
+	FromRecharge          = "充值"
+	FromAgent             = "代理" // 领取 下/下下线 充值代理贡献
+	FromWelfare           = "每日扶贫"
+	DailyTask             = "每日任务"
+	FromUsdtToSqu         = "USDT闪兑SQU"
+	FromSquToUsdt         = "SQU闪兑USDT"
+	FromWithdraw          = "提现"
+	FromAuction           = "拍卖行"
+	FromSquidSettlement   = "鱿鱼结算"
+	FromCompeteSettlement = "拔河结算"
+	FromLadderSettlement  = "梯子结算"
+	FromFirstPass         = "鱿鱼每日首通"
+	FromJackpot           = "鱿鱼jackpot"
+	CDK                   = "兑换cdk"
 )
 
 func InitConfig() {
@@ -75,7 +101,7 @@ func InitConfig() {
 		lumberjackLog := &lumberjack.Logger{
 			Filename: filepath.Join(logDir, filename), // 日志文件的完整路径
 			MaxSize:  10,                              // 日志文件达到10MB后将进行分割
-			MaxAge:   30,                              // 保留分割文件的最长天数为30天
+			MaxAge:   60,                              // 保留分割文件的最长天数为60天
 			//MaxBackups: 5,                               // 只保留最新的5个分割文件
 			//Compress:   true,                            // 分割的旧文件将被压缩
 		}
@@ -85,7 +111,6 @@ func InitConfig() {
 			zap.NewAtomicLevelAt(level),
 		)
 	}
-
 	debugLogger = zap.New(core("debug.log"), zap.AddCaller(), zap.AddCallerSkip(1))
 	infoLogger = zap.New(core("info.log"), zap.AddCaller(), zap.AddCallerSkip(1))
 	warnLogger = zap.New(core("warn.log"), zap.AddCaller(), zap.AddCallerSkip(1))
@@ -115,7 +140,6 @@ func Panic(msg ...interface{}) {
 func Fatal(msg ...interface{}) {
 	fatalLogger.Sugar().Fatal(msg)
 }
-
 func Debugf(msg string, args ...interface{}) {
 	debugLogger.Sugar().Debugf(msg, args...)
 }
@@ -133,4 +157,24 @@ func Panicf(msg string, args ...interface{}) {
 }
 func Fatalf(msg string, args ...interface{}) {
 	fatalLogger.Sugar().Fatalf(msg, args...)
+}
+
+// json形式日志
+func DebugJson(msg string, fields ...zap.Field) {
+	debugLogger.Debug(msg, fields...)
+}
+func InfoJson(msg string, fields ...zap.Field) {
+	infoLogger.Info(msg, fields...)
+}
+func WarnJson(msg string, fields ...zap.Field) {
+	infoLogger.Warn(msg, fields...)
+}
+func ErrorJson(msg string, fields ...zap.Field) {
+	infoLogger.Error(msg, fields...)
+}
+func PanicJson(msg string, fields ...zap.Field) {
+	infoLogger.Panic(msg, fields...)
+}
+func FatalJson(msg string, fields ...zap.Field) {
+	infoLogger.Fatal(msg, fields...)
 }

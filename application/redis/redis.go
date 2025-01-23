@@ -312,7 +312,7 @@ func RemoveLadderBets(ctx context.Context, roundNum int64) error {
 		log.Errorf("Failed to remove bets for round %d: %v", roundNum, err)
 		return err
 	}
-	log.Infof("Successfully removed bets for round %d", roundNum)
+	log.Debugf("Successfully removed bets for round %d", roundNum)
 	return nil
 }
 func GetLadderBets(ctx context.Context, roundNum int64) (map[string]int64, error) {

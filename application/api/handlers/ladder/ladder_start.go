@@ -75,6 +75,17 @@ func startLadder() {
 				if e := ladderRoundEnd(timestamp, game); e != nil {
 					log.Error("梯子游戏结算失败", e)
 				}
+
+				// 停服处理, 不允许下单
+				if viper.GetBool("common.stopGame") {
+					if e := mongodb.Update(context.Background(), game, nil); e != nil {
+						log.Error(e)
+					}
+					log.Info("正在停服, 梯子停止服务")
+					for viper.GetBool("common.stopGame") {
+						time.Sleep(3 * time.Second)
+					}
+				}
 			}
 		}
 

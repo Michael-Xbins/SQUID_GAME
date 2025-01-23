@@ -85,7 +85,7 @@ func startGlass() {
 			continue
 		}
 		if hasUser {
-			go mongodb.Check(mongodb.GlassType) // 临时, 核对总账单, 总出口 == 总入口
+			//go mongodb.Check(mongodb.GlassType) // 临时, 核对总账单, 总出口 == 总入口
 		}
 	}
 }
