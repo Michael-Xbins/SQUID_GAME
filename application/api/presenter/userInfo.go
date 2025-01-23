@@ -4,6 +4,7 @@ type UserInfo struct {
 	Account        string             `bson:"_id"`
 	Nickname       string             `bson:"nickname"`
 	SessionToken   string             `bson:"session_token"`
+	CreatedAt      int64              `bson:"created_at"`     // 注册时间
 	Balance        int64              `bson:"balance"`        // 玩家代币余额(分为单位)
 	USDT           int64              `bson:"USDT"`           // 玩家usdt余额(美分为单位)
 	TurnOver       TurnOver           `bson:"turnOver"`       // 游戏币流水
@@ -19,6 +20,8 @@ type UserInfo struct {
 	Welfare        Welfare            `bson:"welfare"`        // 福利金
 	Address        string             `bson:"address"`        // 钱包地址
 	Voucher        int64              `bson:"voucher"`        // 兑换券
+	DailyTask      DailyTask          `bson:"dailyTask"`      // 每日任务
+	Channel        string             `bson:"channel"`        // 渠道来源
 }
 type Squid struct {
 	RoundId           int32     `bson:"current_round"`              // 玩家当前所在的轮次
@@ -74,6 +77,15 @@ type Welfare struct {
 	LastDate    string `bson:"lastDate"`    // 最近更新日期
 	Times       int32  `bson:"times"`       // 今日剩余可领次数
 	TotalAmount int64  `bson:"totalAmount"` // 累计领取金额
+}
+
+type DailyTask struct {
+	LastDate string                `bson:"lastDate"` // 最近更新日期
+	Tasks    map[int32]*TaskDetail `bson:"tasks"`
+}
+type TaskDetail struct {
+	Progress  int32          `bson:"progress"`  // 今日进度
+	IsClaimed map[int32]bool `bson:"isClaimed"` // 每个任务ID的领取状态
 }
 
 func (userinfo *UserInfo) TableName() string {

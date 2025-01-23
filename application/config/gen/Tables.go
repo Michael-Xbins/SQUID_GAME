@@ -17,6 +17,7 @@ type Tables struct {
     TBCompete *CompeteTBCompete
     TBGlass *GlassTBGlass
     TBLadder *LadderTBLadder
+    TBTask *TaskTBTask
 }
 
 func NewTables(loader JsonLoader) (*Tables, error) {
@@ -52,6 +53,12 @@ func NewTables(loader JsonLoader) (*Tables, error) {
         return nil, err
     }
     if tables.TBLadder, err = NewLadderTBLadder(buf) ; err != nil {
+        return nil, err
+    }
+    if buf, err = loader("task_tbtask") ; err != nil {
+        return nil, err
+    }
+    if tables.TBTask, err = NewTaskTBTask(buf) ; err != nil {
         return nil, err
     }
     return tables, nil

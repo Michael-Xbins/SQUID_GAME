@@ -15,6 +15,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"go.uber.org/zap"
 	"strconv"
 	"strings"
 	"time"
@@ -87,7 +88,7 @@ func startLadder() {
 			continue
 		}
 		if hasUser {
-			go mongodb.Check(mongodb.LadderType) // 临时, 核对总账单, 总出口 == 总入口
+			//go mongodb.Check(mongodb.LadderType) // 临时, 核对总账单, 总出口 == 总入口
 		}
 	}
 }
@@ -286,11 +287,7 @@ func processLadderRoundEnd(roundNum int64, transHash string) error {
 }
 
 func settlement(userInfo *presenter.UserInfo, ladderFund *ladder.Fund, RoundNum int64, winNum []int) ([]*ladder.Order, int64, int64, error) {
-	game := &ladder.Game{}
-	if e := mongodb.Find(context.Background(), game, 0); e != nil {
-		log.Error(e)
-		return nil, 0, 0, e
-	}
+	oldBalance := userInfo.Balance
 	curOrders, err := mongodb.FindLadderUserOrders(context.Background(), userInfo.Account, RoundNum)
 	if err != nil {
 		log.Error(err)
@@ -299,10 +296,12 @@ func settlement(userInfo *presenter.UserInfo, ladderFund *ladder.Fund, RoundNum 
 
 	var winningOrders []*ladder.Order //批量更新订单
 	orders := make([]*pb.Order, len(curOrders))
+	betPrices := int64(0)
 	var totalPayoutCategory1, totalPayoutCategory2 int64 // 玩家userInfo的直注和二串一赔付总额
 	for i, order := range curOrders {
 		match := true
 		bonus := float64(0)
+		betPrices += order.OrderPrice
 
 		// 分解 BetId，可能包含多个赛道信息
 		betId := order.BetId
@@ -339,6 +338,37 @@ func settlement(userInfo *presenter.UserInfo, ladderFund *ladder.Fund, RoundNum 
 			Odds:    order.Odds,
 			Bonus:   bonus,
 		}
+	}
+
+	// 更新每日任务进度
+	mongodb.UpdateDailyTaskProgress(5, userInfo, 1)
+
+	if userInfo.Balance-oldBalance-betPrices > 0 {
+		log.InfoJson("金币入口", // coinFlow埋点
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.CoinFlow),
+			zap.String("From", log.FromLadderSettlement),
+			zap.String("Flag", log.FlagIn),
+			zap.Int64("RoundNum", RoundNum),
+			zap.Int64("Amount", userInfo.Balance-oldBalance-betPrices),
+			zap.Int64("Old", oldBalance+betPrices),
+			zap.Int64("New", userInfo.Balance),
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
+	} else if userInfo.Balance-oldBalance-betPrices < 0 {
+		log.InfoJson("金币出口", // coinFlow埋点
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.CoinFlow),
+			zap.String("From", log.FromLadderSettlement),
+			zap.String("Flag", log.FlagOut),
+			zap.Int64("RoundNum", RoundNum),
+			zap.Int64("Amount", oldBalance+betPrices-userInfo.Balance),
+			zap.Int64("Old", oldBalance+betPrices),
+			zap.Int64("New", userInfo.Balance),
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
 	}
 
 	session.S2CMessage(userInfo.Account, &pb.ClientResponse{

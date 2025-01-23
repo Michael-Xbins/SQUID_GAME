@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"application/api/handlers/web"
 	"application/api/presenter"
 	"application/api/presenter/squid"
 	"application/mongodb"
@@ -18,6 +19,7 @@ import (
 	tginit "github.com/telegram-mini-apps/init-data-golang"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.uber.org/zap"
 	"net/url"
 	"sort"
 	"strconv"
@@ -83,6 +85,8 @@ func LoginHandler() fiber.Handler {
 		inviterNewUser, _ := checkIfNewUser(inviter)
 
 		//重新生成sessionToken
+		nickname := webAppInitData.User.FirstName + " " + webAppInitData.User.LastName
+		userInfo := &presenter.UserInfo{}
 		sessionToken := uuid.New().String()
 		if isNewUser {
 			var upLine string
@@ -90,10 +94,16 @@ func LoginHandler() fiber.Handler {
 				upLine = inviter
 			}
 			times := utils.LubanTables.TBApp.Get("poor_count").NumInt
-			userInfo := &presenter.UserInfo{
+			// 提取渠道ID
+			var adv string
+			if len(parts) > 1 && parts[0] == "adv" {
+				adv = parts[1]
+			}
+			userInfo = &presenter.UserInfo{
 				Account:        account,
-				Nickname:       webAppInitData.User.FirstName + " " + webAppInitData.User.LastName,
+				Nickname:       nickname,
 				SessionToken:   sessionToken,
+				CreatedAt:      time.Now().UnixMilli(),
 				Balance:        utils.InitBalance,
 				USDT:           utils.InitUSDT,
 				Voucher:        utils.InitVoucher,
@@ -103,7 +113,10 @@ func LoginHandler() fiber.Handler {
 				UsdtRecharge:   presenter.UsdtRechargeDetail{DownLineDailyRecharge: make(map[string]bool), DownLineTotalRecharge: make(map[string]bool)},
 				Squid:          presenter.Squid{RoundId: 1, BetPricesPerRound: make([]int64, squid.TotalRounds)},
 				Welfare:        presenter.Welfare{LastDate: time.Now().Format("2006-01-02"), Times: times},
+				DailyTask:      presenter.DailyTask{LastDate: time.Now().Format("2006-01-02"), Tasks: make(map[int32]*presenter.TaskDetail)},
+				Channel:        adv,
 			}
+			mongodb.UpdateDailyTaskProgress(1, userInfo, 1)
 			err := mongodb.Insert(context.Background(), userInfo)
 			if err != nil {
 				log.Error(err)
@@ -112,8 +125,20 @@ func LoginHandler() fiber.Handler {
 					Message: "Failed to initialize user",
 				})
 			}
+
+			// 注册埋点
+			log.InfoJson("注册成功",
+				zap.String("ActionType", log.Register),
+				zap.String("Account", account),
+				zap.String("Platform", loginReq.Type),
+				zap.String("ChatType", string(webAppInitData.Chat.Type)),
+				zap.String("LanguageCode", webAppInitData.User.LanguageCode),
+				zap.String("NickName", nickname),
+				zap.String("Adv", adv),
+				zap.Int64("RegisterTime", userInfo.CreatedAt),
+			)
+
 		} else {
-			userInfo := &presenter.UserInfo{}
 			err = mongodb.Find(context.Background(), userInfo, account)
 			if err != nil {
 				log.Error(err)
@@ -122,10 +147,29 @@ func LoginHandler() fiber.Handler {
 					Message: "Failed to retrieve invites",
 				})
 			}
+			mongodb.UpdateUserinfo(userInfo)
 			userInfo.SessionToken = sessionToken
+			// 更新每日任务进度
+			mongodb.UpdateDailyTaskProgress(1, userInfo, 1)
 			if e := mongodb.Update(context.Background(), userInfo, nil); e != nil {
 				return e
 			}
+			// 登陆埋点
+			log.InfoJson("登录成功",
+				zap.String("ActionType", log.Login),
+				zap.String("Account", account),
+				zap.String("SessionToken", sessionToken),
+				zap.String("Platform", loginReq.Type),
+				zap.String("ChatType", string(webAppInitData.Chat.Type)),
+				zap.String("LanguageCode", webAppInitData.User.LanguageCode),
+				zap.String("NickName", nickname),
+				zap.Int64("Balance", userInfo.Balance),
+				zap.Int64("USDT", userInfo.USDT),
+				zap.Int64("Voucher", userInfo.Voucher),
+				zap.String("UpLine", userInfo.UpLine),
+				zap.Any("DownLines", userInfo.DownLines),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
 		}
 
 		// 处理邀请人信息, 邀请对象必须是新用户
@@ -182,14 +226,20 @@ func LoginHandler() fiber.Handler {
 			"twitter":      "https://twitter.com/intent/tweet?" + "url=" + url.QueryEscape(targetURL),
 			"email":        "mailto:?subject=" + url.QueryEscape("Squid Game") + "&body=" + url.QueryEscape(targetURL),
 		}
-		log.Infof("登录成功, Account:%v, Token:%v, PlatForm:%v", account, sessionToken, loginReq.Type)
 
+		isWhite := false
+		for _, uid := range web.Whitelist {
+			if uid == account {
+				isWhite = true
+			}
+		}
 		return c.Status(fiber.StatusOK).JSON(presenter.Response{
 			Code:    1,
 			Message: "Success",
 			Result: map[string]interface{}{
 				"wsToken": sessionToken,
 				"links":   links,
+				"isWhite": isWhite,
 			},
 		})
 	}

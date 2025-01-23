@@ -18,6 +18,7 @@ type App struct {
     Target int32
     Desc string
     NumInt int32
+    Numlist []int32
 }
 
 const TypeId_App = 66049
@@ -33,6 +34,20 @@ func NewApp(_buf map[string]interface{}) (_v *App, err error) {
     { var _ok_ bool; var _tempNum_ float64; if _tempNum_, _ok_ = _buf["target"].(float64); !_ok_ { err = errors.New("target error"); return }; _v.Target = int32(_tempNum_) }
     { var _ok_ bool; if _v.Desc, _ok_ = _buf["desc"].(string); !_ok_ { err = errors.New("desc error"); return } }
     { var _ok_ bool; var _tempNum_ float64; if _tempNum_, _ok_ = _buf["num_int"].(float64); !_ok_ { err = errors.New("num_int error"); return }; _v.NumInt = int32(_tempNum_) }
+     {
+                    var _arr_ []interface{}
+                    var _ok_ bool
+                    if _arr_, _ok_ = _buf["numlist"].([]interface{}); !_ok_ { err = errors.New("numlist error"); return }
+    
+                    _v.Numlist = make([]int32, 0, len(_arr_))
+                    
+                    for _, _e_ := range _arr_ {
+                        var _list_v_ int32
+                        { var _ok_ bool; var _x_ float64; if _x_, _ok_ = _e_.(float64); !_ok_ { err = errors.New("_list_v_ error"); return }; _list_v_ = int32(_x_) }
+                        _v.Numlist = append(_v.Numlist, _list_v_)
+                    }
+                }
+
     return
 }
 

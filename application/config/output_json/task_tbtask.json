@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 10001,
+    "TaskType": 1,
+    "TaskNum": 1,
+    "TaskParam": 1,
+    "Desc": "Log in to the game today.",
+    "Reward": 1
+  },
+  {
+    "Id": 10002,
+    "TaskType": 2,
+    "TaskNum": 2,
+    "TaskParam": 3,
+    "Desc": "Reach the 3 Lv in the Wooden man game.",
+    "Reward": 1
+  },
+  {
+    "Id": 10003,
+    "TaskType": 2,
+    "TaskNum": 3,
+    "TaskParam": 5,
+    "Desc": "Reach the 5 Lv in the Wooden man game.",
+    "Reward": 1
+  },
+  {
+    "Id": 10004,
+    "TaskType": 2,
+    "TaskNum": 4,
+    "TaskParam": 7,
+    "Desc": "Reach the 7 Lv in the Wooden man game.",
+    "Reward": 1
+  },
+  {
+    "Id": 10005,
+    "TaskType": 4,
+    "TaskNum": 6,
+    "TaskParam": 1,
+    "Desc": "Play Drawing game 1 time.",
+    "Reward": 1
+  },
+  {
+    "Id": 10006,
+    "TaskType": 5,
+    "TaskNum": 7,
+    "TaskParam": 1,
+    "Desc": "Play Bridge game 1 time.",
+    "Reward": 1
+  }
+]

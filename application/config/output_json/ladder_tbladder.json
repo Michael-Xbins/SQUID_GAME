@@ -67,7 +67,7 @@
     "category": 0,
     "name": "开盘时间",
     "desc": "下注时间",
-    "num_int": 130
+    "num_int": 1150
   },
   {
     "id": "close_time",

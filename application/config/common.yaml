@@ -14,3 +14,4 @@ common:
     connection_string: "mongodb://localhost:27017"
   has_robot: true
   stopGame: false
+  metricPort: 5854

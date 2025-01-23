@@ -15,8 +15,9 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	"github.com/speps/go-hashids"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.uber.org/zap"
+	"math/rand"
 	"time"
 )
 
@@ -387,184 +388,6 @@ func ClaimAgent() fiber.Handler {
 	}
 }
 
-func GetCDK() fiber.Handler {
-	return func(c *fiber.Ctx) error {
-		type request struct {
-			SessionToken string `json:"sessionToken"`
-			Type         int    `json:"type"`
-		}
-		var req request
-		if err := c.BodyParser(&req); err != nil {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1000,
-				Message: "Invalid request body",
-			})
-		}
-		if req.SessionToken == "" {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1001,
-				Message: "sessionToken is required",
-			})
-		}
-		account, err := redis.GetAccountBySessionToken(req.SessionToken)
-		if err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1002,
-				Message: "sessionToken error",
-			})
-		}
-		if req.Type != 1 && req.Type != 2 && req.Type != 3 {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1003,
-				Message: "type param error",
-			})
-		}
-		userInfo := &presenter.UserInfo{}
-		err = mongodb.Find(context.Background(), userInfo, account)
-		if err != nil {
-			log.Error(err)
-			if errors.Is(err, mongo.ErrNoDocuments) {
-				return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-					Code: 1004,
-				})
-			}
-			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-				Code: 1005,
-			})
-		}
-
-		hd := hashids.NewData()
-		// 使用用户账号和当前时间戳作为盐值
-		salt := fmt.Sprintf("%s-%d", userInfo.Account, time.Now().UnixMilli())
-		hd.Salt = salt
-		hd.MinLength = 30
-		h, _ := hashids.NewWithData(hd)
-		e, _ := h.Encode([]int{req.Type}) // 对应 exchange1,2,3
-		log.Debugf("account: %v, exchange%v CDK: %v", userInfo.Account, req.Type, e)
-		key := fmt.Sprintf("%s%d", "exchange", req.Type)
-		exchangeAmount := int64(utils.LubanTables.TBApp.Get(key).NumInt)
-		cdkInfo := &presenter.CdkInfo{
-			Cdk:            e,
-			Salt:           salt,
-			ExchangeID:     req.Type,
-			ExchangeAmount: exchangeAmount,
-			Received:       false,
-		}
-		if err := mongodb.Insert(context.Background(), cdkInfo); err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-				Code: 1006,
-			})
-		}
-		return c.Status(fiber.StatusOK).JSON(presenter.Response{
-			Code: 1,
-			Result: map[string]interface{}{
-				"CDK": e,
-			},
-		})
-	}
-}
-
-func ExchangeCDK() fiber.Handler {
-	return func(c *fiber.Ctx) error {
-		type request struct {
-			SessionToken string `json:"sessionToken"`
-			Cdk          string `json:"cdk"`
-		}
-		var req request
-		if err := c.BodyParser(&req); err != nil {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1000,
-				Message: "Invalid request body",
-			})
-		}
-		if req.SessionToken == "" {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1001,
-				Message: "sessionToken is required",
-			})
-		}
-		account, err := redis.GetAccountBySessionToken(req.SessionToken)
-		if err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1002,
-				Message: "sessionToken error",
-			})
-		}
-		userInfo := &presenter.UserInfo{}
-		err = mongodb.Find(context.Background(), userInfo, account)
-		if err != nil {
-			log.Error(err)
-			if errors.Is(err, mongo.ErrNoDocuments) {
-				return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-					Code: 1003,
-				})
-			}
-			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-				Code: 1004,
-			})
-		}
-		cdkInfo := &presenter.CdkInfo{}
-		if err := mongodb.Find(context.Background(), cdkInfo, req.Cdk); err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1005,
-				Message: "Invalid CDK",
-			})
-		}
-
-		hdd := hashids.NewData()
-		hdd.Salt = cdkInfo.Salt
-		hdd.MinLength = 30
-		hh, _ := hashids.NewWithData(hdd)
-		numbers, err := hh.DecodeWithError(req.Cdk)
-		if err != nil {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1006,
-				Message: "Invalid CDK",
-			})
-		}
-
-		if cdkInfo.Received {
-			return c.Status(fiber.StatusOK).JSON(presenter.Response{
-				Code:    1007,
-				Message: "CDK has already been used",
-			})
-		}
-		log.Debugf("exchangeID: %v", numbers[0])
-
-		// 兑换代币至余额
-		key := fmt.Sprintf("%s%d", "exchange", numbers[0])
-		exchangeAmount := int64(utils.LubanTables.TBApp.Get(key).NumInt)
-		mongodb.AddAmount(userInfo, exchangeAmount)
-		err = mongodb.Update(context.Background(), userInfo, nil)
-		if err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-				Code: 1008,
-			})
-		}
-
-		cdkInfo.Received = true
-		if err := mongodb.Update(context.Background(), cdkInfo, nil); err != nil {
-			log.Error(err)
-			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
-				Code: 1009,
-			})
-		}
-
-		return c.Status(fiber.StatusOK).JSON(presenter.Response{
-			Code: 1,
-			Result: map[string]interface{}{
-				"ExchangeAmount": exchangeAmount,
-				"Bonus":          userInfo.Balance,
-			},
-		})
-	}
-}
-
 func MyService() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		targetURL := "https://t.me/" + utils.BotUsername
@@ -617,6 +440,7 @@ func ClaimWelfare() fiber.Handler {
 			})
 		}
 		mongodb.UpdateUserinfo(userInfo)
+		oldBalance := userInfo.Balance
 		poorLim := int64(utils.LubanTables.TBApp.Get("poor_lim").NumInt)
 		if userInfo.Balance >= poorLim {
 			return c.Status(fiber.StatusOK).JSON(presenter.Response{
@@ -642,6 +466,18 @@ func ClaimWelfare() fiber.Handler {
 			})
 		}
 
+		// coinFlow埋点
+		log.InfoJson("金币入口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.CoinFlow),
+			zap.String("From", log.FromWelfare),
+			zap.String("Flag", log.FlagIn),
+			zap.Int64("Amount", poorNum),       //兑换了
+			zap.Int64("Old", oldBalance),       //旧游戏币
+			zap.Int64("New", userInfo.Balance), //新游戏币
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
 		return c.Status(fiber.StatusOK).JSON(presenter.Response{
 			Code: 1,
 			Result: map[string]interface{}{
@@ -900,7 +736,7 @@ func processTransactions(ctx context.Context, userId string, network string, add
 		// 有未处理充值, 创建订单
 		if !mongodb.IsTransactionProcessed(ctx, tx.TransactionID) {
 			// 兑换游戏币
-			retGameCoins, retVoucher, err := mongodb.RechargeUsdt(userId, tx.Value, tx.TokenInfo.Decimals)
+			usdtAmount, retGameCoins, retVoucher, err := mongodb.RechargeUsdt(userId, tx.Value, tx.TokenInfo.Decimals)
 			if err != nil {
 				log.Error("RechargeUsdt error: ", err)
 			}
@@ -922,6 +758,21 @@ func processTransactions(ctx context.Context, userId string, network string, add
 				log.Error("Failed to create order: ", err)
 			}
 			hasPay = true
+			// 充值埋点
+			log.InfoJson("充值成功",
+				zap.String("ActionType", log.Recharge),
+				zap.String("Account", userId),
+				zap.String("Hash", tx.TransactionID),
+				zap.String("Network", network),
+				zap.String("Address", tx.To),
+				zap.String("Value", tx.Value),
+				zap.String("Symbol", tx.TokenInfo.Symbol),
+				zap.Int("Decimals", tx.TokenInfo.Decimals),
+				zap.String("Name", tx.TokenInfo.Name),
+				zap.Int64("Amount", usdtAmount),
+				zap.Int64("BlockTimestamp", tx.BlockTimestamp),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
 		}
 	}
 	return hasPay
@@ -994,6 +845,7 @@ func Withdrawal() fiber.Handler {
 			log.Error(err)
 			return err
 		}
+		oldUSDT := userInfo.USDT
 		mongodb.DecrUSDT(userInfo, req.Amount)
 
 		const scaleFactor = int64(1000)
@@ -1045,6 +897,18 @@ func Withdrawal() fiber.Handler {
 		if err := mongodb.Insert(context.Background(), withdrawInfo); err != nil {
 			log.Error("Failed to create order: ", err)
 		}
+
+		log.InfoJson("USDT出口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.UsdtFlow),
+			zap.String("From", log.FromWithdraw),
+			zap.String("Flag", log.FlagOut),
+			zap.Int64("Amount", req.Amount), //消耗了
+			zap.Int64("Old", oldUSDT),       //旧美分
+			zap.Int64("New", userInfo.USDT), //新美分
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
 
 		return c.Status(fiber.StatusOK).JSON(presenter.Response{
 			Code:    1,
@@ -1138,6 +1002,168 @@ func HistoryRecord() fiber.Handler {
 			return c.Status(fiber.StatusOK).JSON(presenter.Response{
 				Code:    1005,
 				Message: "params error",
+			})
+		}
+	}
+}
+
+func GetDailyTask() fiber.Handler {
+	return func(c *fiber.Ctx) error {
+		type request struct {
+			SessionToken string `json:"sessionToken"`
+		}
+		var req request
+		if err := c.BodyParser(&req); err != nil {
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1000,
+				Message: "Invalid request body",
+			})
+		}
+		if req.SessionToken == "" {
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1001,
+				Message: "sessionToken is required",
+			})
+		}
+		account, err := redis.GetAccountBySessionToken(req.SessionToken)
+		if err != nil {
+			log.Error(err)
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1002,
+				Message: "sessionToken error",
+			})
+		}
+		userInfo := &presenter.UserInfo{}
+		err = mongodb.Find(context.Background(), userInfo, account)
+		if err != nil {
+			log.Error(err)
+			if errors.Is(err, mongo.ErrNoDocuments) {
+				return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
+					Code: 1003,
+				})
+			}
+			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
+				Code: 1004,
+			})
+		}
+		mongodb.UpdateUserinfo(userInfo)
+
+		taskList := utils.LubanTables.TBTask.GetDataList()
+		type retTaskInfo struct {
+			TaskId    int32
+			Progress  int32
+			IsClaimed bool
+		}
+
+		ret := make([]retTaskInfo, 0, len(taskList))
+		for _, task := range taskList {
+			var taskInfo retTaskInfo
+			taskInfo.TaskId = task.Id
+			if info, ok := userInfo.DailyTask.Tasks[task.TaskType]; ok {
+				taskInfo.Progress = info.Progress
+				taskInfo.IsClaimed = info.IsClaimed[task.Id]
+			}
+			ret = append(ret, taskInfo)
+		}
+		return c.Status(fiber.StatusOK).JSON(presenter.Response{
+			Code:    1,
+			Message: "Success",
+			Result: map[string]interface{}{
+				"dailyTask": ret,
+			},
+		})
+	}
+}
+
+func ClaimDailyTask() fiber.Handler {
+	return func(c *fiber.Ctx) error {
+		type request struct {
+			SessionToken string `json:"sessionToken"`
+			TaskId       int32  `json:"taskId"`
+		}
+		var req request
+		if err := c.BodyParser(&req); err != nil {
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1000,
+				Message: "Invalid request body",
+			})
+		}
+		if req.SessionToken == "" {
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1001,
+				Message: "sessionToken is required",
+			})
+		}
+		account, err := redis.GetAccountBySessionToken(req.SessionToken)
+		if err != nil {
+			log.Error(err)
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1002,
+				Message: "sessionToken error",
+			})
+		}
+		userInfo := &presenter.UserInfo{}
+		err = mongodb.Find(context.Background(), userInfo, account)
+		if err != nil {
+			log.Error(err)
+			if errors.Is(err, mongo.ErrNoDocuments) {
+				return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
+					Code: 1003,
+				})
+			}
+			return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
+				Code: 1004,
+			})
+		}
+		oldBalance := userInfo.Balance
+
+		task := utils.LubanTables.TBTask.Get(req.TaskId)
+		if info, ok := userInfo.DailyTask.Tasks[task.TaskType]; ok && info.Progress >= task.TaskParam {
+			if info.IsClaimed == nil {
+				info.IsClaimed = make(map[int32]bool)
+			}
+			// 检查任务是否已被领取
+			if _, claimed := info.IsClaimed[req.TaskId]; !claimed {
+				info.IsClaimed[req.TaskId] = true
+				numlist := utils.LubanTables.TBApp.Get("boxgold").Numlist
+				randomIndex := rand.Intn(len(numlist))
+				amount := int64(numlist[randomIndex] * task.Reward)
+				mongodb.AddAmount(userInfo, amount)
+				if err := mongodb.Update(context.Background(), userInfo, nil); err != nil {
+					log.Error(err)
+					return c.Status(fiber.StatusInternalServerError).JSON(presenter.Response{
+						Code: 1005,
+					})
+				}
+				// coinFlow埋点
+				log.InfoJson("金币入口",
+					zap.String("Account", userInfo.Account),
+					zap.String("ActionType", log.Flow),
+					zap.String("FlowType", log.CoinFlow),
+					zap.String("From", log.DailyTask),
+					zap.String("Flag", log.FlagIn),
+					zap.Int64("Amount", amount),        //兑换了
+					zap.Int64("Old", oldBalance),       //旧游戏币
+					zap.Int64("New", userInfo.Balance), //新游戏币
+					zap.Int64("CreatedAt", time.Now().UnixMilli()),
+				)
+				return c.Status(fiber.StatusOK).JSON(presenter.Response{
+					Code:    1,
+					Message: "Success",
+					Result: map[string]interface{}{
+						"amount":  amount,
+						"balance": userInfo.Balance,
+					},
+				})
+			}
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1006,
+				Message: "The task reward has been received",
+			})
+		} else {
+			return c.Status(fiber.StatusOK).JSON(presenter.Response{
+				Code:    1007,
+				Message: "The task has not reached the progress",
 			})
 		}
 	}

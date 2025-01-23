@@ -15,6 +15,7 @@ import (
 	"errors"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.uber.org/zap"
 	"time"
 )
 
@@ -779,6 +780,45 @@ func SquToUsdt() fiber.Handler {
 
 		log.Infof("用户:%s, 游戏币/兑换券==>美分, 旧美分:%d,兑换了:%d,新美分:%d, 旧游戏币:%d,消耗了:%d,新游戏币:%d, 旧券%d,消耗了:%d,新券:%d",
 			userInfo.Account, oldUSDT, usdtToAdd, userInfo.USDT, oldBalance, req.Squ, userInfo.Balance, oldVoucher, req.Vou, userInfo.Voucher)
+
+		// 游戏币/兑换券==>美分
+		// UsdtFlow埋点
+		log.InfoJson("USDT入口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.UsdtFlow),
+			zap.String("From", log.FromSquToUsdt),
+			zap.String("Flag", log.FlagIn),
+			zap.Int64("Amount", usdtToAdd),  //兑换了
+			zap.Int64("Old", oldUSDT),       //旧美分
+			zap.Int64("New", userInfo.USDT), //新美分
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
+		// coinFlow埋点
+		log.InfoJson("金币出口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.CoinFlow),
+			zap.String("From", log.FromSquToUsdt),
+			zap.String("Flag", log.FlagOut),
+			zap.Int64("Amount", req.Squ),       //消耗了
+			zap.Int64("Old", oldBalance),       //旧游戏币
+			zap.Int64("New", userInfo.Balance), //新游戏币
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
+		// VoucherFlow埋点
+		log.InfoJson("凭证出口",
+			zap.String("Account", userInfo.Account),
+			zap.String("ActionType", log.Flow),
+			zap.String("FlowType", log.VoucherFlow),
+			zap.String("From", log.FromSquToUsdt),
+			zap.String("Flag", log.FlagOut),
+			zap.Int64("Amount", req.Vou),       //消耗了
+			zap.Int64("Old", oldVoucher),       //旧券
+			zap.Int64("New", userInfo.Voucher), //新券
+			zap.Int64("CreatedAt", time.Now().UnixMilli()),
+		)
+
 		return c.Status(fiber.StatusOK).JSON(presenter.Response{
 			Code:    1,
 			Message: "Success",

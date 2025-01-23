@@ -11,6 +11,7 @@ import (
 	"application/session"
 	"context"
 	"github.com/google/uuid"
+	"go.uber.org/zap"
 	"math"
 	"time"
 )
@@ -86,7 +87,7 @@ func EventLoop() {
 			continue
 		}
 		if hasUser {
-			go mongodb.Check(mongodb.CompeteType) // 临时, 核对总账单, 总出口 == 总入口
+			//go mongodb.Check(mongodb.CompeteType) // 临时, 核对总账单, 总出口 == 总入口
 		}
 	}
 }
@@ -193,6 +194,7 @@ func roundEnd(timestamp int64, game *compete.Game) error {
 			log.Error(err)
 			continue
 		}
+		oldBalance := userInfo.Balance
 		if winAmount > 0 {
 			mongodb.AddAmount(userInfo, winAmount)
 		}
@@ -203,6 +205,9 @@ func roundEnd(timestamp int64, game *compete.Game) error {
 
 		//拔河本轮下注额(暂存), 用于核对账单, 结算/取消清零
 		userInfo.CompeteLastBet = 0
+
+		// 更新每日任务进度
+		mongodb.UpdateDailyTaskProgress(4, userInfo, 1)
 
 		if err := mongodb.Update(context.Background(), userInfo, nil); err != nil {
 			log.Error(err)
@@ -217,7 +222,36 @@ func roundEnd(timestamp int64, game *compete.Game) error {
 
 		log.Debugf("拔河订单：account: %v, 本轮a总注额%d,b总注额%d,peace总注额%d, hit: %v, odds: %v, lossAmount: %v, upline: %v, oldHouseCut: %v,  本次抽水包含 庄家: %v, 代理: %v,代理上线:%v,代理上上线:%v",
 			account, betPricesA, betPricesB, betPricesPeace, hit, odds, lossAmount, userInfo.UpLine, game.TakeAmount, totalTakeAmount, pumpDetails.AgentContribution, pumpDetails.UpLineContribution, pumpDetails.UpUpLineContribution)
+
+		if userInfo.Balance-oldBalance-betPrices > 0 {
+			log.InfoJson("金币入口", // coinFlow埋点
+				zap.String("Account", userInfo.Account),
+				zap.String("ActionType", log.Flow),
+				zap.String("FlowType", log.CoinFlow),
+				zap.String("From", log.FromCompeteSettlement),
+				zap.String("Flag", log.FlagIn),
+				zap.Int64("RoundNum", game.RoundNum),
+				zap.Int64("Amount", userInfo.Balance-oldBalance-betPrices),
+				zap.Int64("Old", oldBalance+betPrices),
+				zap.Int64("New", userInfo.Balance),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
+		} else if userInfo.Balance-oldBalance-betPrices < 0 {
+			log.InfoJson("金币出口", // coinFlow埋点
+				zap.String("Account", userInfo.Account),
+				zap.String("ActionType", log.Flow),
+				zap.String("FlowType", log.CoinFlow),
+				zap.String("From", log.FromCompeteSettlement),
+				zap.String("Flag", log.FlagOut),
+				zap.Int64("RoundNum", game.RoundNum),
+				zap.Int64("Amount", oldBalance+betPrices-userInfo.Balance),
+				zap.Int64("Old", oldBalance+betPrices),
+				zap.Int64("New", userInfo.Balance),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
+		}
 	}
+
 	game.Amount += betTotalAmount - totalTakeAmount - lossAmount - agentAmount
 	game.TakeAmount += totalTakeAmount
 	game.ResultHistoryList = append(game.ResultHistoryList, compete.ResultHistory{

@@ -13,6 +13,7 @@ import (
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/spf13/viper"
+	"go.uber.org/zap"
 	"math/rand"
 	"strconv"
 	"strings"
@@ -110,7 +111,7 @@ func startSquid() {
 			continue
 		}
 		if hasUser {
-			go mongodb.Check(mongodb.SquidType) // 临时, 核对总账单, 总出口 == 总入口
+			//go mongodb.Check(mongodb.SquidType) // 临时, 核对总账单, 总出口 == 总入口
 		}
 	}
 }
@@ -314,67 +315,67 @@ func squidRoundEnd(timestamp int64, game *squid.Game) error {
 	})
 
 	//TODO:redis存储每次的开奖数据
-	_, btcSum, _ := calculateDeadTrack(game.TransPrice)
-	newSquidFund := &squid.Fund{}
-	if err := mongodb.Find(context.Background(), newSquidFund, 0); err != nil {
-		log.Error("Error retrieving squid fund:", err)
-	}
-	playerRate := float64(0)
-	robotRate := float64(0)
-	if squidFund.PlayerAccAmount.AccBet > 0 {
-		playerRate = float64(squidFund.PlayerAccAmount.AccPayout) / float64(squidFund.PlayerAccAmount.AccBet)
-	}
-	if squidFund.RobotAccAmount.AccBet > 0 {
-		robotRate = float64(squidFund.RobotAccAmount.AccPayout) / float64(squidFund.RobotAccAmount.AccBet)
-	}
-	data := squid.Data{
-		Timestamp: time.UnixMilli(game.DeadTrackTime).Format("2006-01-02 15:04:05"),
-		BtcPrice:  game.TransPrice, // BTC价格
-		BtcSum:    btcSum,          // BTC价之和
-		DeadTrack: game.DeadTrack,  // 死亡赛道
-
-		Odds1:     rounds[0].Odds,     // 第1轮赔率
-		TotalBet1: rounds[0].TotalBet, // 第1轮总注额
-		DeadBet1:  rounds[0].DeadBet,  // 第1轮死亡注额
-
-		Odds2:     rounds[1].Odds,     // 第2轮赔率
-		TotalBet2: rounds[1].TotalBet, // 第2轮总注额
-		DeadBet2:  rounds[1].DeadBet,  // 第2轮死亡注额
-
-		Odds3:     rounds[2].Odds,     // 第3轮赔率
-		TotalBet3: rounds[2].TotalBet, // 第3轮总注额
-		DeadBet3:  rounds[2].DeadBet,  // 第3轮死亡注额
-
-		Odds4:     rounds[3].Odds,     // 第4轮赔率
-		TotalBet4: rounds[3].TotalBet, // 第4轮总注额
-		DeadBet4:  rounds[3].DeadBet,  // 第4轮死亡注额
-
-		Odds5:     rounds[4].Odds,     // 第5轮赔率
-		TotalBet5: rounds[4].TotalBet, // 第5轮总注额
-		DeadBet5:  rounds[4].DeadBet,  // 第5轮死亡注额
-
-		Odds6:     rounds[5].Odds,     // 第6轮赔率
-		TotalBet6: rounds[5].TotalBet, // 第6轮总注额
-		DeadBet6:  rounds[5].DeadBet,  // 第6轮死亡注额
-
-		Odds7:     rounds[6].Odds,     // 第7轮赔率
-		TotalBet7: rounds[6].TotalBet, // 第7轮总注额
-		DeadBet7:  rounds[6].DeadBet,  // 第7轮死亡注额
-
-		HouseCut:  newSquidFund.HouseCut, // 庄家抽水余额
-		Jackpot:   newSquidFund.Jackpot,  // Jackpot余额
-		RobotPool: squidFund.RobotPool,   // 机器人库存
-
-		PlayerAccBet:    squidFund.PlayerAccAmount.AccBet,    // 玩家累计投注额
-		PlayerAccPayout: squidFund.PlayerAccAmount.AccPayout, // 玩家累计赔付额
-		PlayerRate:      playerRate,                          // 玩家反水比例
-		RobotAccBet:     squidFund.RobotAccAmount.AccBet,     // 机器人累计投注额
-		RobotAccPayout:  squidFund.RobotAccAmount.AccPayout,  // 机器人累计赔付额
-		RobotRate:       robotRate,                           // 机器人反水比例
-	}
-	if err := redis.AddSquidData(game.CloseTime, data); err != nil {
-		log.Errorf("CloseTime: %d, AddSquidData error: %v", game.CloseTime, err)
-	}
+	//_, btcSum, _ := calculateDeadTrack(game.TransPrice)
+	//newSquidFund := &squid.Fund{}
+	//if err := mongodb.Find(context.Background(), newSquidFund, 0); err != nil {
+	//	log.Error("Error retrieving squid fund:", err)
+	//}
+	//playerRate := float64(0)
+	//robotRate := float64(0)
+	//if squidFund.PlayerAccAmount.AccBet > 0 {
+	//	playerRate = float64(squidFund.PlayerAccAmount.AccPayout) / float64(squidFund.PlayerAccAmount.AccBet)
+	//}
+	//if squidFund.RobotAccAmount.AccBet > 0 {
+	//	robotRate = float64(squidFund.RobotAccAmount.AccPayout) / float64(squidFund.RobotAccAmount.AccBet)
+	//}
+	//data := squid.Data{
+	//	Timestamp: time.UnixMilli(game.DeadTrackTime).Format("2006-01-02 15:04:05"),
+	//	BtcPrice:  game.TransPrice, // BTC价格
+	//	BtcSum:    btcSum,          // BTC价之和
+	//	DeadTrack: game.DeadTrack,  // 死亡赛道
+	//
+	//	Odds1:     rounds[0].Odds,     // 第1轮赔率
+	//	TotalBet1: rounds[0].TotalBet, // 第1轮总注额
+	//	DeadBet1:  rounds[0].DeadBet,  // 第1轮死亡注额
+	//
+	//	Odds2:     rounds[1].Odds,     // 第2轮赔率
+	//	TotalBet2: rounds[1].TotalBet, // 第2轮总注额
+	//	DeadBet2:  rounds[1].DeadBet,  // 第2轮死亡注额
+	//
+	//	Odds3:     rounds[2].Odds,     // 第3轮赔率
+	//	TotalBet3: rounds[2].TotalBet, // 第3轮总注额
+	//	DeadBet3:  rounds[2].DeadBet,  // 第3轮死亡注额
+	//
+	//	Odds4:     rounds[3].Odds,     // 第4轮赔率
+	//	TotalBet4: rounds[3].TotalBet, // 第4轮总注额
+	//	DeadBet4:  rounds[3].DeadBet,  // 第4轮死亡注额
+	//
+	//	Odds5:     rounds[4].Odds,     // 第5轮赔率
+	//	TotalBet5: rounds[4].TotalBet, // 第5轮总注额
+	//	DeadBet5:  rounds[4].DeadBet,  // 第5轮死亡注额
+	//
+	//	Odds6:     rounds[5].Odds,     // 第6轮赔率
+	//	TotalBet6: rounds[5].TotalBet, // 第6轮总注额
+	//	DeadBet6:  rounds[5].DeadBet,  // 第6轮死亡注额
+	//
+	//	Odds7:     rounds[6].Odds,     // 第7轮赔率
+	//	TotalBet7: rounds[6].TotalBet, // 第7轮总注额
+	//	DeadBet7:  rounds[6].DeadBet,  // 第7轮死亡注额
+	//
+	//	HouseCut:  newSquidFund.HouseCut, // 庄家抽水余额
+	//	Jackpot:   newSquidFund.Jackpot,  // Jackpot余额
+	//	RobotPool: squidFund.RobotPool,   // 机器人库存
+	//
+	//	PlayerAccBet:    squidFund.PlayerAccAmount.AccBet,    // 玩家累计投注额
+	//	PlayerAccPayout: squidFund.PlayerAccAmount.AccPayout, // 玩家累计赔付额
+	//	PlayerRate:      playerRate,                          // 玩家反水比例
+	//	RobotAccBet:     squidFund.RobotAccAmount.AccBet,     // 机器人累计投注额
+	//	RobotAccPayout:  squidFund.RobotAccAmount.AccPayout,  // 机器人累计赔付额
+	//	RobotRate:       robotRate,                           // 机器人反水比例
+	//}
+	//if err := redis.AddSquidData(game.CloseTime, data); err != nil {
+	//	log.Errorf("CloseTime: %d, AddSquidData error: %v", game.CloseTime, err)
+	//}
 
 	robotBalance, _ := mongodb.SumRobotBalances(context.Background())
 	log.Infof("日志核对, 木头人第%d期, 本期死亡赛道:%d,transPrice:%f, 本期玩家每轮注额%d, 本期机器人每轮注额%d, 本期每轮赔付总额(包含机器人):%d, 机器人总余额:%d, jackpot领取人数:%d,jackpot领取总额:%d",
@@ -382,18 +383,6 @@ func squidRoundEnd(timestamp int64, game *squid.Game) error {
 
 	//TODO:重置GlobalSquidRound
 	mongodb.ResetAllGlobalSquidRound()
-	//for i := 1; i <= squid.TotalRounds; i++ {
-	//	globalSquidRound := &squid.GlobalRound{}
-	//	if err := mongodb.Find(context.Background(), globalSquidRound, i); err != nil {
-	//		log.Error("Error finding round:", err)
-	//		continue
-	//	}
-	//	mongodb.ResetGlobalSquidRound(globalSquidRound)
-	//	if err := mongodb.Update(context.Background(), globalSquidRound, nil); err != nil {
-	//		log.Error("Error updating round:", err)
-	//		continue
-	//	}
-	//}
 	return nil
 }
 
@@ -502,6 +491,7 @@ func getPumpDetails(userRoundBet int64) *presenter.PumpDetails {
 
 func settlement(userInfo *presenter.UserInfo, squidFund *squid.Fund, game *squid.Game, allPlayerWeights map[string]int64, totalRoundBets []int64, winRoundBets []int64) {
 	currentRoundId := userInfo.Squid.RoundId
+	oldBalance := userInfo.Balance
 	// 结算后websocket通知字段
 	realOdds := float64(0)
 	bonus := int64(0)
@@ -623,16 +613,49 @@ func settlement(userInfo *presenter.UserInfo, squidFund *squid.Fund, game *squid
 	log.Debugf("user: %s, 轮次%d, weight: %v, totalWeight: %v, jackpotWeightRate: %v, bonus: %v, newHouseCut: %v, newJackpot: %v, 玩家累计投注总额: %v, 玩家累计赔付总额: %v, 机器人累计投注总额: %v, 机器人累计赔付总额: %v\n",
 		userInfo.Account, currentRoundId, weight, totalWeight, jackpotWeightRate, bonus, squidFund.HouseCut, squidFund.Jackpot, squidFund.PlayerAccAmount.AccBet, squidFund.PlayerAccAmount.AccPayout, squidFund.RobotAccAmount.AccBet, squidFund.RobotAccAmount.AccPayout)
 
+	// 更新每日任务进度
+	mongodb.UpdateDailyTaskProgress(3, userInfo, 1)
+
 	// 如上userinfo更新信息写入db
 	if err := mongodb.Update(context.Background(), userInfo, nil); err != nil {
 		log.Errorf("userInfo: %v, Error updating user: %s", userInfo, err)
 	}
 
-	//记录订单
 	isWin := false
 	if selectTrack != game.DeadTrack {
 		isWin = true
 	}
+	if !userInfo.IsRobot {
+		if isWin {
+			log.InfoJson("金币入口", // coinFlow埋点
+				zap.String("Account", userInfo.Account),
+				zap.String("ActionType", log.Flow),
+				zap.String("FlowType", log.CoinFlow),
+				zap.String("From", log.FromSquidSettlement),
+				zap.String("Flag", log.FlagIn),
+				zap.Int64("RoundNum", game.RoundNum),
+				zap.Int64("Amount", userInfo.Balance-oldBalance-userRoundBet),
+				zap.Int64("Old", oldBalance+userRoundBet),
+				zap.Int64("New", userInfo.Balance),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
+		} else {
+			log.InfoJson("金币出口", // coinFlow埋点
+				zap.String("Account", userInfo.Account),
+				zap.String("ActionType", log.Flow),
+				zap.String("FlowType", log.CoinFlow),
+				zap.String("From", log.FromSquidSettlement),
+				zap.String("Flag", log.FlagOut),
+				zap.Int64("RoundNum", game.RoundNum),
+				zap.Int64("Amount", userRoundBet),
+				zap.Int64("Old", oldBalance+userRoundBet),
+				zap.Int64("New", userInfo.Balance),
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
+		}
+	}
+
+	//记录订单
 	_, btcSum, _ := calculateDeadTrack(game.TransPrice)
 	orderInfo := &squid.Order{
 		OrderId:    uuid.New().String(),
@@ -712,9 +735,25 @@ func processJackpot(jackPotPlayers []string) int64 {
 	for player, userInfo := range userInfos {
 		weight := allPlayerWeights[player]
 		userJackpot := totalJackpot * weight / totalWeight
+		oldBalance := userInfo.Balance
 		log.Debugf("processJackpot, user: %v, Jackpot总奖池:%d,本次比例%f,本次奖池%v, 玩家权重:%v,所有玩家总权重:%v, jackpot奖金: %v",
 			player, squidFund.Jackpot, float64(jackpotPercentage)/100, totalJackpot, weight, totalWeight, userJackpot)
 		mongodb.AddAmount(userInfo, userJackpot)
+		if !userInfo.IsRobot {
+			// coinFlow埋点
+			log.InfoJson("金币入口",
+				zap.String("Account", player),
+				zap.String("ActionType", log.Flow),
+				zap.String("FlowType", log.CoinFlow),
+				zap.String("From", log.FromJackpot),
+				zap.String("Flag", log.FlagIn),
+				zap.Int64("Amount", userJackpot),   //兑换了
+				zap.Int64("Old", oldBalance),       //旧游戏币
+				zap.Int64("New", userInfo.Balance), //新游戏币
+				zap.Int64("CreatedAt", time.Now().UnixMilli()),
+			)
+		}
+
 		realTotalJackpot += userJackpot //考虑精度损失,使用实际扣除款
 		userInfosToUpdate = append(userInfosToUpdate, userInfo)
 		mongodb.SquidReset(userInfo) // 玩家jackpot后重置
